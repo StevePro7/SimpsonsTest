@@ -9,9 +9,10 @@ unsigned char enum_curr_screen_type, enum_next_screen_type;
 /*
 void custom_initialize();
 void custom_load_content();
+*/
 void custom_screen_manager_load(unsigned char screen_type);
 void custom_screen_manager_update(unsigned char *screen_type, const unsigned int curr_joypad1, const unsigned int prev_joypad1);
-*/
+
 void main (void)
 {
 	// Must be static to persist values!
@@ -26,18 +27,17 @@ void main (void)
 	SMS_setSpriteMode(SPRITEMODE_NORMAL);
 	SMS_useFirstHalfTilesforSprites(true);
 
-	engine_content_manager_load_font();
-	engine_content_manager_load_sprites();
-	//engine_content_manager_splash();
+	//engine_content_manager_load_font();
+	//engine_content_manager_load_sprites();
+	engine_content_manager_splash();
 	//engine_content_manager_title();
 
 	// Ensure white border
 	//SMS_setSpritePaletteColor(0, RGB(3,3,3));
 
-	enum_curr_screen_type = screen_type_none;//SCREEN_TYPE_NONE;
-	enum_next_screen_type = screen_type_ready;
+	enum_curr_screen_type = SCREEN_TYPE_NONE;
+	enum_next_screen_type = SCREEN_TYPE_SPLASH;
 
-	
 	SMS_displayOn();
 	for (;;)
 	{
@@ -64,15 +64,14 @@ void main (void)
 
 		if (enum_curr_screen_type != enum_next_screen_type)
 		{
-			engine_font_manager_draw_text("BOBO", 5, 5);
-			engine_font_manager_draw_data(enum_curr_screen_type, 5, 7);
-			engine_font_manager_draw_data(enum_next_screen_type, 5, 9);
+			enum_curr_screen_type = enum_next_screen_type;
+			custom_screen_manager_load(enum_curr_screen_type);
 		}
 
 		SMS_initSprites();
 
 		curr_joypad1 = SMS_getKeysStatus();
-		//custom_screen_manager_update(&enum_next_screen_type, curr_joypad1, prev_joypad1);
+		custom_screen_manager_update(&enum_next_screen_type, curr_joypad1, prev_joypad1);
 
 		SMS_finalizeSprites();
 		SMS_waitForVBlank();
@@ -92,17 +91,27 @@ void custom_initialize()
 void custom_load_content()
 {
 }
-
+*/
 void custom_screen_manager_load(unsigned char screen_type)
 {
+	switch (screen_type)
+	{
+	case screen_type_splash:
+		screen_splash_screen_load();
+		break;
+	}
 }
 
 void custom_screen_manager_update(unsigned char *screen_type, const unsigned int curr_joypad1, const unsigned int prev_joypad1)
 {
 	switch (*screen_type)
 	{
+	case SCREEN_TYPE_SPLASH:
+		screen_splash_screen_update(screen_type, curr_joypad1, prev_joypad1);
+		break;
+	
 	}
 }
-*/
+
 SMS_EMBED_SEGA_ROM_HEADER(9999, 0);
 SMS_EMBED_SDSC_HEADER(1, 0, 2018, 3, 1, "StevePro Studios", "The Simpsons", "Simple Sega Master System demo to run on real hardware!");

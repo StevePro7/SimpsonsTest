@@ -17,4 +17,12 @@
 #include "engine\sprite_manager.h"
 #include "engine\asm_manager.h"
 
+#include "screen\splash_screen.h"
+
+//_BASES_SCREEN_H_
+unsigned int screen_bases_screen_count, screen_bases_screen_timer;
+
+//_SPLASH_SCREEN_H_
+unsigned char screen_splash_screen_delay;
+
 #endif//__MAIN__
