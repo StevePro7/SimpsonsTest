@@ -17,7 +17,7 @@ void engine_content_manager_splash()
 void main (void)
 {
 	SMS_setSpritePaletteColor(0, RGB(3,3,3));
-	engine_content_manager_splash();
+	//engine_content_manager_splash();
 	SMS_displayOn();
 	for (;;)
 	{
