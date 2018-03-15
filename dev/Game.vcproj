@@ -185,6 +185,10 @@
 				>
 			</File>
 			<Filter
+				Name="banks"
+				>
+			</Filter>
+			<Filter
 				Name="engine"
 				>
 				<File
@@ -196,19 +200,11 @@
 					>
 				</File>
 				<File
-					RelativePath=".\engine\enemy_manager.h"
-					>
-				</File>
-				<File
 					RelativePath=".\engine\enum_manager.h"
 					>
 				</File>
 				<File
 					RelativePath=".\engine\font_manager.h"
-					>
-				</File>
-				<File
-					RelativePath=".\engine\gamer_manager.h"
 					>
 				</File>
 				<File
@@ -227,44 +223,12 @@
 					RelativePath=".\engine\locale_manager.h"
 					>
 				</File>
-				<File
-					RelativePath=".\engine\path_manager.h"
-					>
-				</File>
-				<File
-					RelativePath=".\engine\sound_manager.h"
-					>
-				</File>
-				<File
-					RelativePath=".\engine\sprite_manager.h"
-					>
-				</File>
-				<File
-					RelativePath=".\engine\text_manager.h"
-					>
-				</File>
-				<File
-					RelativePath=".\engine\tree_manager.h"
-					>
-				</File>
 			</Filter>
 			<Filter
 				Name="screen"
 				>
 				<File
-					RelativePath=".\screen\play_screen.h"
-					>
-				</File>
-				<File
-					RelativePath=".\screen\ready_screen.h"
-					>
-				</File>
-				<File
 					RelativePath=".\screen\splash_screen.h"
-					>
-				</File>
-				<File
-					RelativePath=".\screen\title_screen.h"
 					>
 				</File>
 			</Filter>
