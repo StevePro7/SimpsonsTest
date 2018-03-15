@@ -185,10 +185,6 @@
 				>
 			</File>
 			<Filter
-				Name="banks"
-				>
-			</Filter>
-			<Filter
 				Name="engine"
 				>
 				<File
