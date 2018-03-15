@@ -219,6 +219,10 @@
 					RelativePath=".\engine\locale_manager.h"
 					>
 				</File>
+				<File
+					RelativePath=".\engine\sprite_manager.h"
+					>
+				</File>
 			</Filter>
 			<Filter
 				Name="screen"
