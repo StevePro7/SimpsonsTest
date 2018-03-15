@@ -1,41 +1,49 @@
 #include "main.h"
 
-#define SPLASH_TILES	0
-#define SIMPSONS_TILES	64
+// Global variables.
+bool global_pause;
 
-void engine_content_manager_splash()
-{
-	SMS_loadPSGaidencompressedTiles(splash__tiles__psgcompr, SPLASH_TILES);
-	SMS_loadSTMcompressedTileMap(0, 0, splash__tilemap__stmcompr);
-	SMS_loadBGPalette(splash__palette__bin);
-}
+unsigned char hacker_debug, hacker_splash;
+unsigned char hacker_start, hacker_delay, hacker_music, hacker_sound;
+unsigned char enum_curr_screen_type, enum_next_screen_type;
 
-void engine_content_manager_title()
-{
-	SMS_loadPSGaidencompressedTiles(simpsons__tiles__psgcompr, SIMPSONS_TILES);
-	SMS_loadSTMcompressedTileMap(0, 0, simpsons__tilemap__stmcompr);
-	SMS_loadBGPalette(simpsons__palette__bin);
-}
-
-//void engine_content_manager_splash()
-//{
-//	SMS_loadPSGaidencompressedTiles(introstage1tiles_psgcompr, 0);
-//	SMS_loadTileMap(0, 0, introstage1tilemap_bin, introstage1tilemap_bin_size);
-//	SMS_loadBGPalette(introstage1palette_bin);
-//}
 
 void main (void)
 {
+	// Must be static to persist values!
+	static unsigned int curr_joypad1 = 0;
+	static unsigned int prev_joypad1 = 0;
+
 	SMS_init();
 	SMS_displayOff();
 
-	//SMS_setSpritePaletteColor(0, RGB(3,3,3));
 	engine_asm_manager_clear_VRAM();
-	engine_content_manager_splash();
+	
+	SMS_setSpriteMode(SPRITEMODE_NORMAL);
+	SMS_useFirstHalfTilesforSprites(true);
+
+	engine_content_manager_load_font();
+	engine_content_manager_load_sprites();
+	//engine_content_manager_splash();
 	//engine_content_manager_title();
+
+	// Ensure white border
+	SMS_setSpritePaletteColor(0, RGB(3,3,3));
+
+	enum_curr_screen_type = screen_type_none;//SCREEN_TYPE_NONE;
+	enum_next_screen_type = screen_type_title;
+
+	
 	SMS_displayOn();
 	for (;;)
 	{
+		if (enum_curr_screen_type != enum_next_screen_type)
+		{
+			engine_font_manager_draw_text("BOBO", 5, 5);
+			engine_font_manager_draw_data(enum_curr_screen_type, 5, 7);
+			engine_font_manager_draw_data(enum_next_screen_type, 5, 9);
+		}
+
 		SMS_waitForVBlank();
 	}
 }
