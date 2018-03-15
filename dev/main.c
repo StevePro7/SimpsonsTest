@@ -6,8 +6,12 @@ bool global_pause;
 unsigned char hacker_debug, hacker_splash;
 unsigned char hacker_start, hacker_delay, hacker_music, hacker_sound;
 unsigned char enum_curr_screen_type, enum_next_screen_type;
-
-
+/*
+void custom_initialize();
+void custom_load_content();
+void custom_screen_manager_load(unsigned char screen_type);
+void custom_screen_manager_update(unsigned char *screen_type, const unsigned int curr_joypad1, const unsigned int prev_joypad1);
+*/
 void main (void)
 {
 	// Must be static to persist values!
@@ -28,15 +32,36 @@ void main (void)
 	//engine_content_manager_title();
 
 	// Ensure white border
-	SMS_setSpritePaletteColor(0, RGB(3,3,3));
+	//SMS_setSpritePaletteColor(0, RGB(3,3,3));
 
 	enum_curr_screen_type = screen_type_none;//SCREEN_TYPE_NONE;
-	enum_next_screen_type = screen_type_title;
+	enum_next_screen_type = screen_type_ready;
 
 	
 	SMS_displayOn();
 	for (;;)
 	{
+		if (SMS_queryPauseRequested())
+		{
+			SMS_resetPauseRequest();
+			global_pause = !global_pause;
+			if (global_pause)
+			{
+				engine_font_manager_draw_text(LOCALE_PAUSED, 13, 12);
+				PSGSilenceChannels();
+			}
+			else
+			{
+				engine_font_manager_draw_text(LOCALE_RESUME, 13, 12);
+				PSGRestoreVolumes();
+			}
+		}
+
+		if (global_pause)
+		{
+			continue;
+		}
+
 		if (enum_curr_screen_type != enum_next_screen_type)
 		{
 			engine_font_manager_draw_text("BOBO", 5, 5);
@@ -44,9 +69,40 @@ void main (void)
 			engine_font_manager_draw_data(enum_next_screen_type, 5, 9);
 		}
 
+		SMS_initSprites();
+
+		curr_joypad1 = SMS_getKeysStatus();
+		//custom_screen_manager_update(&enum_next_screen_type, curr_joypad1, prev_joypad1);
+
+		SMS_finalizeSprites();
 		SMS_waitForVBlank();
+		SMS_copySpritestoSAT();
+
+		PSGFrame();
+		PSGSFXFrame();
+
+		prev_joypad1 = curr_joypad1;
 	}
 }
+/*
+void custom_initialize()
+{
+}
 
+void custom_load_content()
+{
+}
+
+void custom_screen_manager_load(unsigned char screen_type)
+{
+}
+
+void custom_screen_manager_update(unsigned char *screen_type, const unsigned int curr_joypad1, const unsigned int prev_joypad1)
+{
+	switch (*screen_type)
+	{
+	}
+}
+*/
 SMS_EMBED_SEGA_ROM_HEADER(9999, 0);
 SMS_EMBED_SDSC_HEADER(1, 0, 2018, 3, 1, "StevePro Studios", "The Simpsons", "Simple Sega Master System demo to run on real hardware!");
