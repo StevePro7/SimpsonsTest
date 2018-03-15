@@ -1,8 +1,16 @@
 #include "main.h"
 
+#define SPLASH_TILES	0
 #define SIMPSONS_TILES	64
 
 void engine_content_manager_splash()
+{
+	SMS_loadPSGaidencompressedTiles(splash__tiles__psgcompr, SPLASH_TILES);
+	SMS_loadSTMcompressedTileMap(0, 0, splash__tilemap__stmcompr);
+	SMS_loadBGPalette(splash__palette__bin);
+}
+
+void engine_content_manager_title()
 {
 	SMS_loadPSGaidencompressedTiles(simpsons__tiles__psgcompr, SIMPSONS_TILES);
 	SMS_loadSTMcompressedTileMap(0, 0, simpsons__tilemap__stmcompr);
@@ -24,6 +32,7 @@ void main (void)
 	//SMS_setSpritePaletteColor(0, RGB(3,3,3));
 	engine_asm_manager_clear_VRAM();
 	engine_content_manager_splash();
+	//engine_content_manager_title();
 	SMS_displayOn();
 	for (;;)
 	{
