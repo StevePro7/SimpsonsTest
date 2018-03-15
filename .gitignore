@@ -1,4 +1,6 @@
+*.sms
 asm/*
+
 
 # Prerequisites
 *.d
