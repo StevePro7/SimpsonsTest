@@ -2,7 +2,7 @@
 REM echo Execute bmp2tile
 REM bmp2tile.exe raw\font.bmp -savetiles "font (tiles).psgcompr" -removedupes -tileoffset 0 -savetilemap "font (tilemap).bin" -savepalette "font (palette).bin"
 REM bmp2tile.exe raw\splash.bmp -savetiles "splash (tiles).psgcompr" -removedupes -nomirror -planar -tileoffset 0 -savetilemap "splash (tilemap).stmcompr" -savepalette "splash (palette).bin"
-REM bmp2tile.exe raw\simpsons.bmp -savetiles "simpsons (tiles).psgcompr" -removedupes -nomirror -planar -tileoffset 128 -savetilemap "simpsons (tilemap).stmcompr" -savepalette "simpsons (palette).bin"
+REM bmp2tile.exe raw\simpsons.bmp -savetiles "simpsons (tiles).psgcompr" -removedupes -nomirror -planar -tileoffset 64 -savetilemap "simpsons (tilemap).stmcompr" -savepalette "simpsons (palette).bin"
 
 REM echo Build gfx.c and gfx.h from gfx folder
 folder2c ..\gfx gfx

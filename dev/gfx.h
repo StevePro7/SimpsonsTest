@@ -7,14 +7,14 @@ extern const unsigned char	font__tilemap__bin[];
 extern const unsigned char	font__tiles__psgcompr[];
 #define				font__tiles__psgcompr_size 663
 
-extern const unsigned char	Simpsons__palette__bin[];
-#define				Simpsons__palette__bin_size 16
+extern const unsigned char	simpsons__palette__bin[];
+#define				simpsons__palette__bin_size 16
 
-extern const unsigned char	Simpsons__tilemap__stmcompr[];
-#define				Simpsons__tilemap__stmcompr_size 155
+extern const unsigned char	simpsons__tilemap__stmcompr[];
+#define				simpsons__tilemap__stmcompr_size 193
 
-extern const unsigned char	Simpsons__tiles__psgcompr[];
-#define				Simpsons__tiles__psgcompr_size 6740
+extern const unsigned char	simpsons__tiles__psgcompr[];
+#define				simpsons__tiles__psgcompr_size 7783
 
 extern const unsigned char	splash__palette__bin[];
 #define				splash__palette__bin_size 16
