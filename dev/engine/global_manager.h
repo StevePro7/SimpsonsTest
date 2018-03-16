@@ -7,7 +7,7 @@
 #define SOUND2_PSG			sound2_psg
 
 // Sprites.
-#define SPRITE_TILES		80
+#define SPRITE_TILES		64
 
 // Steps.
 #define GAMER_MAX_STEPS		8

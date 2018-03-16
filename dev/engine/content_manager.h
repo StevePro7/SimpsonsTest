@@ -1,9 +1,9 @@
 #ifndef _CONTENT_MANAGER_H_
 #define _CONTENT_MANAGER_H_
 
-#define SPLASH_TILES	0
+#define SPLASH_TILES	112
 #define FONT_TILES		0
-#define SIMPSONS_TILES	64
+#define SIMPSONS_TILES	80
 
 void engine_content_manager_splash()
 {
@@ -34,5 +34,20 @@ void engine_content_manager_load_sprites()
 	SMS_loadPSGaidencompressedTiles(cross__tiles__psgcompr, SPRITE_TILES + 32);
 	SMS_loadSpritePalette(cross__palette__bin);
 }
+
+//void engine_content_manager_load_select_sprite()
+//{
+//	// Sprite tiles.
+//	SMS_loadPSGaidencompressedTiles(select__tiles__psgcompr, SPRITE_TILES);
+//	SMS_loadSpritePalette(cross__palette__bin);
+//}
+//
+//void engine_content_manager_load_indicate_sprite()
+//{
+//	// Sprite tiles.
+//	SMS_loadPSGaidencompressedTiles(tick__tiles__psgcompr, SPRITE_TILES + 16);
+//	SMS_loadPSGaidencompressedTiles(cross__tiles__psgcompr, SPRITE_TILES + 32);
+//	SMS_loadSpritePalette(cross__palette__bin);
+//}
 
 #endif//_CONTENT_MANAGER_H_

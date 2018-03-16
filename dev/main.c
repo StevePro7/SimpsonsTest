@@ -27,8 +27,8 @@ void main (void)
 	SMS_setSpriteMode(SPRITEMODE_NORMAL);
 	SMS_useFirstHalfTilesforSprites(true);
 
-	//engine_content_manager_load_font();
-	//engine_content_manager_load_sprites();
+	engine_content_manager_load_font();
+	engine_content_manager_load_sprites();
 	//engine_content_manager_splash();
 	//engine_content_manager_title();
 
@@ -36,7 +36,7 @@ void main (void)
 	//SMS_setSpritePaletteColor(0, RGB(3,3,3));
 
 	enum_curr_screen_type = SCREEN_TYPE_NONE;
-	enum_next_screen_type = SCREEN_TYPE_TITLE;
+	enum_next_screen_type = SCREEN_TYPE_SPLASH;
 
 	SMS_displayOn();
 	for (;;)
