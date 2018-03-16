@@ -231,6 +231,10 @@
 					RelativePath=".\screen\splash_screen.h"
 					>
 				</File>
+				<File
+					RelativePath=".\screen\title_screen.h"
+					>
+				</File>
 			</Filter>
 		</Filter>
 		<Filter
