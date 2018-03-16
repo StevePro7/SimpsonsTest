@@ -12,6 +12,11 @@ void screen_intro_screen_load()
 	engine_font_manager_draw_text("PRESS", 2, 14);
 	engine_font_manager_draw_text("START", 2, 16);
 	
+	//if (hacker_music)
+	//{
+		PSGPlayNoRepeat(MUSIC_PSG);
+	//}
+
 	SMS_displayOn();
 }
 
