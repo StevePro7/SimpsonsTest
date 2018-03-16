@@ -29,14 +29,14 @@ void main (void)
 
 	//engine_content_manager_load_font();
 	//engine_content_manager_load_sprites();
-	engine_content_manager_splash();
+	//engine_content_manager_splash();
 	//engine_content_manager_title();
 
 	// Ensure white border
 	//SMS_setSpritePaletteColor(0, RGB(3,3,3));
 
 	enum_curr_screen_type = SCREEN_TYPE_NONE;
-	enum_next_screen_type = SCREEN_TYPE_SPLASH;
+	enum_next_screen_type = SCREEN_TYPE_TITLE;
 
 	SMS_displayOn();
 	for (;;)
@@ -99,6 +99,9 @@ void custom_screen_manager_load(unsigned char screen_type)
 	case screen_type_splash:
 		screen_splash_screen_load();
 		break;
+	case screen_type_title:
+		screen_title_screen_load();
+		break;
 	}
 }
 
@@ -109,7 +112,9 @@ void custom_screen_manager_update(unsigned char *screen_type, const unsigned int
 	case SCREEN_TYPE_SPLASH:
 		screen_splash_screen_update(screen_type, curr_joypad1, prev_joypad1);
 		break;
-	
+	case SCREEN_TYPE_TITLE:
+		screen_title_screen_update(screen_type, curr_joypad1, prev_joypad1);
+		break;
 	}
 }
 

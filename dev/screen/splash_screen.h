@@ -8,7 +8,12 @@ extern unsigned char screen_splash_screen_delay;
 void screen_splash_screen_load()
 {
 	screen_splash_screen_delay = SPLASH_DELAY;
+
+	SMS_displayOff();
+	engine_content_manager_splash();
+	SMS_displayOn();
 }
+
 void screen_splash_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
 {
 	unsigned char level = 0;

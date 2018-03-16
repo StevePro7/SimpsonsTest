@@ -18,6 +18,7 @@
 #include "engine\asm_manager.h"
 
 #include "screen\splash_screen.h"
+#include "screen\title_screen.h"
 
 //_BASES_SCREEN_H_
 unsigned int screen_bases_screen_count, screen_bases_screen_timer;
