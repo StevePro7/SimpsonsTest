@@ -36,7 +36,7 @@ void main (void)
 	//SMS_setSpritePaletteColor(0, RGB(3,3,3));
 
 	enum_curr_screen_type = SCREEN_TYPE_NONE;
-	enum_next_screen_type = SCREEN_TYPE_SPLASH;
+	enum_next_screen_type = SCREEN_TYPE_INTRO;
 
 	SMS_displayOn();
 	for (;;)
@@ -102,6 +102,12 @@ void custom_screen_manager_load(unsigned char screen_type)
 	case screen_type_title:
 		screen_title_screen_load();
 		break;
+	case screen_type_intro:
+		screen_intro_screen_load();
+		break;
+	case screen_type_ready:
+		screen_ready_screen_load();
+		break;
 	}
 }
 
@@ -114,6 +120,12 @@ void custom_screen_manager_update(unsigned char *screen_type, const unsigned int
 		break;
 	case SCREEN_TYPE_TITLE:
 		screen_title_screen_update(screen_type, curr_joypad1, prev_joypad1);
+		break;
+	case SCREEN_TYPE_INTRO:
+		screen_intro_screen_update(screen_type, curr_joypad1, prev_joypad1);
+		break;
+	case SCREEN_TYPE_READY:
+		screen_ready_screen_update(screen_type, curr_joypad1, prev_joypad1);
 		break;
 	}
 }

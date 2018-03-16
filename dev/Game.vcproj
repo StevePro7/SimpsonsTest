@@ -228,6 +228,14 @@
 				Name="screen"
 				>
 				<File
+					RelativePath=".\screen\intro_screen.h"
+					>
+				</File>
+				<File
+					RelativePath=".\screen\ready_screen.h"
+					>
+				</File>
+				<File
 					RelativePath=".\screen\splash_screen.h"
 					>
 				</File>
