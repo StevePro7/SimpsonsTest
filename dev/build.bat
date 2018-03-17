@@ -11,7 +11,7 @@ REM bmp2tile.exe raw\select.png -savetiles "select (tiles).psgcompr" -noremovedu
 REM bmp2tile.exe raw\maggie.bmp -savetiles "maggie (tiles).psgcompr" -removedupes -nomirror -planar -tileoffset 112 -savetilemap "maggie (tilemap).stmcompr" -savepalette "maggie (palette).bin"
 
 REM echo Build gfx.c and gfx.h from gfx folder
-folder2c ..\gfx gfx
+REM folder2c ..\gfx gfx
 REM folder2c ..\psg psg
 
 REM echo Build gfx

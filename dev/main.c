@@ -147,4 +147,4 @@ void custom_screen_manager_update(unsigned char *screen_type, const unsigned int
 }
 
 SMS_EMBED_SEGA_ROM_HEADER(9999, 0);
-SMS_EMBED_SDSC_HEADER(1, 0, 2018, 3, 1, "StevePro Studios", "The Simpsons", "Simple Sega Master System demo to run on real hardware!");
+SMS_EMBED_SDSC_HEADER(1, 0, 2018, 3, 27, "StevePro Studios", "Simpsons Trivia", "The Simpsons Trivia Quiz for SMS Power! Competition 2018");
