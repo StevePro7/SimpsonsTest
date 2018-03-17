@@ -1,7 +1,25 @@
 #ifndef _SPRITE_MANAGER_H_
 #define _SPRITE_MANAGER_H_
 
-void engine_sprite_manager_draw(unsigned char x, unsigned char y, unsigned char tile)
+// Private helper method.
+static void engine_sprite_manager_draw(unsigned char x, unsigned char y, unsigned char tile);
+
+// Public methods.
+void engine_sprite_manager_draw_select(unsigned char x, unsigned char y)
+{
+	engine_sprite_manager_draw(x, y, SPRITE_TILES+0);
+}
+void engine_sprite_manager_draw_tick(unsigned char x, unsigned char y)
+{
+	engine_sprite_manager_draw(x, y, SPRITE_TILES+16);
+}
+void engine_sprite_manager_draw_cross(unsigned char x, unsigned char y)
+{
+	engine_sprite_manager_draw(x, y, SPRITE_TILES+32);
+}
+
+
+static void engine_sprite_manager_draw(unsigned char x, unsigned char y, unsigned char tile)
 {
 	SMS_addSprite(x+0, y+0, tile+0);
 	SMS_addSprite(x+8, y+0, tile+1);

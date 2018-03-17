@@ -4,10 +4,8 @@
 void screen_play_screen_load()
 {
 	SMS_displayOff();
-	////engine_content_manager_load_font();
-	//engine_content_manager_load_sprites();
-	//engine_content_manager_title();
-	//SMS_setSpritePaletteColor(0, RGB(3,3,3));
+	engine_content_manager_load_maggie();
+	SMS_setSpritePaletteColor(0, RGB(3,3,3));
 
 	////engine_font_manager_draw_text("A.SIMPLE", 2, 9);
 	//engine_font_manager_draw_text("> EASY", 2, 13);
@@ -22,6 +20,9 @@ void screen_play_screen_update(unsigned char *screen_type, unsigned int curr_joy
 	unsigned int bob = curr_joypad1 * 2;
 	unsigned int sgb = prev_joypad1 * 2;
 
+	engine_sprite_manager_draw_select(80, 50);
+	engine_sprite_manager_draw_tick(80, 100);
+	engine_sprite_manager_draw_cross(80, 150);
 	*screen_type = SCREEN_TYPE_PLAY;
 }
 
