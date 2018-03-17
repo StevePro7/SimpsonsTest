@@ -1,6 +1,9 @@
 #ifndef _GLOBAL_MANAGER_H_
 #define _GLOBAL_MANAGER_H_
 
+// General.
+#define MAX_STATES			5
+
 // Content.
 #define MUSIC_PSG			music_psg
 #define SOUND1_PSG			sfx_right_psg

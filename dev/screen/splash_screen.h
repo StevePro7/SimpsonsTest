@@ -31,8 +31,8 @@ void screen_splash_screen_update(unsigned char *screen_type, unsigned int curr_j
 
 	if (level)
 	{
-		//*screen_type = SCREEN_TYPE_TITLE;
-		*screen_type = SCREEN_TYPE_SPLASH;
+		*screen_type = SCREEN_TYPE_TITLE;
+		//*screen_type = SCREEN_TYPE_SPLASH;
 	}
 }
 
