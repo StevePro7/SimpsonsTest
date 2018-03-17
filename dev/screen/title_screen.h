@@ -4,7 +4,6 @@
 void screen_title_screen_load()
 {
 	SMS_displayOff();
-	//engine_content_manager_load_sprites();
 	engine_content_manager_title();
 	SMS_setSpritePaletteColor(0, RGB(3,3,3));
 
@@ -33,7 +32,8 @@ void screen_title_screen_update(unsigned char *screen_type, unsigned int curr_jo
 
 	if (level)
 	{
-		*screen_type = SCREEN_TYPE_INTRO;
+		//*screen_type = SCREEN_TYPE_INTRO;
+		*screen_type = SCREEN_TYPE_PLAY;			// TODO remove - just for testing
 	}
 }
 
