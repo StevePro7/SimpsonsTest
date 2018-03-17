@@ -1,0 +1,37 @@
+XL2
+H A areas 5 global symbols
+M bank3
+O -mz80
+S .__.ABS. Def0000
+A _CODE size 0 flags 0 addr 0
+A _DATA size 0 flags 0 addr 0
+A _INITIALIZED size 0 flags 0 addr 0
+A _DABS size 0 flags 8 addr 0
+A _HOME size 0 flags 0 addr 0
+A _GSINIT size 0 flags 0 addr 0
+A _GSFINAL size 0 flags 0 addr 0
+A _BANK3 size 38 flags 0 addr 0
+S _Lisa_OptionA Def001C
+S _Lisa_OptionB Def0028
+S _Lisa__palette__bin Def0000
+S _Lisa_Answer Def0034
+A _INITIALIZER size 0 flags 0 addr 0
+A _CABS size 0 flags 8 addr 0
+T 00 00
+R 00 00 07 00
+T 00 00 53 42 43 44 46 46 00 41 20 42 5F 46 46 00
+R 00 00 07 00
+T 0E 00 5F 42 20 5F 46 46 00 44 43 42 41 46 49 00
+R 00 00 07 00
+T 1C 00
+R 00 00 07 00
+T 1C 00 51 42 00 51 20 00 5F 42 00 55 43 00
+R 00 00 07 00
+T 28 00
+R 00 00 07 00
+T 28 00 52 42 00 52 20 00 5E 42 00 53 43 00
+R 00 00 07 00
+T 34 00
+R 00 00 07 00
+T 34 00 08 04 02 01
+R 00 00 07 00

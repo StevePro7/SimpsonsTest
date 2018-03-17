@@ -10,22 +10,22 @@ REM bmp2tile.exe raw\select.png -savetiles "select (tiles).psgcompr" -noremovedu
 
 
 REM echo Build gfx.c and gfx.h from gfx folder
-folder2c ..\gfx gfx
-folder2c ..\psg psg
+REM folder2c ..\gfx gfx
+REM folder2c ..\psg psg
 
 REM echo Build gfx
-sdcc -c -mz80 --opt-code-speed --peep-file peep-rules.txt --std-c99 gfx.c
+REM sdcc -c -mz80 --opt-code-speed --peep-file peep-rules.txt --std-c99 gfx.c
 if %errorlevel% NEQ 0 goto :EOF
 
 REM echo Build psg
-sdcc -c -mz80 --opt-code-speed --peep-file peep-rules.txt --std-c99 psg.c
+REM sdcc -c -mz80 --opt-code-speed --peep-file peep-rules.txt --std-c99 psg.c
 if %errorlevel% NEQ 0 goto :EOF
 
 REM echo Build banks
-cd banks
-sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK2 bank2.c
-sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK3 bank3.c
-cd ..
+REM cd banks
+REM sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK2 bank2.c
+REM sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK3 bank3.c
+REM cd ..
 
 REM echo Build main
 sdcc -c -mz80 --opt-code-speed --peep-file peep-rules.txt --std-c99 main.c
@@ -60,10 +60,10 @@ cd ..\dev
 
 REM echo Delete
 cd banks
-del *.asm > nul
-del *.lst > nul
-del *.rel > nul
-del *.sym > nul
+REM del *.asm > nul
+REM del *.lst > nul
+REM del *.rel > nul
+REM del *.sym > nul
 cd ..
 
 del *.asm > nul
