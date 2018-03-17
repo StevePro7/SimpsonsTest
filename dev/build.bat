@@ -8,6 +8,7 @@ REM bmp2tile.exe raw\tick.bmp -savetiles "tick (tiles).psgcompr" -noremovedupes 
 REM bmp2tile.exe raw\cross.bmp -savetiles "cross (tiles).psgcompr" -noremovedupes -nomirror -planar -savepalette "cross (palette).bin" -spritepalette
 REM bmp2tile.exe raw\select.png -savetiles "select (tiles).psgcompr" -noremovedupes -nomirror -planar -savepalette "select (palette).bin" -spritepalette
 
+REM bmp2tile.exe raw\maggie.bmp -savetiles "maggie (tiles).psgcompr" -removedupes -nomirror -planar -tileoffset 112 -savetilemap "maggie (tilemap).stmcompr" -savepalette "maggie (palette).bin"
 
 REM echo Build gfx.c and gfx.h from gfx folder
 REM folder2c ..\gfx gfx

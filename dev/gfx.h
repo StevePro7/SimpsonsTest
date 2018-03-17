@@ -13,6 +13,15 @@ extern const unsigned char	font__tilemap__bin[];
 extern const unsigned char	font__tiles__psgcompr[];
 #define				font__tiles__psgcompr_size 663
 
+extern const unsigned char	maggie__palette__bin[];
+#define				maggie__palette__bin_size 16
+
+extern const unsigned char	maggie__tilemap__stmcompr[];
+#define				maggie__tilemap__stmcompr_size 124
+
+extern const unsigned char	maggie__tiles__psgcompr[];
+#define				maggie__tiles__psgcompr_size 2896
+
 extern const unsigned char	select__palette__bin[];
 #define				select__palette__bin_size 11
 
