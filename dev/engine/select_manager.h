@@ -34,6 +34,20 @@ void engine_select_manager_moveup()
 	select_height = select_option[select_choice];
 }
 
+void engine_select_manager_movedown()
+{
+	if(3 == select_choice)
+	{
+		select_choice = 0;
+	}
+	else
+	{
+		select_choice++;
+	}
+
+	select_height = select_option[select_choice];
+}
+
 void engine_select_manager_draw()
 {
 	engine_sprite_manager_draw_select(SELECT_X, select_height);

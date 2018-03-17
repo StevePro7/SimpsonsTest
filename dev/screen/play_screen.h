@@ -40,6 +40,10 @@ void screen_play_screen_update(unsigned char *screen_type, unsigned int curr_joy
 	{
 		engine_select_manager_moveup();
 	}
+	if (curr_joypad1 & PORT_A_KEY_DOWN && !(prev_joypad1 & PORT_A_KEY_DOWN))
+	{
+		engine_select_manager_movedown();
+	}
 
 	engine_select_manager_draw();
 	*screen_type = SCREEN_TYPE_PLAY;
