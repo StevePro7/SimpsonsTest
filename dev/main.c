@@ -6,10 +6,10 @@ bool global_pause;
 unsigned char hacker_debug, hacker_splash;
 unsigned char hacker_start, hacker_delay, hacker_music, hacker_sound;
 unsigned char enum_curr_screen_type, enum_next_screen_type;
-/*
+
 void custom_initialize();
 void custom_load_content();
-*/
+
 void custom_screen_manager_load(unsigned char screen_type);
 void custom_screen_manager_update(unsigned char *screen_type, const unsigned int curr_joypad1, const unsigned int prev_joypad1);
 
@@ -24,6 +24,9 @@ void main (void)
 
 	engine_asm_manager_clear_VRAM();
 	
+	custom_initialize();
+	custom_load_content();
+
 	SMS_setSpriteMode(SPRITEMODE_NORMAL);
 	SMS_useFirstHalfTilesforSprites(true);
 
@@ -83,15 +86,16 @@ void main (void)
 		prev_joypad1 = curr_joypad1;
 	}
 }
-/*
+
 void custom_initialize()
 {
+	engine_select_manager_init();
 }
 
 void custom_load_content()
 {
 }
-*/
+
 void custom_screen_manager_load(unsigned char screen_type)
 {
 	switch (screen_type)

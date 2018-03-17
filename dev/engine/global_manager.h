@@ -18,4 +18,7 @@
 #define ENEMY_STD_DELAY		75
 #define ENEMY_MIN_DELAY		25
 
+// Options.
+#define MAX_OPTIONS			4
+
 #endif//_GLOBAL_MANAGER_H_

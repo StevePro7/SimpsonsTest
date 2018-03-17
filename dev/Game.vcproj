@@ -224,6 +224,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\engine\select_manager.h"
+					>
+				</File>
+				<File
 					RelativePath=".\engine\sprite_manager.h"
 					>
 				</File>

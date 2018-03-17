@@ -17,6 +17,7 @@
 #include "engine\content_manager.h"
 #include "engine\font_manager.h"
 #include "engine\quiz_manager.h"
+#include "engine\select_manager.h"
 #include "engine\sprite_manager.h"
 #include "engine\asm_manager.h"
 
@@ -26,6 +27,10 @@
 #include "screen\ready_screen.h"
 #include "screen\play_screen.h"
 //#include "screen\quiz_screen.h"
+
+//_SELECT_MANAGER_H_
+unsigned char select_choice;
+unsigned char select_option[4];
 
 //_BASES_SCREEN_H_
 unsigned int screen_bases_screen_count, screen_bases_screen_timer;
