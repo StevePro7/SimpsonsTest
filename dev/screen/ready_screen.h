@@ -19,6 +19,9 @@ void screen_ready_screen_load()
 
 void screen_ready_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
 {
+	unsigned int bob = curr_joypad1 * 2;
+	unsigned int sgb = prev_joypad1 * 2;
+
 	//engine_sprite_manager_draw(0 + 4, 0 + 92, 64);
 	engine_sprite_manager_draw(0 + 4, 0 + 124, 64);
 	*screen_type = SCREEN_TYPE_READY;

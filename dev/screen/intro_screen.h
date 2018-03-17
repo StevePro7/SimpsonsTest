@@ -22,6 +22,9 @@ void screen_intro_screen_load()
 
 void screen_intro_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
 {
+	unsigned int bob = curr_joypad1 * 2;
+	unsigned int sgb = prev_joypad1 * 2;
+
 	*screen_type = SCREEN_TYPE_INTRO;
 }
 

@@ -232,6 +232,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\screen\play_screen.h"
+					>
+				</File>
+				<File
+					RelativePath=".\screen\quiz_screen.h"
+					>
+				</File>
+				<File
 					RelativePath=".\screen\ready_screen.h"
 					>
 				</File>

@@ -21,6 +21,8 @@
 #include "screen\title_screen.h"
 #include "screen\intro_screen.h"
 #include "screen\ready_screen.h"
+#include "screen\play_screen.h"
+//#include "screen\quiz_screen.h"
 
 //_BASES_SCREEN_H_
 unsigned int screen_bases_screen_count, screen_bases_screen_timer;
