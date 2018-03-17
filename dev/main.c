@@ -89,6 +89,7 @@ void main (void)
 
 void custom_initialize()
 {
+	engine_score_manager_init();
 	engine_select_manager_init();
 }
 

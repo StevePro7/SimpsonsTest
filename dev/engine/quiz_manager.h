@@ -1,11 +1,10 @@
 #ifndef _QUIZ_MANAGER_H_
 #define _QUIZ_MANAGER_H_
 
-
 #define QUIZ_X	2
 #define QUIZ_Y	5
 
-#define SCORE_X	22
+#define TITLE_X	22
 #define TITLE_Y	3
 
 #define OPTN_X	4
@@ -17,7 +16,7 @@
 void engine_quiz_manager_base()
 {
 	engine_font_manager_draw_text(LOCALE_QUESTION, QUIZ_X, TITLE_Y);
-	engine_font_manager_draw_text(LOCALE_SCORE, SCORE_X, TITLE_Y);
+	engine_font_manager_draw_text(LOCALE_SCORE, TITLE_X, TITLE_Y);
 
 	engine_font_manager_draw_text(LOCALE_OPTA, QUIZ_X, OPTA_Y);
 	engine_font_manager_draw_text(LOCALE_OPTB, QUIZ_X, OPTB_Y);

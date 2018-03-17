@@ -19,6 +19,7 @@
 #include "engine\quiz_manager.h"
 #include "engine\sprite_manager.h"
 #include "engine\select_manager.h"
+#include "engine\score_manager.h"
 #include "engine\asm_manager.h"
 
 #include "screen\splash_screen.h"
@@ -27,6 +28,9 @@
 #include "screen\ready_screen.h"
 #include "screen\play_screen.h"
 //#include "screen\quiz_screen.h"
+
+//_SCORE MANAGER_H_
+unsigned char score_player;
 
 //_SELECT_MANAGER_H_
 unsigned char select_choice, select_height;
