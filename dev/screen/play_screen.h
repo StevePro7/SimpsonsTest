@@ -12,6 +12,9 @@ void screen_play_screen_load()
 	//engine_font_manager_draw_text("> HARD", 2, 17);
 	////engine_font_manager_draw_text("D.INSANE", 2, 21);
 	
+	engine_quiz_manager_base();
+	engine_quiz_manager_bank(2);
+	engine_quiz_manager_load(0);
 	SMS_displayOn();
 }
 
@@ -20,9 +23,9 @@ void screen_play_screen_update(unsigned char *screen_type, unsigned int curr_joy
 	unsigned int bob = curr_joypad1 * 2;
 	unsigned int sgb = prev_joypad1 * 2;
 
-	engine_sprite_manager_draw_select(80, 50);
+	/*engine_sprite_manager_draw_select(80, 50);
 	engine_sprite_manager_draw_tick(80, 100);
-	engine_sprite_manager_draw_cross(80, 150);
+	engine_sprite_manager_draw_cross(80, 150);*/
 	*screen_type = SCREEN_TYPE_PLAY;
 }
 
