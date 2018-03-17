@@ -8,7 +8,7 @@ extern unsigned char score_player;
 
 void engine_score_manager_init()
 {
-	score_player = 2;
+	score_player = 0;
 }
 
 void engine_score_manager_draw()

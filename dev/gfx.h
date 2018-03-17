@@ -1,9 +1,3 @@
-extern const unsigned char	cross__palette__bin[];
-#define				cross__palette__bin_size 16
-
-extern const unsigned char	cross__tiles__psgcompr[];
-#define				cross__tiles__psgcompr_size 185
-
 extern const unsigned char	font__palette__bin[];
 #define				font__palette__bin_size 16
 
@@ -21,6 +15,12 @@ extern const unsigned char	maggie__tilemap__stmcompr[];
 
 extern const unsigned char	maggie__tiles__psgcompr[];
 #define				maggie__tiles__psgcompr_size 2896
+
+extern const unsigned char	right__palette__bin[];
+#define				right__palette__bin_size 16
+
+extern const unsigned char	right__tiles__psgcompr[];
+#define				right__tiles__psgcompr_size 175
 
 extern const unsigned char	select__palette__bin[];
 #define				select__palette__bin_size 11
@@ -46,9 +46,9 @@ extern const unsigned char	splash__tilemap__stmcompr[];
 extern const unsigned char	splash__tiles__psgcompr[];
 #define				splash__tiles__psgcompr_size 2089
 
-extern const unsigned char	tick__palette__bin[];
-#define				tick__palette__bin_size 16
+extern const unsigned char	wrong__palette__bin[];
+#define				wrong__palette__bin_size 16
 
-extern const unsigned char	tick__tiles__psgcompr[];
-#define				tick__tiles__psgcompr_size 175
+extern const unsigned char	wrong__tiles__psgcompr[];
+#define				wrong__tiles__psgcompr_size 185
 

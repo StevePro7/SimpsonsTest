@@ -30,9 +30,9 @@ void engine_content_manager_load_sprites()
 {
 	// Sprite tiles.
 	SMS_loadPSGaidencompressedTiles(select__tiles__psgcompr, SPRITE_TILES);
-	SMS_loadPSGaidencompressedTiles(tick__tiles__psgcompr, SPRITE_TILES + 16);
-	SMS_loadPSGaidencompressedTiles(cross__tiles__psgcompr, SPRITE_TILES + 32);
-	SMS_loadSpritePalette(cross__palette__bin);
+	SMS_loadPSGaidencompressedTiles(right__tiles__psgcompr, SPRITE_TILES + 16);
+	SMS_loadPSGaidencompressedTiles(wrong__tiles__psgcompr, SPRITE_TILES + 32);
+	SMS_loadSpritePalette(wrong__palette__bin);
 }
 
 void engine_content_manager_load_maggie()
