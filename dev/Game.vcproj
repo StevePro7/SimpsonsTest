@@ -244,7 +244,23 @@
 				Name="screen"
 				>
 				<File
+					RelativePath=".\screen\credit_screen.h"
+					>
+				</File>
+				<File
 					RelativePath=".\screen\intro_screen.h"
+					>
+				</File>
+				<File
+					RelativePath=".\screen\level_screen.h"
+					>
+				</File>
+				<File
+					RelativePath=".\screen\number_screen.h"
+					>
+				</File>
+				<File
+					RelativePath=".\screen\over_screen.h"
 					>
 				</File>
 				<File
@@ -257,6 +273,10 @@
 				</File>
 				<File
 					RelativePath=".\screen\ready_screen.h"
+					>
+				</File>
+				<File
+					RelativePath=".\screen\score_screen.h"
 					>
 				</File>
 				<File

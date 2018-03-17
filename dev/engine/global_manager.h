@@ -2,7 +2,7 @@
 #define _GLOBAL_MANAGER_H_
 
 // General.
-#define MAX_STATES			5
+#define MAX_STATES			12
 
 // Content.
 #define MUSIC_PSG			music_psg

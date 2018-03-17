@@ -6,8 +6,14 @@
 #define SCREEN_TYPE_SPLASH	1
 #define SCREEN_TYPE_TITLE	2
 #define SCREEN_TYPE_INTRO	3
-#define SCREEN_TYPE_READY	4
-#define SCREEN_TYPE_PLAY	5
+#define SCREEN_TYPE_LEVEL	4
+#define SCREEN_TYPE_NUMBER	5
+#define SCREEN_TYPE_READY	6
+#define SCREEN_TYPE_PLAY	7
+#define SCREEN_TYPE_QUIZ	8
+#define SCREEN_TYPE_SCORE	9
+#define SCREEN_TYPE_OVER	10
+#define SCREEN_TYPE_CREDIT	11
 
 enum
 {
@@ -15,8 +21,14 @@ enum
 	screen_type_splash,	// 1
 	screen_type_title,	// 2
 	screen_type_intro,	// 3
-	screen_type_ready,	// 4
-	screen_type_play,	// 5
+	screen_type_level,	// 4
+	screen_type_number,	// 5
+	screen_type_ready,	// 6
+	screen_type_play,	// 7
+	screen_type_quiz,	// 8
+	screen_type_score,	// 9
+	screen_type_over,	// 10
+	screen_type_credit,	// 11
 } enum_curr_screen_type, enum_next_screen_type;
 
 

@@ -13,9 +13,6 @@ void custom_load_content();
 void (*load_method[MAX_STATES])();
 void (*update_method[MAX_STATES])(unsigned char *screen_type, const unsigned int curr_joypad1, const unsigned int prev_joypad1);
 
-void custom_screen_manager_load(unsigned char screen_type);
-void custom_screen_manager_update(unsigned char *screen_type, const unsigned int curr_joypad1, const unsigned int prev_joypad1);
-
 void main( void )
 {
 	// Must be static to persist values!
@@ -37,7 +34,7 @@ void main( void )
 	custom_load_content();
 
 	enum_curr_screen_type = SCREEN_TYPE_NONE;
-	enum_next_screen_type = SCREEN_TYPE_SPLASH;
+	enum_next_screen_type = SCREEN_TYPE_CREDIT;
 	//enum_next_screen_type = SCREEN_TYPE_PLAY;
 	//enum_next_screen_type = SCREEN_TYPE_INTRO;
 
@@ -91,13 +88,32 @@ void main( void )
 
 void custom_initialize()
 {
+	// Set load methods
 	load_method[screen_type_splash] = screen_splash_screen_load;
 	load_method[screen_type_title] = screen_title_screen_load;
 	load_method[screen_type_intro] = screen_intro_screen_load;
+	load_method[screen_type_level] = screen_level_screen_load;
+	load_method[screen_type_number] = screen_number_screen_load;
+	load_method[screen_type_ready] = screen_ready_screen_load;
+	load_method[screen_type_play] = screen_play_screen_load;
+	load_method[screen_type_quiz] = screen_quiz_screen_load;
+	load_method[screen_type_score] = screen_score_screen_load;
+	load_method[screen_type_over] = screen_over_screen_load;
+	load_method[screen_type_credit] = screen_credit_screen_load;
 
+
+	// Set update methods
 	update_method[screen_type_splash] = screen_splash_screen_update;
 	update_method[screen_type_title] = screen_title_screen_update;
 	update_method[screen_type_intro] = screen_intro_screen_update;
+	update_method[screen_type_level] = screen_level_screen_update;
+	update_method[screen_type_number] = screen_number_screen_update;
+	update_method[screen_type_ready] = screen_ready_screen_update;
+	update_method[screen_type_play] = screen_play_screen_update;
+	update_method[screen_type_quiz] = screen_quiz_screen_update;
+	update_method[screen_type_score] = screen_score_screen_update;
+	update_method[screen_type_over] = screen_over_screen_update;
+	update_method[screen_type_credit] = screen_credit_screen_update;
 
 	engine_hack_manager_init();
 	engine_hack_manager_invert();
@@ -109,50 +125,6 @@ void custom_initialize()
 
 void custom_load_content()
 {
-}
-
-void custom_screen_manager_load(unsigned char screen_type)
-{
-	switch (screen_type)
-	{
-	case screen_type_splash:
-		screen_splash_screen_load();
-		break;
-	case screen_type_title:
-		screen_title_screen_load();
-		break;
-	case screen_type_intro:
-		screen_intro_screen_load();
-		break;
-	case screen_type_ready:
-		screen_ready_screen_load();
-		break;
-	case screen_type_play:
-		screen_play_screen_load();
-		break;
-	}
-}
-
-void custom_screen_manager_update(unsigned char *screen_type, const unsigned int curr_joypad1, const unsigned int prev_joypad1)
-{
-	switch (*screen_type)
-	{
-	case SCREEN_TYPE_SPLASH:
-		screen_splash_screen_update(screen_type, curr_joypad1, prev_joypad1);
-		break;
-	case SCREEN_TYPE_TITLE:
-		screen_title_screen_update(screen_type, curr_joypad1, prev_joypad1);
-		break;
-	case SCREEN_TYPE_INTRO:
-		screen_intro_screen_update(screen_type, curr_joypad1, prev_joypad1);
-		break;
-	case SCREEN_TYPE_READY:
-		screen_ready_screen_update(screen_type, curr_joypad1, prev_joypad1);
-		break;
-	case SCREEN_TYPE_PLAY:
-		screen_play_screen_update(screen_type, curr_joypad1, prev_joypad1);
-		break;
-	}
 }
 
 SMS_EMBED_SEGA_ROM_HEADER(9999, 0);

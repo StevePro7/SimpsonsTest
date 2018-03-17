@@ -10,7 +10,9 @@ void screen_splash_screen_load()
 	screen_splash_screen_delay = SPLASH_DELAY;
 
 	SMS_displayOff();
-	engine_content_manager_splash();
+	//engine_content_manager_splash();
+	engine_font_manager_draw_text(LOCALE_BLANK, 2, 2);
+	engine_font_manager_draw_text("SPLASH", 2, 2);
 	SMS_displayOn();
 }
 
@@ -32,7 +34,6 @@ void screen_splash_screen_update(unsigned char *screen_type, unsigned int curr_j
 	if (level)
 	{
 		*screen_type = SCREEN_TYPE_TITLE;
-		//*screen_type = SCREEN_TYPE_SPLASH;
 	}
 }
 

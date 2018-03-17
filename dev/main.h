@@ -27,9 +27,14 @@
 #include "screen\splash_screen.h"
 #include "screen\title_screen.h"
 #include "screen\intro_screen.h"
+#include "screen\level_screen.h"
+#include "screen\number_screen.h"
 #include "screen\ready_screen.h"
 #include "screen\play_screen.h"
-//#include "screen\quiz_screen.h"
+#include "screen\quiz_screen.h"
+#include "screen\score_screen.h"
+#include "screen\over_screen.h"
+#include "screen\credit_screen.h"
 
 //_QUIZ_MANAGER_H_
 unsigned char quiz_number;
