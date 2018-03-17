@@ -5,7 +5,7 @@
 #define SELECT_Y		60
 #define SELECT_DELTA	32
 
-extern unsigned char select_choice;
+extern unsigned char select_choice, select_height;
 extern unsigned char select_option[MAX_OPTIONS];
 
 void engine_select_manager_init()
@@ -17,6 +17,26 @@ void engine_select_manager_init()
 	}
 
 	select_choice = 0;
+	select_height = select_option[select_choice];
+}
+
+void engine_select_manager_moveup()
+{
+	if(0 == select_choice)
+	{
+		select_choice = 3;
+	}
+	else
+	{
+		select_choice--;
+	}
+
+	select_height = select_option[select_choice];
+}
+
+void engine_select_manager_draw()
+{
+	engine_sprite_manager_draw_select(SELECT_X, select_height);
 }
 
 #endif//_SELECT_MANAGER_H_

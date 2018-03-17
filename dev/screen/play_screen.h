@@ -14,7 +14,7 @@ void screen_play_screen_load()
 	
 	engine_quiz_manager_base();
 	engine_quiz_manager_bank(2);
-	//engine_quiz_manager_load(1);
+	engine_quiz_manager_load(1);
 
 	
 	SMS_displayOn();
@@ -36,11 +36,12 @@ void screen_play_screen_update(unsigned char *screen_type, unsigned int curr_joy
 	engine_sprite_manager_draw_cross(80, 150);
 	*/
 
-	/*if ((curr_joypad1 & PORT_A_KEY_1 && !(prev_joypad1 & PORT_A_KEY_1)) ||
-		(curr_joypad1 & PORT_A_KEY_2 && !(prev_joypad1 & PORT_A_KEY_2)))
+	if (curr_joypad1 & PORT_A_KEY_UP && !(prev_joypad1 & PORT_A_KEY_UP))
 	{
-	}*/
+		engine_select_manager_moveup();
+	}
 
+	engine_select_manager_draw();
 	*screen_type = SCREEN_TYPE_PLAY;
 }
 
