@@ -13,6 +13,13 @@
 #define OPTC_Y	17
 #define OPTD_Y	21
 
+extern unsigned char quiz_number;
+
+void engine_quiz_manager_init()
+{
+	quiz_number = 0;
+}
+
 void engine_quiz_manager_base()
 {
 	engine_font_manager_draw_text(LOCALE_QUESTION, QUIZ_X, TITLE_Y);
@@ -29,7 +36,7 @@ void engine_quiz_manager_bank(unsigned char b)
 	SMS_mapROMBank(b);
 }
 
-void engine_quiz_manager_load(unsigned char q)
+void engine_quiz_manager_load_all(unsigned char q)
 {
 	// Question.
 	engine_font_manager_draw_text(bank2_quiz_line1[q], QUIZ_X, QUIZ_Y + 0);
@@ -55,6 +62,11 @@ void engine_quiz_manager_load(unsigned char q)
 	engine_font_manager_draw_text(bank2_optD_line1[q], OPTN_X, OPTD_Y + 0);
 	engine_font_manager_draw_text(bank2_optD_line2[q], OPTN_X, OPTD_Y + 1);
 	engine_font_manager_draw_text(bank2_optD_line3[q], OPTN_X, OPTD_Y + 2);
+}
+
+void engine_quiz_manager_load()
+{
+	engine_quiz_manager_load_all(quiz_number);
 }
 
 #endif//_QUIZ_MANAGER_H_

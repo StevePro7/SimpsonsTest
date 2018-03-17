@@ -29,7 +29,10 @@
 #include "screen\play_screen.h"
 //#include "screen\quiz_screen.h"
 
-//_SCORE MANAGER_H_
+//_QUIZ_MANAGER_H_
+unsigned char quiz_number;
+
+//_SCORE_MANAGER_H_
 unsigned char score_player;
 
 //_SELECT_MANAGER_H_

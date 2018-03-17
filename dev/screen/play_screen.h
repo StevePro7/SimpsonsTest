@@ -6,14 +6,16 @@ extern unsigned char play_answer_state;
 void screen_play_screen_load()
 {
 	SMS_displayOff();
+
+	// Load full screen image here!
 	engine_content_manager_load_maggie();
 	SMS_setSpritePaletteColor(0, RGB(3,3,3));
 
 	engine_quiz_manager_base();
 	engine_quiz_manager_bank(2);
-	engine_quiz_manager_load(0);
-
+	engine_quiz_manager_load();
 	engine_score_manager_draw();
+
 	play_answer_state = ANSWER_TYPE_SELECT;
 	SMS_displayOn();
 }
@@ -33,6 +35,7 @@ void screen_play_screen_update(unsigned char *screen_type, unsigned int curr_joy
 		{
 			engine_select_manager_movedown();
 		}
+
 
 		// REMOVE - used for testing
 		if (curr_joypad1 & PORT_A_KEY_1 && !(prev_joypad1 & PORT_A_KEY_1))
