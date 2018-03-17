@@ -16,7 +16,7 @@ void screen_play_screen_load()
 	
 	engine_quiz_manager_base();
 	engine_quiz_manager_bank(2);
-	engine_quiz_manager_load(1);
+	engine_quiz_manager_load(0);
 
 	play_answer_state = ANSWER_TYPE_SELECT;
 	SMS_displayOn();

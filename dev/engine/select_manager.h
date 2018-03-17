@@ -25,7 +25,7 @@ void engine_select_manager_moveup()
 {
 	if(0 == select_choice)
 	{
-		select_choice = 3;
+		select_choice = (MAX_OPTIONS - 1);
 	}
 	else
 	{
@@ -37,7 +37,7 @@ void engine_select_manager_moveup()
 
 void engine_select_manager_movedown()
 {
-	if(3 == select_choice)
+	if((MAX_OPTIONS - 1) == select_choice)
 	{
 		select_choice = 0;
 	}
