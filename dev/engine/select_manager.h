@@ -1,6 +1,7 @@
 #ifndef _SELECT_MANAGER_H_
 #define _SELECT_MANAGER_H_
 
+#define ANSWER_X		0
 #define SELECT_X		4
 #define SELECT_Y		60
 #define SELECT_DELTA	32
@@ -48,9 +49,16 @@ void engine_select_manager_movedown()
 	select_height = select_option[select_choice];
 }
 
-void engine_select_manager_draw()
+void engine_select_manager_draw_select()
 {
 	engine_sprite_manager_draw_select(SELECT_X, select_height);
 }
-
+void engine_select_manager_draw_right()
+{
+	engine_sprite_manager_draw_right(ANSWER_X, select_height);
+}
+void engine_select_manager_draw_wrong()
+{
+	engine_sprite_manager_draw_wrong(ANSWER_X, select_height);
+}
 #endif//_SELECT_MANAGER_H_

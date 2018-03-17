@@ -38,4 +38,7 @@ unsigned int screen_bases_screen_count, screen_bases_screen_timer;
 //_SPLASH_SCREEN_H_
 unsigned char screen_splash_screen_delay;
 
+//_PLAY_SCREEN_H_
+unsigned char play_answer_state;
+
 #endif//__MAIN__

@@ -19,4 +19,17 @@ enum
 	screen_type_play,	// 5
 } enum_curr_screen_type, enum_next_screen_type;
 
+
+// Select type.
+#define ANSWER_TYPE_SELECT	0
+#define ANSWER_TYPE_RIGHT	1
+#define ANSWER_TYPE_WRONG	2
+
+enum
+{
+	answer_type_select,	// 0
+	answer_type_right,	// 1
+	answer_type_wrong,	// 2
+} enum_select_answer_type;
+
 #endif//_ENUM_MANAGER_H_

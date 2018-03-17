@@ -1,6 +1,8 @@
 #ifndef _PLAY_SCREEN_H_
 #define _PLAY_SCREEN_H_
 
+extern unsigned char play_answer_state;
+
 void screen_play_screen_load()
 {
 	SMS_displayOff();
@@ -16,7 +18,7 @@ void screen_play_screen_load()
 	engine_quiz_manager_bank(2);
 	engine_quiz_manager_load(1);
 
-	
+	play_answer_state = ANSWER_TYPE_SELECT;
 	SMS_displayOn();
 }
 
@@ -25,27 +27,41 @@ void screen_play_screen_update(unsigned char *screen_type, unsigned int curr_joy
 	unsigned int bob = curr_joypad1 * 2;
 	unsigned int sgb = prev_joypad1 * 2;
 
-	//engine_sprite_manager_draw_select(4, 60);
-	//engine_sprite_manager_draw_select(4, 92);
-	//engine_sprite_manager_draw_select(4, 124);
-	//engine_sprite_manager_draw_select(4, 156);
-
-
-	/*
-	engine_sprite_manager_draw_tick(80, 100);
-	engine_sprite_manager_draw_cross(80, 150);
-	*/
-
-	if (curr_joypad1 & PORT_A_KEY_UP && !(prev_joypad1 & PORT_A_KEY_UP))
+	if(ANSWER_TYPE_SELECT == play_answer_state)
 	{
-		engine_select_manager_moveup();
-	}
-	if (curr_joypad1 & PORT_A_KEY_DOWN && !(prev_joypad1 & PORT_A_KEY_DOWN))
-	{
-		engine_select_manager_movedown();
+		if (curr_joypad1 & PORT_A_KEY_UP && !(prev_joypad1 & PORT_A_KEY_UP))
+		{
+			engine_select_manager_moveup();
+		}
+		if (curr_joypad1 & PORT_A_KEY_DOWN && !(prev_joypad1 & PORT_A_KEY_DOWN))
+		{
+			engine_select_manager_movedown();
+		}
+
+		// REMOVE - used for testing
+		if (curr_joypad1 & PORT_A_KEY_1 && !(prev_joypad1 & PORT_A_KEY_1))
+		{
+			play_answer_state = ANSWER_TYPE_RIGHT;
+		}
+		if (curr_joypad1 & PORT_A_KEY_2 && !(prev_joypad1 & PORT_A_KEY_2))
+		{
+			play_answer_state = ANSWER_TYPE_WRONG;
+		}
+		// REMOVE - used for testing
+
+
+		engine_select_manager_draw_select();
 	}
 
-	engine_select_manager_draw();
+	if(ANSWER_TYPE_RIGHT == play_answer_state)
+	{
+		engine_select_manager_draw_right();
+	}
+	if(ANSWER_TYPE_WRONG == play_answer_state)
+	{
+		engine_select_manager_draw_wrong();
+	}
+
 	*screen_type = SCREEN_TYPE_PLAY;
 }
 
