@@ -41,10 +41,12 @@ void screen_play_screen_update(unsigned char *screen_type, unsigned int curr_joy
 		if (curr_joypad1 & PORT_A_KEY_1 && !(prev_joypad1 & PORT_A_KEY_1))
 		{
 			play_answer_state = ANSWER_TYPE_RIGHT;
+			engine_audio_manager_sound_right();
 		}
 		if (curr_joypad1 & PORT_A_KEY_2 && !(prev_joypad1 & PORT_A_KEY_2))
 		{
 			play_answer_state = ANSWER_TYPE_WRONG;
+			engine_audio_manager_sound_wrong();
 		}
 		// REMOVE - used for testing
 

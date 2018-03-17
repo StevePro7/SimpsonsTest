@@ -31,9 +31,6 @@ void screen_splash_screen_update(unsigned char *screen_type, unsigned int curr_j
 
 	if (level)
 	{
-		//engine_asm_manager_clear_VRAM();
-		//engine_content_manager_load();
-
 		//*screen_type = SCREEN_TYPE_TITLE;
 		*screen_type = SCREEN_TYPE_SPLASH;
 	}
