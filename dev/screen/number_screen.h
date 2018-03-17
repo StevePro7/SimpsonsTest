@@ -3,8 +3,11 @@
 
 void screen_number_screen_load()
 {
-	engine_font_manager_draw_text(LOCALE_BLANK, 2, 2);
-	engine_font_manager_draw_text("NUMBER", 2, 2);
+	if( hacker_debug )
+	{
+		engine_font_manager_draw_text( "      ", 2, 21 );
+		engine_font_manager_draw_text( "NUMBER", 2, 21 );
+	}
 }
 
 void screen_number_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
@@ -18,7 +21,10 @@ void screen_number_screen_update(unsigned char *screen_type, unsigned int curr_j
 
 	if (level)
 	{
-		*screen_type = SCREEN_TYPE_OVER;
+		engine_audio_manager_stop_music();
+		//*screen_type = SCREEN_TYPE_INTRO;
+		//*screen_type = SCREEN_TYPE_READY;
+		*screen_type = SCREEN_TYPE_PLAY;
 	}
 }
 

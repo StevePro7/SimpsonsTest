@@ -4,18 +4,16 @@
 void screen_title_screen_load()
 {
 	SMS_displayOff();
-	//engine_content_manager_load_font();
-	engine_content_manager_load_sprites();
-	//engine_content_manager_title();
+	//engine_content_manager_load_sprites();
+	engine_content_manager_title();
 	SMS_setSpritePaletteColor(0, RGB(3,3,3));
 
-	//engine_font_manager_draw_text("A.SIMPLE", 2, 9);
-	//engine_font_manager_draw_text("> EASY", 2, 13);
-	//engine_font_manager_draw_text("> HARD", 2, 17);
-	//engine_font_manager_draw_text("D.INSANE", 2, 21);
-	
-	engine_font_manager_draw_text(LOCALE_BLANK, 2, 2);
-	engine_font_manager_draw_text("TITLE", 2, 2);
+	engine_audio_manager_start_music();
+	if( hacker_debug )
+	{
+		engine_font_manager_draw_text("      ", 2, 21);
+		engine_font_manager_draw_text("TITLE", 2, 21);
+	}
 
 	SMS_displayOn();
 }

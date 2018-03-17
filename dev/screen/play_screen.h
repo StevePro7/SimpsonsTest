@@ -8,6 +8,7 @@ void screen_play_screen_load()
 	SMS_displayOff();
 
 	// Load full screen image here!
+	engine_content_manager_load_sprites();
 	engine_content_manager_load_maggie();
 	SMS_setSpritePaletteColor(0, RGB(3,3,3));
 

@@ -10,9 +10,7 @@ void screen_splash_screen_load()
 	screen_splash_screen_delay = SPLASH_DELAY;
 
 	SMS_displayOff();
-	//engine_content_manager_splash();
-	engine_font_manager_draw_text(LOCALE_BLANK, 2, 2);
-	engine_font_manager_draw_text("SPLASH", 2, 2);
+	engine_content_manager_splash();
 	SMS_displayOn();
 }
 

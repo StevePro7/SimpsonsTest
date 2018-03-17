@@ -34,7 +34,7 @@ void main( void )
 	custom_load_content();
 
 	enum_curr_screen_type = SCREEN_TYPE_NONE;
-	enum_next_screen_type = SCREEN_TYPE_CREDIT;
+	enum_next_screen_type = SCREEN_TYPE_SPLASH;
 	//enum_next_screen_type = SCREEN_TYPE_PLAY;
 	//enum_next_screen_type = SCREEN_TYPE_INTRO;
 
