@@ -1,8 +1,60 @@
-extern const unsigned char	Bart__palette__bin[4][7];
+extern const unsigned char bank2_quiz_line1[2][31];
+#define				bank2_quiz_line1_size 62
+#define				bank2_quiz_line1_bank 2
 
-extern const unsigned char	Bart_OptionA[4][3];
+extern const unsigned char bank2_quiz_line2[2][31];
+#define				bank2_quiz_line2_size 62
+#define				bank2_quiz_line2_bank 2
 
-extern const unsigned char	Bart_OptionB[4][3];
+extern const unsigned char bank2_quiz_line3[2][31];
+#define				bank2_quiz_line3_size 62
+#define				bank2_quiz_line3_bank 2
 
-// 8-bit number
-extern const unsigned char Bart_Answer[4];
+extern const unsigned char bank2_optA_line1;[2][18];
+#define				bank2_optA_line1;_size 36
+#define				bank2_optA_line1;_bank 2
+
+extern const unsigned char bank2_optA_line2;[2][18];
+#define				bank2_optA_line2;_size 36
+#define				bank2_optA_line2;_bank 2
+
+extern const unsigned char bank2_optA_line3;[2][18];
+#define				bank2_optA_line3;_size 36
+#define				bank2_optA_line3;_bank 2
+
+extern const unsigned char bank2_optB_line1;[2][18];
+#define				bank2_optB_line1;_size 36
+#define				bank2_optB_line1;_bank 2
+
+extern const unsigned char bank2_optB_line2;[2][18];
+#define				bank2_optB_line2;_size 36
+#define				bank2_optB_line2;_bank 2
+
+extern const unsigned char bank2_optB_line3;[2][18];
+#define				bank2_optB_line3;_size 36
+#define				bank2_optB_line3;_bank 2
+
+extern const unsigned char bank2_optC_line1;[2][18];
+#define				bank2_optC_line1;_size 36
+#define				bank2_optC_line1;_bank 2
+
+extern const unsigned char bank2_optC_line2;[2][18];
+#define				bank2_optC_line2;_size 36
+#define				bank2_optC_line2;_bank 2
+
+extern const unsigned char bank2_optC_line3;[2][18];
+#define				bank2_optC_line3;_size 36
+#define				bank2_optC_line3;_bank 2
+
+extern const unsigned char bank2_optD_line1;[2][18];
+#define				bank2_optD_line1;_size 36
+#define				bank2_optD_line1;_bank 2
+
+extern const unsigned char bank2_optD_line2;[2][18];
+#define				bank2_optD_line2;_size 36
+#define				bank2_optD_line2;_bank 2
+
+extern const unsigned char bank2_optD_line3;[2][18];
+#define				bank2_optD_line3;_size 36
+#define				bank2_optD_line3;_bank 2
+

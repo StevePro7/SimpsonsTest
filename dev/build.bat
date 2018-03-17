@@ -11,7 +11,7 @@ REM bmp2tile.exe raw\select.png -savetiles "select (tiles).psgcompr" -noremovedu
 
 REM echo Build gfx.c and gfx.h from gfx folder
 folder2c ..\gfx gfx
-REM folder2c ..\psg psg
+folder2c ..\psg psg
 
 REM echo Build gfx
 sdcc -c -mz80 --opt-code-speed --peep-file peep-rules.txt --std-c99 gfx.c

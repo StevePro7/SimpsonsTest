@@ -9,8 +9,8 @@ void screen_intro_screen_load()
 	engine_content_manager_title();
 	SMS_setSpritePaletteColor(0, RGB(3,3,3));
 
-	engine_font_manager_draw_text("PRESS", 2, 14);
-	engine_font_manager_draw_text("START", 2, 16);
+	engine_font_manager_draw_text("PRESS", 2, 16);
+	engine_font_manager_draw_text("START", 2, 17);
 	
 	//if (hacker_music)
 	//{
