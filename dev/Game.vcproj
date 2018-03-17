@@ -220,6 +220,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\engine\quiz_manager.h"
+					>
+				</File>
+				<File
 					RelativePath=".\engine\sprite_manager.h"
 					>
 				</File>
