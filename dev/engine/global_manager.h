@@ -3,8 +3,8 @@
 
 // Content.
 #define MUSIC_PSG			music_psg
-#define SOUND1_PSG			sound1_psg
-#define SOUND2_PSG			sound2_psg
+#define SOUND1_PSG			sfx_right_psg
+#define SOUND2_PSG			sfx_wrong_psg
 
 // Sprites.
 #define SPRITE_TILES		64
