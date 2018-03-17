@@ -192,6 +192,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\engine\audio_manager.h"
+					>
+				</File>
+				<File
 					RelativePath=".\engine\content_manager.h"
 					>
 				</File>
