@@ -7,10 +7,21 @@ Symbol Table
     .__.ABS.                                                    =  0000 G
     .__.CPU.                                                    =  0000 L
     .__.H$L.                                                    =  0000 L
-  7 _Lisa_Answer                                                   0034 GR
-  7 _Lisa_OptionA                                                  001C GR
-  7 _Lisa_OptionB                                                  0028 GR
-  7 _Lisa__palette__bin                                            0000 GR
+  7 _bank3_opt1_line1                                              122A GR
+  7 _bank3_opt1_line2                                              15AE GR
+  7 _bank3_opt1_line3                                              1932 GR
+  7 _bank3_opt2_line1                                              1CB6 GR
+  7 _bank3_opt2_line2                                              203A GR
+  7 _bank3_opt2_line3                                              23BE GR
+  7 _bank3_opt3_line1                                              2742 GR
+  7 _bank3_opt3_line2                                              2AC6 GR
+  7 _bank3_opt3_line3                                              2E4A GR
+  7 _bank3_opt4_line1                                              31CE GR
+  7 _bank3_opt4_line2                                              3552 GR
+  7 _bank3_opt4_line3                                              38D6 GR
+  7 _bank3_quiz_line1                                              0000 GR
+  7 _bank3_quiz_line2                                              060E GR
+  7 _bank3_quiz_line3                                              0C1C GR
 
 
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 2.
@@ -25,7 +36,7 @@ Area Table
    4 _HOME                                      size    0   flags    0
    5 _GSINIT                                    size    0   flags    0
    6 _GSFINAL                                   size    0   flags    0
-   7 _BANK3                                     size   38   flags    0
+   7 _BANK3                                     size 3C5A   flags    0
    8 _INITIALIZER                               size    0   flags    0
    9 _CABS                                      size    0   flags    8
 

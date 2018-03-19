@@ -23,10 +23,10 @@ REM sdcc -c -mz80 --opt-code-speed --peep-file peep-rules.txt --std-c99 psg.c
 REM if %errorlevel% NEQ 0 goto :EOF
 
 REM echo Build banks
-REM cd banks
-REM sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK2 bank2.c
-REM sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK3 bank3.c
-REM cd ..
+cd banks
+sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK2 bank2.c
+sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK3 bank3.c
+cd ..
 
 REM echo Build main
 sdcc -c -mz80 --opt-code-speed --peep-file peep-rules.txt --std-c99 main.c
