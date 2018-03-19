@@ -15,12 +15,12 @@ REM folder2c ..\gfx gfx
 REM folder2c ..\psg psg
 
 REM echo Build gfx
-sdcc -c -mz80 --opt-code-speed --peep-file peep-rules.txt --std-c99 gfx.c
-if %errorlevel% NEQ 0 goto :EOF
+REM sdcc -c -mz80 --opt-code-speed --peep-file peep-rules.txt --std-c99 gfx.c
+REM if %errorlevel% NEQ 0 goto :EOF
 
 REM echo Build psg
 REM sdcc -c -mz80 --opt-code-speed --peep-file peep-rules.txt --std-c99 psg.c
-if %errorlevel% NEQ 0 goto :EOF
+REM if %errorlevel% NEQ 0 goto :EOF
 
 REM echo Build banks
 REM cd banks

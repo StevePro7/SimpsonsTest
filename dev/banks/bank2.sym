@@ -1,0 +1,42 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 1.
+Hexadecimal [16-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =  2710 L
+    .__.ABS.                                                    =  0000 G
+    .__.CPU.                                                    =  0000 L
+    .__.H$L.                                                    =  0000 L
+  7 _bank2_opt1_line1                                              00BA GR
+  7 _bank2_opt1_line2                                              00DE GR
+  7 _bank2_opt1_line3                                              0102 GR
+  7 _bank2_opt2_line1                                              0126 GR
+  7 _bank2_opt2_line2                                              014A GR
+  7 _bank2_opt2_line3                                              016E GR
+  7 _bank2_opt3_line1                                              0192 GR
+  7 _bank2_opt3_line2                                              01B6 GR
+  7 _bank2_opt3_line3                                              01DA GR
+  7 _bank2_opt4_line1                                              01FE GR
+  7 _bank2_opt4_line2                                              0222 GR
+  7 _bank2_opt4_line3                                              0246 GR
+  7 _bank2_quiz_line1                                              0000 GR
+  7 _bank2_quiz_line2                                              003E GR
+  7 _bank2_quiz_line3                                              007C GR
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 2.
+Hexadecimal [16-Bits]
+
+Area Table
+
+   0 _CODE                                      size    0   flags    0
+   1 _DATA                                      size    0   flags    0
+   2 _INITIALIZED                               size    0   flags    0
+   3 _DABS                                      size    0   flags    8
+   4 _HOME                                      size    0   flags    0
+   5 _GSINIT                                    size    0   flags    0
+   6 _GSFINAL                                   size    0   flags    0
+   7 _BANK2                                     size  26A   flags    0
+   8 _INITIALIZER                               size    0   flags    0
+   9 _CABS                                      size    0   flags    8
+
