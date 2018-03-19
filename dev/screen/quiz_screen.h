@@ -2,6 +2,7 @@
 #define _QUIZ_SCREEN_H_
 
 #define MAX_QUIZ	100
+
 void screen_quiz_screen_load()
 {
 	SMS_displayOff();
