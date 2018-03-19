@@ -38,33 +38,71 @@ void engine_quiz_manager_bank(unsigned char b)
 
 void engine_quiz_manager_load(unsigned char q)
 {
+	unsigned char plat = 1;
+
+	if(q < 50)
+	{
+		engine_quiz_manager_bank(4);
+
+		// Question.
+		engine_font_manager_draw_text(bank4_quiz_line1[q], QUIZ_X, QUIZ_Y + 0);
+		engine_font_manager_draw_text(bank4_quiz_line2[q], QUIZ_X, QUIZ_Y + 1);
+		engine_font_manager_draw_text(bank4_quiz_line3[q], QUIZ_X, QUIZ_Y + 2);
+
+		// Option A.
+		engine_font_manager_draw_text(bank4_opt1_line1[q], OPTN_X, OPTA_Y + 0);
+		engine_font_manager_draw_text(bank4_opt1_line2[q], OPTN_X, OPTA_Y + 1);
+		engine_font_manager_draw_text(bank4_opt1_line3[q], OPTN_X, OPTA_Y + 2);
+
+		// Option B.
+		engine_font_manager_draw_text(bank4_opt2_line1[q], OPTN_X, OPTB_Y + 0);
+		engine_font_manager_draw_text(bank4_opt2_line2[q], OPTN_X, OPTB_Y + 1);
+		engine_font_manager_draw_text(bank4_opt2_line3[q], OPTN_X, OPTB_Y + 2);
+
+		// Option C.
+		engine_font_manager_draw_text(bank4_opt3_line1[q], OPTN_X, OPTC_Y + 0);
+		engine_font_manager_draw_text(bank4_opt3_line2[q], OPTN_X, OPTC_Y + 1);
+		engine_font_manager_draw_text(bank4_opt3_line3[q], OPTN_X, OPTC_Y + 2);
+
+		// Option D.
+		engine_font_manager_draw_text(bank4_opt4_line1[q], OPTN_X, OPTD_Y + 0);
+		engine_font_manager_draw_text(bank4_opt4_line2[q], OPTN_X, OPTD_Y + 1);
+		engine_font_manager_draw_text(bank4_opt4_line3[q], OPTN_X, OPTD_Y + 2);
+	}
+	else
+	{
+		plat = 51;
+		engine_quiz_manager_bank(5);
+		q -= 50;
+
+		// Question.
+		engine_font_manager_draw_text(bank5_quiz_line1[q], QUIZ_X, QUIZ_Y + 0);
+		engine_font_manager_draw_text(bank5_quiz_line2[q], QUIZ_X, QUIZ_Y + 1);
+		engine_font_manager_draw_text(bank5_quiz_line3[q], QUIZ_X, QUIZ_Y + 2);
+
+		// Option A.
+		engine_font_manager_draw_text(bank5_opt1_line1[q], OPTN_X, OPTA_Y + 0);
+		engine_font_manager_draw_text(bank5_opt1_line2[q], OPTN_X, OPTA_Y + 1);
+		engine_font_manager_draw_text(bank5_opt1_line3[q], OPTN_X, OPTA_Y + 2);
+
+		// Option B.
+		engine_font_manager_draw_text(bank5_opt2_line1[q], OPTN_X, OPTB_Y + 0);
+		engine_font_manager_draw_text(bank5_opt2_line2[q], OPTN_X, OPTB_Y + 1);
+		engine_font_manager_draw_text(bank5_opt2_line3[q], OPTN_X, OPTB_Y + 2);
+
+		// Option C.
+		engine_font_manager_draw_text(bank5_opt3_line1[q], OPTN_X, OPTC_Y + 0);
+		engine_font_manager_draw_text(bank5_opt3_line2[q], OPTN_X, OPTC_Y + 1);
+		engine_font_manager_draw_text(bank5_opt3_line3[q], OPTN_X, OPTC_Y + 2);
+
+		// Option D.
+		engine_font_manager_draw_text(bank5_opt4_line1[q], OPTN_X, OPTD_Y + 0);
+		engine_font_manager_draw_text(bank5_opt4_line2[q], OPTN_X, OPTD_Y + 1);
+		engine_font_manager_draw_text(bank5_opt4_line3[q], OPTN_X, OPTD_Y + 2);
+	}
+
 	// Number.
-	engine_font_manager_draw_data_ZERO(q + 51, QUIZ_X + 12, TITLE_Y);		// TODO - logic here is wrong!
-
-	// Question.
-	engine_font_manager_draw_text(bank3_quiz_line1[q], QUIZ_X, QUIZ_Y + 0);
-	engine_font_manager_draw_text(bank3_quiz_line2[q], QUIZ_X, QUIZ_Y + 1);
-	engine_font_manager_draw_text(bank3_quiz_line3[q], QUIZ_X, QUIZ_Y + 2);
-
-	// Option A.
-	engine_font_manager_draw_text(bank3_opt1_line1[q], OPTN_X, OPTA_Y + 0);
-	engine_font_manager_draw_text(bank3_opt1_line2[q], OPTN_X, OPTA_Y + 1);
-	engine_font_manager_draw_text(bank3_opt1_line3[q], OPTN_X, OPTA_Y + 2);
-
-	// Option B.
-	engine_font_manager_draw_text(bank3_opt2_line1[q], OPTN_X, OPTB_Y + 0);
-	engine_font_manager_draw_text(bank3_opt2_line2[q], OPTN_X, OPTB_Y + 1);
-	engine_font_manager_draw_text(bank3_opt2_line3[q], OPTN_X, OPTB_Y + 2);
-
-	// Option C.
-	engine_font_manager_draw_text(bank3_opt3_line1[q], OPTN_X, OPTC_Y + 0);
-	engine_font_manager_draw_text(bank3_opt3_line2[q], OPTN_X, OPTC_Y + 1);
-	engine_font_manager_draw_text(bank3_opt3_line3[q], OPTN_X, OPTC_Y + 2);
-
-	// Option D.
-	engine_font_manager_draw_text(bank3_opt4_line1[q], OPTN_X, OPTD_Y + 0);
-	engine_font_manager_draw_text(bank3_opt4_line2[q], OPTN_X, OPTD_Y + 1);
-	engine_font_manager_draw_text(bank3_opt4_line3[q], OPTN_X, OPTD_Y + 2);
+	engine_font_manager_draw_data_ZERO(q + plat, QUIZ_X + 12, TITLE_Y);		// TODO - logic here is wrong!
 }
 
 //void engine_quiz_manager_load()
