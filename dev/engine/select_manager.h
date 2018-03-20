@@ -21,7 +21,7 @@ void engine_select_manager_init()
 	select_height = select_option[select_choice];
 }
 
-void engine_select_manager_moveup()
+void engine_select_manager_move_up()
 {
 	if(0 == select_choice)
 	{
@@ -35,7 +35,7 @@ void engine_select_manager_moveup()
 	select_height = select_option[select_choice];
 }
 
-void engine_select_manager_movedown()
+void engine_select_manager_move_down()
 {
 	if((MAX_OPTIONS - 1) == select_choice)
 	{

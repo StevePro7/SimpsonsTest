@@ -23,16 +23,13 @@ void screen_quiz_screen_load()
 
 void screen_quiz_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
 {
-	unsigned int bob = curr_joypad1 * 2;
-	unsigned int sgb = prev_joypad1 * 2;
-
 	if (curr_joypad1 & PORT_A_KEY_UP && !(prev_joypad1 & PORT_A_KEY_UP))
 	{
-		engine_select_manager_moveup();
+		engine_select_manager_move_up();
 	}
 	if (curr_joypad1 & PORT_A_KEY_DOWN && !(prev_joypad1 & PORT_A_KEY_DOWN))
 	{
-		engine_select_manager_movedown();
+		engine_select_manager_move_down();
 	}
 
 	if (curr_joypad1 & PORT_A_KEY_LEFT)// && !(prev_joypad1 & PORT_A_KEY_LEFT))

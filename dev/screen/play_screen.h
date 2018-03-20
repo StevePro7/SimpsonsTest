@@ -23,20 +23,19 @@ void screen_play_screen_load()
 
 void screen_play_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
 {
-	unsigned int bob = curr_joypad1 * 2;
-	unsigned int sgb = prev_joypad1 * 2;
-
+	unsigned char input = 0;
 	if(ANSWER_TYPE_SELECT == play_answer_state)
 	{
-		if (curr_joypad1 & PORT_A_KEY_UP && !(prev_joypad1 & PORT_A_KEY_UP))
+		input = engine_input_manager_hold_up(curr_joypad1, prev_joypad1);
+		if (input)
 		{
-			engine_select_manager_moveup();
+			engine_select_manager_move_up();
 		}
-		if (curr_joypad1 & PORT_A_KEY_DOWN && !(prev_joypad1 & PORT_A_KEY_DOWN))
+		input = engine_input_manager_hold_down(curr_joypad1, prev_joypad1);
+		if (input)
 		{
-			engine_select_manager_movedown();
+			engine_select_manager_move_down();
 		}
-
 
 		// REMOVE - used for testing
 		if (curr_joypad1 & PORT_A_KEY_1 && !(prev_joypad1 & PORT_A_KEY_1))
