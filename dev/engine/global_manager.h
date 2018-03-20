@@ -8,7 +8,7 @@
 #define MUSIC_PSG			music_psg
 #define SOUND1_PSG			sfx_right_psg
 #define SOUND2_PSG			sfx_wrong_psg
-#define SOUND3_PSG			sfx_right_psg		//TODO sfx_pause_psg
+#define SOUND3_PSG			sfx_pause_psg
 
 // Sprites.
 #define SPRITE_TILES		64

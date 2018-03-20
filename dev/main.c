@@ -34,25 +34,26 @@ void main( void )
 	custom_load_content();
 
 	enum_curr_screen_type = SCREEN_TYPE_NONE;
-	//enum_next_screen_type = SCREEN_TYPE_SPLASH;
-	enum_next_screen_type = SCREEN_TYPE_PLAY;
+	enum_next_screen_type = SCREEN_TYPE_SPLASH;
+	//enum_next_screen_type = SCREEN_TYPE_PLAY;
 	//enum_next_screen_type = SCREEN_TYPE_QUIZ;
 
 	SMS_displayOn();
 	for (;;)
 	{
-		if (SMS_queryPauseRequested())
+		if( SMS_queryPauseRequested() )
 		{
 			SMS_resetPauseRequest();
 			global_pause = !global_pause;
 			if( global_pause )
 			{
-				engine_font_manager_draw_text(LOCALE_PAUSED, 13, 12);
+				engine_audio_manager_sound_pause();
+				//engine_font_manager_draw_text(LOCALE_PAUSED, 13, 12);
 				PSGSilenceChannels();
 			}
 			else
 			{
-				engine_font_manager_draw_text(LOCALE_RESUME, 13, 12);
+				//engine_font_manager_draw_text(LOCALE_RESUME, 13, 12);
 				PSGRestoreVolumes();
 			}
 		}
@@ -66,14 +67,12 @@ void main( void )
 		{
 			enum_curr_screen_type = enum_next_screen_type;
 			load_method[enum_curr_screen_type]();
-			//custom_screen_manager_load(enum_curr_screen_type);
 		}
 
 		SMS_initSprites();
 
 		curr_joypad1 = SMS_getKeysStatus();
 		update_method[enum_curr_screen_type](&enum_next_screen_type, curr_joypad1, prev_joypad1);
-		//custom_screen_manager_update(&enum_next_screen_type, curr_joypad1, prev_joypad1);
 
 		SMS_finalizeSprites();
 		SMS_waitForVBlank();
