@@ -34,8 +34,8 @@ void main( void )
 	custom_load_content();
 
 	enum_curr_screen_type = SCREEN_TYPE_NONE;
-	//enum_next_screen_type = SCREEN_TYPE_SPLASH;
-	enum_next_screen_type = SCREEN_TYPE_INTRO;
+	enum_next_screen_type = SCREEN_TYPE_SPLASH;
+	//enum_next_screen_type = SCREEN_TYPE_INTRO;
 	//enum_next_screen_type = SCREEN_TYPE_PLAY;
 	//enum_next_screen_type = SCREEN_TYPE_QUIZ;
 
@@ -128,6 +128,7 @@ void custom_initialize()
 	screen_bases_screen_init();
 	screen_splash_screen_init();
 	screen_title_screen_init();
+	screen_intro_screen_init();
 }
 
 void custom_load_content()

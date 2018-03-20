@@ -19,6 +19,9 @@
 
 // Delay.
 #define SPLASH_DELAY		150
+#define TITLE_DELAY			100
+#define INTRO_DELAY			50
+
 #define ENEMY_STD_DELAY		75
 #define ENEMY_MIN_DELAY		25
 

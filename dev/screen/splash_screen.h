@@ -13,6 +13,7 @@ void screen_splash_screen_init()
 void screen_splash_screen_load()
 {
 	SMS_displayOff();
+	screen_bases_screen_init();
 	engine_content_manager_splash();
 	SMS_displayOn();
 }
@@ -33,7 +34,6 @@ void screen_splash_screen_update(unsigned char *screen_type, unsigned int curr_j
 	{
 		*screen_type = SCREEN_TYPE_TITLE;
 	}
-
 }
 
 #endif//_SPLASH_SCREEN_H_

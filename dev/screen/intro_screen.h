@@ -5,9 +5,10 @@ extern unsigned int screen_bases_screen_count;
 extern unsigned int screen_bases_screen_timer;
 extern unsigned char screen_intro_screen_delay;
 
-void screen_title_screen_init()
-{	
-	screen_intro_screen_delay = 50;
+void screen_intro_screen_init()
+{
+	screen_bases_screen_init();
+	screen_intro_screen_delay = INTRO_DELAY;
 }
 
 void screen_intro_screen_load()

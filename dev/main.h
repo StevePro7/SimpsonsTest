@@ -61,6 +61,9 @@ unsigned char screen_splash_screen_delay;
 //_INTRO_SCREEN_H_
 unsigned char screen_intro_screen_delay;
 
+//_INTRO_SCREEN_H_
+unsigned char screen_intro_screen_delay;
+
 //_PLAY_SCREEN_H_
 unsigned char play_answer_state;
 
