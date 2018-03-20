@@ -16,23 +16,28 @@ void screen_splash_screen_load()
 
 void screen_splash_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
 {
-	unsigned char level = 0;
-	if ((curr_joypad1 & PORT_A_KEY_1 && !(prev_joypad1 & PORT_A_KEY_1)) ||
+	unsigned char mover = 0;
+	unsigned char input = 0;
+
+	input = engine_input_manager_hold_fire1(curr_joypad1, prev_joypad1);
+	if( input )
+	{
+		*screen_type = SCREEN_TYPE_TITLE;
+	}
+
+	/*if ((curr_joypad1 & PORT_A_KEY_1 && !(prev_joypad1 & PORT_A_KEY_1)) ||
 		(curr_joypad1 & PORT_A_KEY_2 && !(prev_joypad1 & PORT_A_KEY_2)))
 	{
 		level = 1;
-	}
+	}*/
 
 	screen_bases_screen_timer++;
 	if (screen_bases_screen_timer >= screen_splash_screen_delay)
 	{
-		level = 1;
-	}
-
-	if (level)
-	{
 		*screen_type = SCREEN_TYPE_TITLE;
 	}
+
+	
 }
 
 #endif//_SPLASH_SCREEN_H_
