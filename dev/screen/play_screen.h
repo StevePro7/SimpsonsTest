@@ -24,8 +24,10 @@ void screen_play_screen_load()
 void screen_play_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
 {
 	unsigned char input = 0;
+
 	if(ANSWER_TYPE_SELECT == play_answer_state)
 	{
+		engine_select_manager_draw_select();
 		input = engine_input_manager_hold_up(curr_joypad1, prev_joypad1);
 		if( input )
 		{
@@ -43,18 +45,19 @@ void screen_play_screen_update(unsigned char *screen_type, unsigned int curr_joy
 		if( input )
 		{
 			play_answer_state = ANSWER_TYPE_RIGHT;
+			engine_sprite_manager_hide_select();
 			engine_audio_manager_sound_right();
 		}
 		input = engine_input_manager_hold_fire2(curr_joypad1, prev_joypad1);
 		if( input )
 		{
 			play_answer_state = ANSWER_TYPE_WRONG;
+			engine_sprite_manager_hide_select();
 			engine_audio_manager_sound_wrong();
 		}
 		// REMOVE - used for testing
 
 
-		engine_select_manager_draw_select();
 	}
 
 	if(ANSWER_TYPE_RIGHT == play_answer_state)

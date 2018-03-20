@@ -23,7 +23,6 @@
 #include "engine\sprite_manager.h"
 #include "engine\select_manager.h"
 #include "engine\score_manager.h"
-#include "engine\score_manager.h"
 #include "engine\audio_manager.h"
 #include "engine\input_manager.h"
 #include "engine\asm_manager.h"
