@@ -6,6 +6,7 @@
 #define SELECT_Y		60
 #define SELECT_DELTA	32
 
+extern unsigned char diff_select, long_select, quiz_select;
 extern unsigned char select_choice, select_height;
 extern unsigned char select_option[MAX_OPTIONS];
 
@@ -17,6 +18,7 @@ void engine_select_manager_init()
 		select_option[idx] = SELECT_Y + idx * SELECT_DELTA;
 	}
 
+	diff_select = long_select = quiz_select = 0;
 	select_choice = 0;
 	select_height = select_option[select_choice];
 }

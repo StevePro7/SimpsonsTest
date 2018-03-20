@@ -47,6 +47,7 @@ unsigned char quiz_number;
 unsigned char score_player;
 
 //_SELECT_MANAGER_H_
+unsigned char diff_select, long_select, quiz_select;
 unsigned char select_choice, select_height;
 unsigned char select_option[4];
 

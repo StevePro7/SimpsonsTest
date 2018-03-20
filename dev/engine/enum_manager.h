@@ -44,4 +44,20 @@ enum
 	answer_type_wrong,	// 2
 } enum_select_answer_type;
 
+
+// Difficulty type.
+#define DIFF_TYPE_EASY		0
+#define DIFF_TYPE_NORM		1
+#define DIFF_TYPE_HARD		2
+#define DIFF_TYPE_ARGH		3
+
+enum
+{
+	diff_type_easy,	// 0
+	diff_type_norm,	// 1
+	diff_type_hard,	// 2
+	diff_type_argh,	// 3
+} enum_select_answer_type;
+
+
 #endif//_ENUM_MANAGER_H_

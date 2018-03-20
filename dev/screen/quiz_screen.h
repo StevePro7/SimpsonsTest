@@ -11,10 +11,11 @@ void screen_quiz_screen_load()
 	SMS_setSpritePaletteColor(0, RGB(3,3,3));
 
 	engine_quiz_manager_base();
-	//engine_quiz_manager_bank(5);
+	engine_quiz_manager_bank(diff_select + QUIZ_BANK);
 	engine_quiz_manager_load(0);
 	engine_score_manager_draw();
 
+	engine_font_manager_draw_data(diff_select, 10, 10);
 	//play_answer_state = ANSWER_TYPE_SELECT;
 	SMS_displayOn();
 }

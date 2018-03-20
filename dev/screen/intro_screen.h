@@ -4,9 +4,9 @@
 void screen_intro_screen_load()
 {
 	SMS_displayOff();
-	engine_content_manager_load_font();
+	//engine_content_manager_load_font();
 	//engine_content_manager_load_sprites();
-	engine_content_manager_title();
+	//engine_content_manager_title();
 	//SMS_setSpritePaletteColor(0, RGB(3,3,3));
 
 	/*engine_font_manager_draw_text("PRESS", 2, 16);
@@ -18,7 +18,9 @@ void screen_intro_screen_load()
 		
 	}*/
 
-	engine_font_manager_draw_text( "INTRO", 2, 21 );
+	engine_font_manager_draw_data(diff_select, 10, 10);
+	engine_font_manager_draw_data(long_select, 10, 11);
+	engine_font_manager_draw_data(quiz_select, 10, 12);
 
 	SMS_displayOn();
 }
