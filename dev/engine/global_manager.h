@@ -8,7 +8,7 @@
 #define MUSIC_PSG			music_psg
 #define SOUND1_PSG			sfx_right_psg
 #define SOUND2_PSG			sfx_wrong_psg
-#define SOUND3_PSG			sfx_right_psg		//sfx_pause_psg
+#define SOUND3_PSG			sfx_right_psg		//TODO sfx_pause_psg
 
 // Sprites.
 #define SPRITE_TILES		64
@@ -24,5 +24,8 @@
 
 // Options.
 #define MAX_OPTIONS			4
+
+// Quiz.
+#define MAX_QUIZ			50
 
 #endif//_GLOBAL_MANAGER_H_
