@@ -8,6 +8,10 @@
 #define LOCALE_STEVEPRO1	"STEVEPRO"
 #define LOCALE_STEVEPRO2	"(C) 1984"
 
+#define LOCALE_PRESS		"PRESS"
+#define LOCALE_START		"START"
+#define LOCALE_BLANK5		"     "
+
 #define LOCALE_QUESTION		"QUESTION #"
 #define LOCALE_SCORE		"SCORE"
 #define LOCALE_SPACE		"   "

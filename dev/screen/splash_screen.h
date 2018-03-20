@@ -5,10 +5,13 @@ extern unsigned int screen_bases_screen_count;
 extern unsigned int screen_bases_screen_timer;
 extern unsigned char screen_splash_screen_delay;
 
-void screen_splash_screen_load()
+void screen_splash_screen_init()
 {
 	screen_splash_screen_delay = SPLASH_DELAY;
+}
 
+void screen_splash_screen_load()
+{
 	SMS_displayOff();
 	engine_content_manager_splash();
 	SMS_displayOn();
@@ -25,19 +28,12 @@ void screen_splash_screen_update(unsigned char *screen_type, unsigned int curr_j
 		*screen_type = SCREEN_TYPE_TITLE;
 	}
 
-	/*if ((curr_joypad1 & PORT_A_KEY_1 && !(prev_joypad1 & PORT_A_KEY_1)) ||
-		(curr_joypad1 & PORT_A_KEY_2 && !(prev_joypad1 & PORT_A_KEY_2)))
-	{
-		level = 1;
-	}*/
-
 	screen_bases_screen_timer++;
 	if (screen_bases_screen_timer >= screen_splash_screen_delay)
 	{
 		*screen_type = SCREEN_TYPE_TITLE;
 	}
 
-	
 }
 
 #endif//_SPLASH_SCREEN_H_

@@ -35,9 +35,9 @@ void main( void )
 
 	enum_curr_screen_type = SCREEN_TYPE_NONE;
 	//enum_next_screen_type = SCREEN_TYPE_SPLASH;
-	//enum_next_screen_type = SCREEN_TYPE_INTRO;
+	enum_next_screen_type = SCREEN_TYPE_INTRO;
 	//enum_next_screen_type = SCREEN_TYPE_PLAY;
-	enum_next_screen_type = SCREEN_TYPE_QUIZ;
+	//enum_next_screen_type = SCREEN_TYPE_QUIZ;
 
 	SMS_displayOn();
 	for (;;)
@@ -118,9 +118,16 @@ void custom_initialize()
 	engine_hack_manager_init();
 	engine_hack_manager_invert();
 
+
+	// Initialize other managers.
 	engine_quiz_manager_init();
 	engine_score_manager_init();
 	engine_select_manager_init();
+
+	// Initialize screens.
+	screen_bases_screen_init();
+	screen_splash_screen_init();
+	screen_title_screen_init();
 }
 
 void custom_load_content()

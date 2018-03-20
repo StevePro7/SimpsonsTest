@@ -28,6 +28,7 @@
 #include "engine\input_manager.h"
 #include "engine\asm_manager.h"
 
+#include "screen\bases_screen.h"
 #include "screen\splash_screen.h"
 #include "screen\title_screen.h"
 #include "screen\intro_screen.h"
@@ -56,6 +57,9 @@ unsigned int screen_bases_screen_count, screen_bases_screen_timer;
 
 //_SPLASH_SCREEN_H_
 unsigned char screen_splash_screen_delay;
+
+//_INTRO_SCREEN_H_
+unsigned char screen_intro_screen_delay;
 
 //_PLAY_SCREEN_H_
 unsigned char play_answer_state;

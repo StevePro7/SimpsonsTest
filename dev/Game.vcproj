@@ -248,6 +248,10 @@
 				Name="screen"
 				>
 				<File
+					RelativePath=".\screen\bases_screen.h"
+					>
+				</File>
+				<File
 					RelativePath=".\screen\credit_screen.h"
 					>
 				</File>

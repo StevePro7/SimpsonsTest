@@ -63,4 +63,5 @@ void engine_select_manager_draw_wrong()
 {
 	engine_sprite_manager_draw_wrong(ANSWER_X, select_height);
 }
+
 #endif//_SELECT_MANAGER_H_
