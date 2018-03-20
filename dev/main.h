@@ -18,6 +18,7 @@
 #include "engine\hack_manager.h"
 #include "engine\enum_manager.h"
 #include "engine\content_manager.h"
+#include "engine\image_manager.h"
 #include "engine\font_manager.h"
 #include "engine\quiz_manager.h"
 #include "engine\sprite_manager.h"

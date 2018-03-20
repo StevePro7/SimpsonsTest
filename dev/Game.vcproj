@@ -216,6 +216,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\engine\image_manager.h"
+					>
+				</File>
+				<File
 					RelativePath=".\engine\input_manager.h"
 					>
 				</File>
