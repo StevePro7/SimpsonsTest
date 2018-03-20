@@ -1,8 +1,6 @@
 #ifndef _QUIZ_SCREEN_H_
 #define _QUIZ_SCREEN_H_
 
-#define MAX_QUIZ	100
-
 void screen_quiz_screen_load()
 {
 	SMS_displayOff();
@@ -23,18 +21,25 @@ void screen_quiz_screen_load()
 
 void screen_quiz_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
 {
-	if (curr_joypad1 & PORT_A_KEY_UP && !(prev_joypad1 & PORT_A_KEY_UP))
+	unsigned char input = 0;
+
+	engine_select_manager_draw_select();
+
+	input = engine_input_manager_hold_up(curr_joypad1, prev_joypad1);
+	if( input )
 	{
 		engine_select_manager_move_up();
 	}
-	if (curr_joypad1 & PORT_A_KEY_DOWN && !(prev_joypad1 & PORT_A_KEY_DOWN))
+	input = engine_input_manager_hold_down(curr_joypad1, prev_joypad1);
+	if (input)
 	{
 		engine_select_manager_move_down();
 	}
 
-	if (curr_joypad1 & PORT_A_KEY_LEFT)// && !(prev_joypad1 & PORT_A_KEY_LEFT))
+	input = engine_input_manager_move_left(curr_joypad1);
+	if( input )
 	{
-		if(0 == quiz_number)
+		if( 0 == quiz_number )
 		{
 			return;
 		}
@@ -42,7 +47,8 @@ void screen_quiz_screen_update(unsigned char *screen_type, unsigned int curr_joy
 		quiz_number--;
 		engine_quiz_manager_load(quiz_number);
 	}
-	if (curr_joypad1 & PORT_A_KEY_RIGHT)// && !(prev_joypad1 & PORT_A_KEY_RIGHT))
+	input = engine_input_manager_move_right(curr_joypad1);
+	if( input )
 	{
 		if(MAX_QUIZ-1 == quiz_number)
 		{
@@ -53,7 +59,7 @@ void screen_quiz_screen_update(unsigned char *screen_type, unsigned int curr_joy
 		engine_quiz_manager_load(quiz_number);
 	}
 
-	engine_select_manager_draw_select();
+	
 
 	*screen_type = SCREEN_TYPE_QUIZ;
 }

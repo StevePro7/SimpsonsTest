@@ -4,7 +4,7 @@
 // Private helper method.
 static void engine_sprite_manager_draw(unsigned char x, unsigned char y, unsigned char tile);
 
-// Public methods.
+// Public methods DRAW.
 void engine_sprite_manager_draw_select(unsigned char x, unsigned char y)
 {
 	engine_sprite_manager_draw(x, y, SPRITE_TILES+0);
