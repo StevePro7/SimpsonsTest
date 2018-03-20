@@ -27,7 +27,7 @@ void screen_play_screen_update(unsigned char *screen_type, unsigned int curr_joy
 	if(ANSWER_TYPE_SELECT == play_answer_state)
 	{
 		input = engine_input_manager_hold_up(curr_joypad1, prev_joypad1);
-		if (input)
+		if( input )
 		{
 			engine_select_manager_move_up();
 		}
@@ -37,13 +37,16 @@ void screen_play_screen_update(unsigned char *screen_type, unsigned int curr_joy
 			engine_select_manager_move_down();
 		}
 
+
 		// REMOVE - used for testing
-		if (curr_joypad1 & PORT_A_KEY_1 && !(prev_joypad1 & PORT_A_KEY_1))
+		input = engine_input_manager_hold_fire1(curr_joypad1, prev_joypad1);
+		if( input )
 		{
 			play_answer_state = ANSWER_TYPE_RIGHT;
 			engine_audio_manager_sound_right();
 		}
-		if (curr_joypad1 & PORT_A_KEY_2 && !(prev_joypad1 & PORT_A_KEY_2))
+		input = engine_input_manager_hold_fire2(curr_joypad1, prev_joypad1);
+		if( input )
 		{
 			play_answer_state = ANSWER_TYPE_WRONG;
 			engine_audio_manager_sound_wrong();

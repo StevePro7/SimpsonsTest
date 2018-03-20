@@ -5,6 +5,7 @@
 static unsigned char engine_input_manager_hold(unsigned int data, unsigned int curr_joypad1, unsigned int prev_joypad1);
 static unsigned char engine_input_manager_move(unsigned int data, unsigned int curr_joypad1);
 
+
 // Public methods HOLD.
 unsigned char engine_input_manager_hold_up(unsigned int curr_joypad1, unsigned int prev_joypad1)
 {
