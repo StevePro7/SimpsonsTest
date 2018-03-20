@@ -48,11 +48,11 @@ void main( void )
 			global_pause = !global_pause;
 			if( global_pause )
 			{
-				engine_audio_manager_sound_pause();
+				//engine_audio_manager_sound_pause();
 				//engine_font_manager_draw_text(LOCALE_PAUSED, 13, 12);
 				PSGSilenceChannels();
 			}
-			else
+			elseq
 			{
 				//engine_font_manager_draw_text(LOCALE_RESUME, 13, 12);
 				PSGRestoreVolumes();
@@ -61,6 +61,8 @@ void main( void )
 
 		if (global_pause)
 		{
+			//PSGSFXFrame();
+			SMS_waitForVBlank();
 			continue;
 		}
 
