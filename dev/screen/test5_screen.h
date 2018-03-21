@@ -10,7 +10,7 @@ void screen_test5_screen_init()
 	screen_test5_screen_delay = 100;
 }
 
-void screen_splash_screen_load()
+void screen_test5_screen_load()
 {
 	SMS_displayOff();
 	screen_bases_screen_init();

@@ -15,7 +15,7 @@ void screen_quiz_screen_load()
 	engine_quiz_manager_load(0);
 	engine_score_manager_draw();
 
-	engine_font_manager_draw_data(diff_select, 10, 10);
+	//engine_font_manager_draw_data(diff_select, 10, 10);
 	//play_answer_state = ANSWER_TYPE_SELECT;
 	SMS_displayOn();
 }

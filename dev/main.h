@@ -41,6 +41,12 @@
 #include "screen\over_screen.h"
 #include "screen\credit_screen.h"
 
+#include "screen\test1_screen.h"
+#include "screen\test2_screen.h"
+#include "screen\test3_screen.h"
+#include "screen\test4_screen.h"
+#include "screen\test5_screen.h"
+
 //_QUIZ_MANAGER_H_
 unsigned char quiz_number;
 
@@ -66,5 +72,8 @@ unsigned char screen_intro_screen_delay;
 
 //_PLAY_SCREEN_H_
 unsigned char play_answer_state;
+
+//_TEST_SCREEN_H_
+unsigned char screen_test1_screen_delay, screen_test2_screen_delay, screen_test3_screen_delay, screen_test4_screen_delay, screen_test5_screen_delay;
 
 #endif//__MAIN__

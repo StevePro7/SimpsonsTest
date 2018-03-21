@@ -29,6 +29,6 @@
 #define MAX_OPTIONS			4
 
 // Quiz.
-#define MAX_QUIZ			50
+#define MAX_QUIZ			10		// TODO changed for testing - correct to 50
 
 #endif//_GLOBAL_MANAGER_H_

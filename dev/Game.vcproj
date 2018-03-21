@@ -292,6 +292,26 @@
 					>
 				</File>
 				<File
+					RelativePath=".\screen\test1_screen.h"
+					>
+				</File>
+				<File
+					RelativePath=".\screen\test2_screen.h"
+					>
+				</File>
+				<File
+					RelativePath=".\screen\test3_screen.h"
+					>
+				</File>
+				<File
+					RelativePath=".\screen\test4_screen.h"
+					>
+				</File>
+				<File
+					RelativePath=".\screen\test5_screen.h"
+					>
+				</File>
+				<File
 					RelativePath=".\screen\title_screen.h"
 					>
 				</File>
