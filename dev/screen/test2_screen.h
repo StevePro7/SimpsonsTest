@@ -26,7 +26,15 @@ void screen_test2_screen_load()
 	option3_value = quiz_options[question_value][2];
 	option4_value = quiz_options[question_value][3];
 
-	engine_quiz_manager_load(question_index, question_value, option1_value, option2_value, option3_value, option4_value);
+	engine_font_manager_draw_data(question_index, 15, 0);
+	engine_font_manager_draw_data(question_value, 20, 0);
+
+	engine_font_manager_draw_data(option1_value, 20, 10);
+	engine_font_manager_draw_data(option2_value, 20, 11);
+	engine_font_manager_draw_data(option3_value, 20, 12);
+	engine_font_manager_draw_data(option4_value, 20, 13);
+
+	//engine_quiz_manager_load(question_index, question_value, option1_value, option2_value, option3_value, option4_value);
 }
 
 void screen_test2_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)

@@ -22,7 +22,7 @@ void engine_hack_manager_init()
 
 void engine_hack_manager_invert()
 {
-	//hacker_debug = !hacker_debug;				// TODO take this out
+	hacker_debug = !hacker_debug;				// TODO take this out
 
 	hacker_splash = !hacker_splash;
 	hacker_music = !hacker_music;				// TODO uncomment - just for testing

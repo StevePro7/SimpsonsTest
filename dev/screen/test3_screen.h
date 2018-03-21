@@ -7,7 +7,7 @@ extern unsigned char screen_test3_screen_delay;
 
 void screen_test3_screen_init()
 {
-	screen_test3_screen_delay = 100;
+	screen_test3_screen_delay = 10;
 }
 
 void screen_test3_screen_load()
@@ -26,7 +26,10 @@ void screen_test3_screen_update(unsigned char *screen_type, unsigned int curr_jo
 	screen_bases_screen_timer++;
 	if (screen_bases_screen_timer >= screen_test3_screen_delay)
 	{
+		engine_font_manager_draw_data(question_index, 15, 0);
 		question_index++;
+		engine_font_manager_draw_data(question_index, 20, 0);
+
 		*screen_type = SCREEN_TYPE_TEST2;
 		return;
 	}
