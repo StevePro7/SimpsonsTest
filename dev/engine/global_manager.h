@@ -13,10 +13,6 @@
 // Sprites.
 #define SPRITE_TILES		64
 
-// Steps.
-#define GAMER_MAX_STEPS		8
-#define GAMER_STD_STEPS		1
-
 // Delay.
 #define SPLASH_DELAY		150
 #define TITLE_DELAY			100
@@ -25,10 +21,10 @@
 #define ENEMY_STD_DELAY		75
 #define ENEMY_MIN_DELAY		25
 
-// Options.
-#define MAX_OPTIONS			4
-
 // Quiz.
 #define MAX_QUESTIONS		5		// TODO changed for testing - correct to 50
+
+// Options.
+#define MAX_OPTIONS			4
 
 #endif//_GLOBAL_MANAGER_H_

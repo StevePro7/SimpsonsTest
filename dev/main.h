@@ -50,7 +50,7 @@
 #include "screen\test5_screen.h"
 
 //_QUIZ_MANAGER_H_
-unsigned char quiz_number;
+unsigned char quiz_number;		// TODO remove
 unsigned char quiz_questions[MAX_QUESTIONS];
 unsigned char quiz_options[MAX_QUESTIONS][MAX_OPTIONS];
 
@@ -78,6 +78,14 @@ unsigned char screen_intro_screen_delay;
 unsigned char play_answer_state;
 
 //_TEST_SCREEN_H_
-unsigned char screen_test1_screen_delay, screen_test2_screen_delay, screen_test3_screen_delay, screen_test4_screen_delay, screen_test5_screen_delay;
+//unsigned char screen_test1_screen_delay;
+unsigned char screen_test2_screen_delay;
+unsigned char screen_test3_screen_delay;
+unsigned char screen_test4_screen_delay;
+unsigned char screen_test5_screen_delay;
+
+unsigned char question_index, question_count, question_length;
+unsigned char question_value, option1_value, option2_value, option3_value, option4_value;
+unsigned char answer_index, answer_value;
 
 #endif//__MAIN__
