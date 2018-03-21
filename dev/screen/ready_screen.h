@@ -14,7 +14,7 @@ void screen_ready_screen_load()
 	//engine_font_manager_draw_text("> HARD", 2, 17);
 	////engine_font_manager_draw_text("D.INSANE", 2, 21);
 	engine_audio_manager_stop_music();
-	engine_font_manager_draw_text( "READY", 2, 21 );
+	engine_font_manager_draw_text( "READY", 2, 2 );
 	SMS_displayOn();
 }
 

@@ -9,9 +9,9 @@
 #include "psg.h"
 
 #include "banks\bank2.h"
-#include "banks\bank3.h"
-#include "banks\bank4.h"
-#include "banks\bank5.h"
+//#include "banks\bank3.h"
+//#include "banks\bank4.h"
+//#include "banks\bank5.h"
 
 #include "engine\global_manager.h"
 #include "engine\locale_manager.h"

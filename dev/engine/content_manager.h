@@ -7,16 +7,16 @@
 
 void engine_content_manager_splash()
 {
-	SMS_loadPSGaidencompressedTiles(splash__tiles__psgcompr, GRAPHICS_TILES);
+	/*SMS_loadPSGaidencompressedTiles(splash__tiles__psgcompr, GRAPHICS_TILES);
 	SMS_loadSTMcompressedTileMap(0, 0, splash__tilemap__stmcompr);
-	SMS_loadBGPalette(splash__palette__bin);
+	SMS_loadBGPalette(splash__palette__bin);*/
 }
 
 void engine_content_manager_title()
 {
-	SMS_loadPSGaidencompressedTiles(simpsons__tiles__psgcompr, SIMPSONS_TILES);
+	/*SMS_loadPSGaidencompressedTiles(simpsons__tiles__psgcompr, SIMPSONS_TILES);
 	SMS_loadSTMcompressedTileMap(0, 0, simpsons__tilemap__stmcompr);
-	SMS_loadBGPalette(simpsons__palette__bin);
+	SMS_loadBGPalette(simpsons__palette__bin);*/
 }
 
 void engine_content_manager_load_font()
@@ -37,9 +37,9 @@ void engine_content_manager_load_sprites()
 
 void engine_content_manager_load_maggie()
 {
-	SMS_loadPSGaidencompressedTiles(maggie__tiles__psgcompr, GRAPHICS_TILES);
+	/*SMS_loadPSGaidencompressedTiles(maggie__tiles__psgcompr, GRAPHICS_TILES);
 	SMS_loadSTMcompressedTileMap(0, 0, maggie__tilemap__stmcompr);
-	SMS_loadBGPalette(maggie__palette__bin);
+	SMS_loadBGPalette(maggie__palette__bin);*/
 }
 
 #endif//_CONTENT_MANAGER_H_

@@ -31,12 +31,12 @@ REM sdcc -c -mz80 --opt-code-speed --peep-file peep-rules.txt --std-c99 psg.c
 REM if %errorlevel% NEQ 0 goto :EOF
 
 REM echo Build banks
-REM cd banks
+cd banks
 REM sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK2 bank2.c
 REM sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK3 bank3.c
 REM sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK4 bank4.c
 REM sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK5 bank5.c
-REM cd ..
+cd ..
 
 REM echo Build main
 sdcc -c -mz80 --opt-code-speed --peep-file peep-rules.txt --std-c99 main.c
@@ -45,13 +45,18 @@ if %errorlevel% NEQ 0 goto :EOF
 REM echo Linking
 sdcc -o output.ihx --Werror --opt-code-speed -mz80 --no-std-crt0 --data-loc 0xC000 ^
 -Wl-b_BANK2=0x8000 ^
+-Wl-b_BANK3=0x8000 ^
+-Wl-b_BANK4=0x8000 ^
+-Wl-b_BANK5=0x8000 ^
 ..\crt0\crt0_sms.rel ^main.rel ^
 ..\lib\SMSlib.lib ^
 ..\lib\PSGlib.rel ^
 banks\bank2.rel ^
-gfx.rel
-REM gfx.rel ^
-REM psg.rel
+banks\bank3.rel ^
+banks\bank4.rel ^
+banks\bank5.rel ^
+gfx.rel ^
+psg.rel
 
 if %errorlevel% NEQ 0 goto :EOF
 
@@ -60,21 +65,21 @@ ihx2sms output.ihx output.sms
 if %errorlevel% NEQ 0 goto :EOF
 
 REM echo Copy output
-REM copy output.sms ..\asm
-REM copy output.sms ..\Simpsons.sms
+copy output.sms ..\asm
+copy output.sms ..\Simpsons.sms
 
 REM echo Disassemble output
-REM cd ..\asm
-REM smsexamine.exe output.sms
-REM cd ..\dev
+cd ..\asm
+smsexamine.exe output.sms
+cd ..\dev
 
 REM echo Delete
-REM cd banks
+cd banks
 REM del *.asm > nul
 REM del *.lst > nul
 REM del *.rel > nul
 REM del *.sym > nul
-REM cd ..
+cd ..
 
 del *.asm > nul
 del *.ihx > nul
