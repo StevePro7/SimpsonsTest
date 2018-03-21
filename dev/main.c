@@ -153,7 +153,7 @@ void custom_initialize()
 	// TODO - delete
 	screen_test1_screen_init();
 	screen_test2_screen_init();
-	screen_test1_screen_init();
+	screen_test3_screen_init();
 	screen_test4_screen_init();
 	screen_test5_screen_init();
 	// TODO - delete

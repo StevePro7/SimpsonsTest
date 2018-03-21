@@ -26,13 +26,18 @@ void screen_test2_screen_load()
 	option3_value = quiz_options[question_value][2];
 	option4_value = quiz_options[question_value][3];
 
-	engine_quiz_manager_load(question_value, option1_value, option2_value, option3_value, option4_value);
+	engine_quiz_manager_load(question_index, question_value, option1_value, option2_value, option3_value, option4_value);
 }
 
 void screen_test2_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
 {
-	unsigned int test_curr_joypad1 = curr_joypad1;
-	unsigned int test_prev_joypad1 = prev_joypad1;
+	unsigned char input = 0;
+	input = engine_input_manager_hold_fire1(curr_joypad1, prev_joypad1);
+	if( input )
+	{
+		*screen_type = SCREEN_TYPE_TEST3;
+		return;
+	}
 
 	*screen_type = SCREEN_TYPE_TEST2;
 }

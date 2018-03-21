@@ -47,7 +47,7 @@ void engine_quiz_manager_bank(unsigned char b)
 	SMS_mapROMBank(b);
 }
 
-void engine_quiz_manager_load(unsigned char q, unsigned char opt1, unsigned char opt2, unsigned char opt3, unsigned char opt4)
+void engine_quiz_manager_load(unsigned char qi, unsigned char qv, unsigned char opt1, unsigned char opt2, unsigned char opt3, unsigned char opt4)
 {
 	unsigned char opt1_Y, opt2_Y, opt3_Y, opt4_Y;
 
@@ -57,7 +57,7 @@ void engine_quiz_manager_load(unsigned char q, unsigned char opt1, unsigned char
 	opt4_Y = option_height[opt4];
 
 	// Number.
-	engine_font_manager_draw_data_ZERO(q + 1, QUIZ_X + 12, TITLE_Y);
+	engine_font_manager_draw_data_ZERO(qi + 1, QUIZ_X + 12, TITLE_Y);
 
 
 	// TODO remove
@@ -68,33 +68,33 @@ void engine_quiz_manager_load(unsigned char q, unsigned char opt1, unsigned char
 	// TODO remove
 
 
-	//if( DIFF_TYPE_EASY == diff_select )
-	//{
-	//	// Question.
-	//	engine_font_manager_draw_text(bank2_quiz_line1[q], QUIZ_X, QUIZ_Y + 0);
-	//	engine_font_manager_draw_text(bank2_quiz_line2[q], QUIZ_X, QUIZ_Y + 1);
-	//	engine_font_manager_draw_text(bank2_quiz_line3[q], QUIZ_X, QUIZ_Y + 2);
+	if( DIFF_TYPE_EASY == diff_select )
+	{
+		// Question.
+		engine_font_manager_draw_text(bank2_quiz_line1[qv], QUIZ_X, QUIZ_Y + 0);
+		engine_font_manager_draw_text(bank2_quiz_line2[qv], QUIZ_X, QUIZ_Y + 1);
+		engine_font_manager_draw_text(bank2_quiz_line3[qv], QUIZ_X, QUIZ_Y + 2);
 
-	//	// Option A.
-	//	engine_font_manager_draw_text(bank2_opt1_line1[q], OPTN_X, opt1_Y + 0);
-	//	engine_font_manager_draw_text(bank2_opt1_line2[q], OPTN_X, opt1_Y + 1);
-	//	engine_font_manager_draw_text(bank2_opt1_line3[q], OPTN_X, opt1_Y + 2);
+		// Option A.
+		engine_font_manager_draw_text(bank2_opt1_line1[qv], OPTN_X, opt1_Y + 0);
+		engine_font_manager_draw_text(bank2_opt1_line2[qv], OPTN_X, opt1_Y + 1);
+		engine_font_manager_draw_text(bank2_opt1_line3[qv], OPTN_X, opt1_Y + 2);
 
-	//	// Option B.
-	//	engine_font_manager_draw_text(bank2_opt2_line1[q], OPTN_X, opt2_Y + 0);
-	//	engine_font_manager_draw_text(bank2_opt2_line2[q], OPTN_X, opt2_Y + 1);
-	//	engine_font_manager_draw_text(bank2_opt2_line3[q], OPTN_X, opt2_Y + 2);
+		// Option B.
+		engine_font_manager_draw_text(bank2_opt2_line1[qv], OPTN_X, opt2_Y + 0);
+		engine_font_manager_draw_text(bank2_opt2_line2[qv], OPTN_X, opt2_Y + 1);
+		engine_font_manager_draw_text(bank2_opt2_line3[qv], OPTN_X, opt2_Y + 2);
 
-	//	// Option C.
-	//	engine_font_manager_draw_text(bank2_opt3_line1[q], OPTN_X, opt3_Y + 0);
-	//	engine_font_manager_draw_text(bank2_opt3_line2[q], OPTN_X, opt3_Y + 1);
-	//	engine_font_manager_draw_text(bank2_opt3_line3[q], OPTN_X, opt3_Y + 2);
+		// Option C.
+		engine_font_manager_draw_text(bank2_opt3_line1[qv], OPTN_X, opt3_Y + 0);
+		engine_font_manager_draw_text(bank2_opt3_line2[qv], OPTN_X, opt3_Y + 1);
+		engine_font_manager_draw_text(bank2_opt3_line3[qv], OPTN_X, opt3_Y + 2);
 
-	//	// Option D.
-	//	engine_font_manager_draw_text(bank2_opt4_line1[q], OPTN_X, opt4_Y + 0);
-	//	engine_font_manager_draw_text(bank2_opt4_line2[q], OPTN_X, opt4_Y + 1);
-	//	engine_font_manager_draw_text(bank2_opt4_line3[q], OPTN_X, opt4_Y + 2);
-	//}
+		// Option D.
+		engine_font_manager_draw_text(bank2_opt4_line1[qv], OPTN_X, opt4_Y + 0);
+		engine_font_manager_draw_text(bank2_opt4_line2[qv], OPTN_X, opt4_Y + 1);
+		engine_font_manager_draw_text(bank2_opt4_line3[qv], OPTN_X, opt4_Y + 2);
+	}
 }
 
 void engine_quiz_manager_loadX(unsigned char q)
@@ -211,7 +211,6 @@ void engine_quiz_manager_loadX(unsigned char q)
 	// Number.
 	engine_font_manager_draw_data_ZERO(q + 1, QUIZ_X + 12, TITLE_Y);		// TODO - logic here is wrong!
 }
-
 
 unsigned char engine_quiz_manager_answer(unsigned char q)
 {

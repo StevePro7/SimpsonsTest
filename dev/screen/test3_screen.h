@@ -12,6 +12,9 @@ void screen_test3_screen_init()
 
 void screen_test3_screen_load()
 {
+	engine_font_manager_draw_text(LOCALE_BLANK, 0, 1);
+	engine_font_manager_draw_text("TEST3", 0, 1);
+
 	screen_bases_screen_init();
 }
 
@@ -19,6 +22,14 @@ void screen_test3_screen_update(unsigned char *screen_type, unsigned int curr_jo
 {
 	unsigned int test_curr_joypad1 = curr_joypad1;
 	unsigned int test_prev_joypad1 = prev_joypad1;
+
+	screen_bases_screen_timer++;
+	if (screen_bases_screen_timer >= screen_test3_screen_delay)
+	{
+		question_index++;
+		*screen_type = SCREEN_TYPE_TEST2;
+		return;
+	}
 
 	*screen_type = SCREEN_TYPE_TEST3;
 }

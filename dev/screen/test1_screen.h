@@ -18,6 +18,8 @@ void screen_test1_screen_init()
 // Ready
 void screen_test1_screen_load()
 {
+	unsigned char bank;
+
 	engine_font_manager_draw_text(LOCALE_BLANK, 0, 1);
 	engine_font_manager_draw_text("TEST1", 0, 1);
 
@@ -41,6 +43,9 @@ void screen_test1_screen_load()
 	{
 		engine_debug_manager_load();
 	}
+
+	bank = diff_select + QUIZ_BANK;
+	engine_quiz_manager_bank( bank );
 }
 
 void screen_test1_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
