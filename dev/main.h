@@ -53,6 +53,7 @@
 unsigned char quiz_number;		// TODO remove
 unsigned char quiz_questions[MAX_QUESTIONS];
 unsigned char quiz_options[MAX_QUESTIONS][MAX_OPTIONS];
+unsigned char option_height[MAX_OPTIONS];
 
 //_SCORE_MANAGER_H_
 unsigned char score_player;
@@ -78,7 +79,7 @@ unsigned char screen_intro_screen_delay;
 unsigned char play_answer_state;
 
 //_TEST_SCREEN_H_
-//unsigned char screen_test1_screen_delay;
+unsigned char screen_test1_screen_delay;
 unsigned char screen_test2_screen_delay;
 unsigned char screen_test3_screen_delay;
 unsigned char screen_test4_screen_delay;

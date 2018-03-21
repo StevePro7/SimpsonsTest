@@ -103,12 +103,13 @@ void custom_initialize()
 	load_method[screen_type_over] = screen_over_screen_load;
 	load_method[screen_type_credit] = screen_credit_screen_load;
 
+	// TODO - delete
 	load_method[screen_type_test1] = screen_test1_screen_load;
 	load_method[screen_type_test2] = screen_test2_screen_load;
 	load_method[screen_type_test3] = screen_test3_screen_load;
 	load_method[screen_type_test4] = screen_test4_screen_load;
 	load_method[screen_type_test5] = screen_test5_screen_load;
-
+	// TODO - delete
 
 	// Set update methods
 	update_method[screen_type_splash] = screen_splash_screen_update;
@@ -123,11 +124,14 @@ void custom_initialize()
 	update_method[screen_type_over] = screen_over_screen_update;
 	update_method[screen_type_credit] = screen_credit_screen_update;
 
+
+	// TODO - delete
 	update_method[screen_type_test1] = screen_test1_screen_update;
 	update_method[screen_type_test2] = screen_test2_screen_update;
 	update_method[screen_type_test3] = screen_test3_screen_update;
 	update_method[screen_type_test4] = screen_test4_screen_update;
 	update_method[screen_type_test5] = screen_test5_screen_update;
+	// TODO - delete
 
 
 	engine_hack_manager_init();
@@ -144,6 +148,15 @@ void custom_initialize()
 	screen_splash_screen_init();
 	screen_title_screen_init();
 	screen_intro_screen_init();
+
+
+	// TODO - delete
+	screen_test1_screen_init();
+	screen_test2_screen_init();
+	screen_test1_screen_init();
+	screen_test4_screen_init();
+	screen_test5_screen_init();
+	// TODO - delete
 }
 
 void custom_load_content()

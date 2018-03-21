@@ -12,7 +12,7 @@ void screen_quiz_screen_load()
 
 	engine_quiz_manager_base();
 	engine_quiz_manager_bank(diff_select + QUIZ_BANK);
-	engine_quiz_manager_load(0);
+	engine_quiz_manager_loadX(0);
 	engine_score_manager_draw();
 
 	//engine_font_manager_draw_data(diff_select, 10, 10);
@@ -46,7 +46,7 @@ void screen_quiz_screen_update(unsigned char *screen_type, unsigned int curr_joy
 		}
 
 		quiz_number--;
-		engine_quiz_manager_load(quiz_number);
+		engine_quiz_manager_loadX(quiz_number);
 	}
 	input = engine_input_manager_move_right(curr_joypad1);
 	if( input )
@@ -57,7 +57,7 @@ void screen_quiz_screen_update(unsigned char *screen_type, unsigned int curr_joy
 		}
 
 		quiz_number++;
-		engine_quiz_manager_load(quiz_number);
+		engine_quiz_manager_loadX(quiz_number);
 	}
 
 	

@@ -19,11 +19,16 @@ extern unsigned char quiz_number;
 extern unsigned char diff_select;
 extern unsigned char quiz_questions[MAX_QUESTIONS];
 extern unsigned char quiz_options[MAX_QUESTIONS][MAX_OPTIONS];
-extern unsigned char select_option[MAX_OPTIONS];
+extern unsigned char option_height[MAX_OPTIONS];
 
 void engine_quiz_manager_init()
 {
 	quiz_number = 0;		// TODO remove!
+
+	option_height[0] = OPTA_Y;
+	option_height[1] = OPTB_Y;
+	option_height[2] = OPTC_Y;
+	option_height[3] = OPTD_Y;
 }
 
 void engine_quiz_manager_base()
@@ -42,48 +47,58 @@ void engine_quiz_manager_bank(unsigned char b)
 	SMS_mapROMBank(b);
 }
 
-void engine_quiz_manager_loadX(unsigned char q, unsigned char opt1, unsigned char opt2, unsigned char opt3, unsigned char opt4)
+void engine_quiz_manager_load(unsigned char q, unsigned char opt1, unsigned char opt2, unsigned char opt3, unsigned char opt4)
 {
 	unsigned char opt1_Y, opt2_Y, opt3_Y, opt4_Y;
 
-	opt1_Y = select_option[opt1];
-	opt2_Y = select_option[opt2];
-	opt3_Y = select_option[opt3];
-	opt4_Y = select_option[opt4];
+	opt1_Y = option_height[opt1];
+	opt2_Y = option_height[opt2];
+	opt3_Y = option_height[opt3];
+	opt4_Y = option_height[opt4];
 
-	if( DIFF_TYPE_EASY == diff_select )
-	{
-		// Question.
-		engine_font_manager_draw_text(bank2_quiz_line1[q], QUIZ_X, QUIZ_Y + 0);
-		engine_font_manager_draw_text(bank2_quiz_line2[q], QUIZ_X, QUIZ_Y + 1);
-		engine_font_manager_draw_text(bank2_quiz_line3[q], QUIZ_X, QUIZ_Y + 2);
+	// Number.
+	engine_font_manager_draw_data_ZERO(q + 1, QUIZ_X + 12, TITLE_Y);
 
-		// Option A.
-		engine_font_manager_draw_text(bank2_opt1_line1[q], OPTN_X, opt1_Y + 0);
-		engine_font_manager_draw_text(bank2_opt1_line2[q], OPTN_X, opt1_Y + 1);
-		engine_font_manager_draw_text(bank2_opt1_line3[q], OPTN_X, opt1_Y + 2);
 
-		// Option B.
-		engine_font_manager_draw_text(bank2_opt2_line1[q], OPTN_X, opt2_Y + 0);
-		engine_font_manager_draw_text(bank2_opt2_line2[q], OPTN_X, opt2_Y + 1);
-		engine_font_manager_draw_text(bank2_opt2_line3[q], OPTN_X, opt2_Y + 2);
+	// TODO remove
+	//engine_font_manager_draw_data_ZERO(opt1+1, 10, 10);
+	//engine_font_manager_draw_data_ZERO(opt2+1, 10, 11);
+	//engine_font_manager_draw_data_ZERO(opt3+1, 10, 12);
+	//engine_font_manager_draw_data_ZERO(opt4+1, 10, 13);
+	// TODO remove
 
-		// Option C.
-		engine_font_manager_draw_text(bank2_opt3_line1[q], OPTN_X, opt3_Y + 0);
-		engine_font_manager_draw_text(bank2_opt3_line2[q], OPTN_X, opt3_Y + 1);
-		engine_font_manager_draw_text(bank2_opt3_line3[q], OPTN_X, opt3_Y + 2);
 
-		// Option D.
-		engine_font_manager_draw_text(bank2_opt4_line1[q], OPTN_X, opt4_Y + 0);
-		engine_font_manager_draw_text(bank2_opt4_line2[q], OPTN_X, opt4_Y + 1);
-		engine_font_manager_draw_text(bank2_opt4_line3[q], OPTN_X, opt4_Y + 2);
-	}
+	//if( DIFF_TYPE_EASY == diff_select )
+	//{
+	//	// Question.
+	//	engine_font_manager_draw_text(bank2_quiz_line1[q], QUIZ_X, QUIZ_Y + 0);
+	//	engine_font_manager_draw_text(bank2_quiz_line2[q], QUIZ_X, QUIZ_Y + 1);
+	//	engine_font_manager_draw_text(bank2_quiz_line3[q], QUIZ_X, QUIZ_Y + 2);
+
+	//	// Option A.
+	//	engine_font_manager_draw_text(bank2_opt1_line1[q], OPTN_X, opt1_Y + 0);
+	//	engine_font_manager_draw_text(bank2_opt1_line2[q], OPTN_X, opt1_Y + 1);
+	//	engine_font_manager_draw_text(bank2_opt1_line3[q], OPTN_X, opt1_Y + 2);
+
+	//	// Option B.
+	//	engine_font_manager_draw_text(bank2_opt2_line1[q], OPTN_X, opt2_Y + 0);
+	//	engine_font_manager_draw_text(bank2_opt2_line2[q], OPTN_X, opt2_Y + 1);
+	//	engine_font_manager_draw_text(bank2_opt2_line3[q], OPTN_X, opt2_Y + 2);
+
+	//	// Option C.
+	//	engine_font_manager_draw_text(bank2_opt3_line1[q], OPTN_X, opt3_Y + 0);
+	//	engine_font_manager_draw_text(bank2_opt3_line2[q], OPTN_X, opt3_Y + 1);
+	//	engine_font_manager_draw_text(bank2_opt3_line3[q], OPTN_X, opt3_Y + 2);
+
+	//	// Option D.
+	//	engine_font_manager_draw_text(bank2_opt4_line1[q], OPTN_X, opt4_Y + 0);
+	//	engine_font_manager_draw_text(bank2_opt4_line2[q], OPTN_X, opt4_Y + 1);
+	//	engine_font_manager_draw_text(bank2_opt4_line3[q], OPTN_X, opt4_Y + 2);
+	//}
 }
 
-void engine_quiz_manager_load(unsigned char q)
+void engine_quiz_manager_loadX(unsigned char q)
 {
-	unsigned char plat = 1;
-
 	if( DIFF_TYPE_EASY == diff_select )
 	{
 		// Question.
@@ -194,7 +209,7 @@ void engine_quiz_manager_load(unsigned char q)
 	//}
 
 	// Number.
-	engine_font_manager_draw_data_ZERO(q + plat, QUIZ_X + 12, TITLE_Y);		// TODO - logic here is wrong!
+	engine_font_manager_draw_data_ZERO(q + 1, QUIZ_X + 12, TITLE_Y);		// TODO - logic here is wrong!
 }
 
 
