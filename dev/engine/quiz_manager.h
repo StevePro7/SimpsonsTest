@@ -17,6 +17,8 @@
 
 extern unsigned char quiz_number;
 extern unsigned char diff_select;
+extern unsigned char quiz_questions[MAX_QUESTIONS];
+extern unsigned char quiz_options[MAX_QUESTIONS][MAX_OPTIONS];
 
 void engine_quiz_manager_init()
 {

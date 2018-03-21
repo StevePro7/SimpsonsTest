@@ -12,9 +12,7 @@ void screen_test2_screen_init()
 
 void screen_test2_screen_load()
 {
-	SMS_displayOff();
 	screen_bases_screen_init();
-	SMS_displayOn();
 }
 
 void screen_test2_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)

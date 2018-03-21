@@ -21,11 +21,13 @@
 #include "engine\image_manager.h"
 #include "engine\font_manager.h"
 #include "engine\quiz_manager.h"
+#include "engine\random_manager.h"
 #include "engine\sprite_manager.h"
 #include "engine\select_manager.h"
 #include "engine\score_manager.h"
 #include "engine\audio_manager.h"
 #include "engine\input_manager.h"
+#include "engine\debug_manager.h"
 #include "engine\asm_manager.h"
 
 #include "screen\bases_screen.h"
@@ -49,6 +51,8 @@
 
 //_QUIZ_MANAGER_H_
 unsigned char quiz_number;
+unsigned char quiz_questions[MAX_QUESTIONS];
+unsigned char quiz_options[MAX_QUESTIONS][MAX_OPTIONS];
 
 //_SCORE_MANAGER_H_
 unsigned char score_player;
@@ -56,7 +60,7 @@ unsigned char score_player;
 //_SELECT_MANAGER_H_
 unsigned char diff_select, long_select, quiz_select;
 unsigned char select_choice, select_height;
-unsigned char select_option[4];
+unsigned char select_option[MAX_OPTIONS];
 
 //_BASES_SCREEN_H_
 unsigned int screen_bases_screen_count, screen_bases_screen_timer;

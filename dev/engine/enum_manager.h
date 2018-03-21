@@ -34,6 +34,11 @@ enum
 	screen_type_score,	// 9
 	screen_type_over,	// 10
 	screen_type_credit,	// 11
+	screen_type_test1,	// 12
+	screen_type_test2,	// 13
+	screen_type_test3,	// 14
+	screen_type_test4,	// 15
+	screen_type_test5,	// 16
 } enum_curr_screen_type, enum_next_screen_type;
 
 

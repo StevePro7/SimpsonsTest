@@ -2,7 +2,7 @@
 #define _GLOBAL_MANAGER_H_
 
 // General.
-#define MAX_STATES			12
+#define MAX_STATES			17
 
 // Content.
 #define MUSIC_PSG			music_psg
@@ -29,6 +29,6 @@
 #define MAX_OPTIONS			4
 
 // Quiz.
-#define MAX_QUIZ			10		// TODO changed for testing - correct to 50
+#define MAX_QUESTIONS		5		// TODO changed for testing - correct to 50
 
 #endif//_GLOBAL_MANAGER_H_

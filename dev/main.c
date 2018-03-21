@@ -37,7 +37,7 @@ void main( void )
 	//enum_next_screen_type = SCREEN_TYPE_SPLASH;
 	//enum_next_screen_type = SCREEN_TYPE_READY;
 	//enum_next_screen_type = SCREEN_TYPE_PLAY;
-	enum_next_screen_type = SCREEN_TYPE_QUIZ;
+	enum_next_screen_type = SCREEN_TYPE_TEST1;
 
 	SMS_displayOn();
 	for (;;)
@@ -103,6 +103,12 @@ void custom_initialize()
 	load_method[screen_type_over] = screen_over_screen_load;
 	load_method[screen_type_credit] = screen_credit_screen_load;
 
+	load_method[screen_type_test1] = screen_test1_screen_load;
+	load_method[screen_type_test2] = screen_test2_screen_load;
+	load_method[screen_type_test3] = screen_test3_screen_load;
+	load_method[screen_type_test4] = screen_test4_screen_load;
+	load_method[screen_type_test5] = screen_test5_screen_load;
+
 
 	// Set update methods
 	update_method[screen_type_splash] = screen_splash_screen_update;
@@ -116,6 +122,13 @@ void custom_initialize()
 	update_method[screen_type_score] = screen_score_screen_update;
 	update_method[screen_type_over] = screen_over_screen_update;
 	update_method[screen_type_credit] = screen_credit_screen_update;
+
+	update_method[screen_type_test1] = screen_test1_screen_update;
+	update_method[screen_type_test2] = screen_test2_screen_update;
+	update_method[screen_type_test3] = screen_test3_screen_update;
+	update_method[screen_type_test4] = screen_test4_screen_update;
+	update_method[screen_type_test5] = screen_test5_screen_update;
+
 
 	engine_hack_manager_init();
 	engine_hack_manager_invert();

@@ -200,6 +200,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\engine\debug_manager.h"
+					>
+				</File>
+				<File
 					RelativePath=".\engine\enum_manager.h"
 					>
 				</File>
@@ -229,6 +233,10 @@
 				</File>
 				<File
 					RelativePath=".\engine\quiz_manager.h"
+					>
+				</File>
+				<File
+					RelativePath=".\engine\random_manager.h"
 					>
 				</File>
 				<File

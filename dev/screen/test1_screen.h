@@ -10,11 +10,10 @@ void screen_test1_screen_init()
 	screen_test1_screen_delay = 100;
 }
 
-void screen_tset1_screen_load()
+void screen_test1_screen_load()
 {
-	SMS_displayOff();
 	screen_bases_screen_init();
-	SMS_displayOn();
+	engine_font_manager_draw_text("HELLO", 3, 3);
 }
 
 void screen_test1_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)

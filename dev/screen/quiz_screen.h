@@ -51,7 +51,7 @@ void screen_quiz_screen_update(unsigned char *screen_type, unsigned int curr_joy
 	input = engine_input_manager_move_right(curr_joypad1);
 	if( input )
 	{
-		if(MAX_QUIZ-1 == quiz_number)
+		if(MAX_QUESTIONS-1 == quiz_number)
 		{
 			return;
 		}
