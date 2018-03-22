@@ -59,4 +59,15 @@ void engine_debug_manager_quest(unsigned char qi)
 	engine_font_manager_draw_data(quiz_options[qv][3], 25, 8);
 }
 
+void engine_debug_manager_quest2(unsigned char qi, unsigned char qv, unsigned char opt1, unsigned char opt2, unsigned char opt3, unsigned char opt4)
+{
+	engine_font_manager_draw_data(qi, 15, 0);
+	engine_font_manager_draw_data(qv, 20, 0);
+
+	engine_font_manager_draw_data(opt1, 24, 15); engine_font_manager_draw_data(opt1+1, 30, 15);
+	engine_font_manager_draw_data(opt2, 24, 16); engine_font_manager_draw_data(opt2+1, 30, 16);
+	engine_font_manager_draw_data(opt3, 24, 17); engine_font_manager_draw_data(opt3+1, 30, 17);
+	engine_font_manager_draw_data(opt4, 24, 18); engine_font_manager_draw_data(opt4+1, 30, 18);
+}
+
 #endif//_DEBUG_MANAGER_H_

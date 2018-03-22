@@ -20,8 +20,8 @@ void screen_test1_screen_load()
 {
 	unsigned char bank;
 
-	//engine_font_manager_draw_text(LOCALE_BLANK, 0, 1);
-	//engine_font_manager_draw_text("TEST1", 0, 1);
+	engine_font_manager_draw_text(LOCALE_BLANK, 0, 1);
+	engine_font_manager_draw_text("TEST1", 0, 1);
 
 	screen_bases_screen_init();
 
@@ -39,6 +39,9 @@ void screen_test1_screen_load()
 
 
 	engine_random_manager_load();
+	//engine_random_manager_load_random();
+	//engine_random_manager_load_normal();
+
 	if( hacker_debug )
 	{
 		engine_debug_manager_load();
@@ -49,7 +52,10 @@ void screen_test1_screen_load()
 
 
 	// TODO remove
-	engine_debug_manager_quest(2);
+	if( hacker_debug )
+	{
+		engine_debug_manager_quest(2);
+	}
 }
 
 void screen_test1_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
@@ -60,7 +66,8 @@ void screen_test1_screen_update(unsigned char *screen_type, unsigned int curr_jo
 	screen_bases_screen_timer++;
 	if (screen_bases_screen_timer >= screen_test1_screen_delay)
 	{
-		//*screen_type = SCREEN_TYPE_TEST2;
+		//*screen_type = SCREEN_TYPE_TEST1;
+		*screen_type = SCREEN_TYPE_TEST2;
 	}
 }
 

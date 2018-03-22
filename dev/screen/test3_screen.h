@@ -7,7 +7,7 @@ extern unsigned char screen_test3_screen_delay;
 
 void screen_test3_screen_init()
 {
-	screen_test3_screen_delay = 10;
+	screen_test3_screen_delay = 50;
 }
 
 void screen_test3_screen_load()
@@ -16,6 +16,9 @@ void screen_test3_screen_load()
 	engine_font_manager_draw_text("TEST3", 0, 1);
 
 	screen_bases_screen_init();
+
+	// TODO
+	engine_font_manager_draw_data(question_index, 20, 0);
 }
 
 void screen_test3_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
@@ -26,8 +29,9 @@ void screen_test3_screen_update(unsigned char *screen_type, unsigned int curr_jo
 	screen_bases_screen_timer++;
 	if (screen_bases_screen_timer >= screen_test3_screen_delay)
 	{
-		engine_font_manager_draw_data(question_index, 15, 0);
 		question_index++;
+
+		//TODO
 		engine_font_manager_draw_data(question_index, 20, 0);
 
 		*screen_type = SCREEN_TYPE_TEST2;
