@@ -30,16 +30,18 @@ void engine_random_manager_init()
 
 void engine_random_manager_load()
 {
-	engine_random_manager_load_normal();
-
-	/*if( hacker_random )
+	if( RAND_TYPE_NORMAL == hacker_random )
 	{
-		engine_random_manager_load_random();
+		engine_random_manager_load_normal();
+	}
+	else if( RAND_TYPE_MIXED == hacker_random )
+	{
+		engine_random_manager_load_mixed();
 	}
 	else
 	{
-		engine_random_manager_load_normal();
-	}*/
+		engine_random_manager_load_random();
+	}
 }
 
 // Private helper methods.
@@ -91,8 +93,17 @@ void engine_random_manager_load_normal()
 			quiz_options[idx][opt] = opt;
 		}
 	}
+}
 
-	/*for( idx = 0; idx < MAX_QUESTIONS; idx++)
+void engine_random_manager_load_mixed()
+{
+	unsigned char idx, opt;
+	for( idx = 0; idx < MAX_QUESTIONS; idx++)
+	{
+		quiz_questions[idx] = idx;
+	}
+
+	for( idx = 0; idx < MAX_QUESTIONS; idx++)
 	{
 		for( opt = 0; opt < MAX_OPTIONS; opt++)
 		{
@@ -106,13 +117,7 @@ void engine_random_manager_load_normal()
 				}
 			}
 		}
-	}*/
-
-	/*opt = 0;
-	quiz_options[0][0] = 3;
-	quiz_options[0][1] = 2;
-	quiz_options[0][2] = 1;
-	quiz_options[0][3] = 0;*/
+	}
 }
 
 #endif//_RANDOM_MANAGER_H_

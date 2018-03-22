@@ -42,6 +42,7 @@ enum
 } enum_curr_screen_type, enum_next_screen_type;
 
 
+// TODO - not used so can remove
 // Select type.
 #define ANSWER_TYPE_SELECT	0
 #define ANSWER_TYPE_RIGHT	1
@@ -52,7 +53,8 @@ enum
 	answer_type_select,	// 0
 	answer_type_right,	// 1
 	answer_type_wrong,	// 2
-} enum_select_answer_type;
+} enum_answer_type;
+// TODO - not used so can remove
 
 
 // Difficulty type.
@@ -67,7 +69,19 @@ enum
 	diff_type_norm,	// 1
 	diff_type_hard,	// 2
 	diff_type_argh,	// 3
-} enum_select_answer_type;
+} enum_difficulty_type;
 
+
+// Random type.
+#define RAND_TYPE_RANDOM		0
+#define RAND_TYPE_NORMAL		1
+#define RAND_TYPE_MIXED			2
+
+enum
+{
+	rand_type_random,	// 0
+	rand_type_normal,	// 1
+	rand_type_mixed,	// 2
+} enum_select_answer_type;
 
 #endif//_ENUM_MANAGER_H_
