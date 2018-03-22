@@ -17,8 +17,8 @@ void screen_test3_screen_load()
 
 	screen_bases_screen_init();
 
-	answer_value = engine_quiz_manager_answer(question_value);
-	answer_index = answer_value - 1;		// Zero based index
+	//answer_value = engine_quiz_manager_answer(question_value);
+	//answer_index = answer_value - 1;		// Zero based index
 
 	// TODO remove
 	/*engine_font_manager_draw_data(question_index, 20, 0);

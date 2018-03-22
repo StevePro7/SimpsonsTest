@@ -48,22 +48,57 @@ void engine_quiz_manager_bank(unsigned char b)
 	SMS_mapROMBank(b);
 }
 
-unsigned char engine_quiz_manager_answer(unsigned char q)
+void engine_quiz_manager_answer(unsigned char q)
 {
-	unsigned char answer = 0;
+	unsigned char idx;
 
+	answer_value = MAX_OPTIONS;
 	if( DIFF_TYPE_EASY == diff_select )
 	{
-		answer = bank2_soln[q];
+		answer_value = bank2_soln[q];
+	}
+	
+engine_font_manager_draw_data(answer_value, 22, 1);
+
+	answer_value -= 1;
+engine_font_manager_draw_data(answer_value, 26, 1);
+
+answer_index = quiz_options[q][answer_value];
+
+engine_font_manager_draw_data(answer_index, 30, 1);
+
+	/*for( idx = 0; idx < MAX_OPTIONS; idx++ )
+	{
+		if( answer_value == quiz_options[q][idx] )
+		{
+			answer_index = idx;
+			break;
+		}
+	}*/
+
+engine_font_manager_draw_data(answer_index, 30, 1);
+}
+
+void engine_quiz_manager_cheat(unsigned char ans)
+{
+	unsigned char idx, cheat_Y;
+
+	for( idx = 0; idx < MAX_OPTIONS; idx++)
+	{
+		cheat_Y = option_height[idx];
+		engine_font_manager_draw_text(LOCALE_ARROW_SPACE, QUIZ_X-1, cheat_Y);
 	}
 
-	return answer;
+	if( hacker_cheat )
+	{
+		cheat_Y = option_height[ans];
+		engine_font_manager_draw_text(LOCALE_ARROW_LEFT, QUIZ_X-1, cheat_Y);
+	}
 }
 
 void engine_quiz_manager_load(unsigned char qi, unsigned char qv, unsigned char opt1, unsigned char opt2, unsigned char opt3, unsigned char opt4)
 {
 	unsigned char opt1_Y, opt2_Y, opt3_Y, opt4_Y;
-	unsigned char idx, cheat_Y;
 
 	opt1_Y = option_height[opt1];
 	opt2_Y = option_height[opt2];
@@ -122,20 +157,20 @@ void engine_quiz_manager_load(unsigned char qi, unsigned char qv, unsigned char 
 	}
 
 	// Cheat!
-	if( hacker_cheat )
-	{
-		answer_value = engine_quiz_manager_answer(question_value);
-		answer_index = answer_value - 1;		// Zero based index
+	//if( hacker_cheat )
+	//{
+	//	//answer_value = engine_quiz_manager_answer(question_value);
+	//	//answer_index = answer_value - 1;		// Zero based index
 
-		for( idx = 0; idx < MAX_OPTIONS; idx++)
-		{
-			cheat_Y = option_height[idx];
-			engine_font_manager_draw_text(LOCALE_ARROW_SPACE, QUIZ_X-1, cheat_Y);
-		}
+	//	//for( idx = 0; idx < MAX_OPTIONS; idx++)
+	//	//{
+	//	//	cheat_Y = option_height[idx];
+	//	//	engine_font_manager_draw_text(LOCALE_ARROW_SPACE, QUIZ_X-1, cheat_Y);
+	//	//}
 
-		cheat_Y = option_height[answer_index];
-		engine_font_manager_draw_text(LOCALE_ARROW_LEFT, QUIZ_X-1, cheat_Y);
-	}
+	//	cheat_Y = option_height[answer_index];
+	//	engine_font_manager_draw_text(LOCALE_ARROW_LEFT, QUIZ_X-1, cheat_Y);
+	//}
 }
 
 void engine_quiz_manager_loadX(unsigned char q)

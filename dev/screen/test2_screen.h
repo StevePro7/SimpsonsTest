@@ -21,10 +21,12 @@ void screen_test2_screen_load()
 	engine_quiz_manager_base();
 
 	question_value = quiz_questions[question_index];
-	option1_value = quiz_options[question_index][0];
-	option2_value = quiz_options[question_index][1];
-	option3_value = quiz_options[question_index][2];
-	option4_value = quiz_options[question_index][3];
+	option1_value = quiz_options[question_value][0];
+	option2_value = quiz_options[question_value][1];
+	option3_value = quiz_options[question_value][2];
+	option4_value = quiz_options[question_value][3];
+
+	engine_debug_manager_quest3(question_value, option1_value, option2_value, option3_value, option4_value);
 
 	// TODO remove
 	//if( hacker_debug )
@@ -32,7 +34,10 @@ void screen_test2_screen_load()
 	//engine_debug_manager_quest2(question_index, question_value, option1_value, option2_value, option3_value, option4_value);
 	//}
 
+
 	engine_quiz_manager_load(question_index, question_value, option1_value, option2_value, option3_value, option4_value);
+	engine_quiz_manager_answer(question_value);
+	engine_quiz_manager_cheat(answer_index);
 }
 
 void screen_test2_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
