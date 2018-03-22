@@ -30,8 +30,8 @@ void engine_random_manager_init()
 
 void engine_random_manager_load()
 {
-	//engine_random_manager_load_random();
-	engine_random_manager_load_normal();
+	engine_random_manager_load_random();
+	//engine_random_manager_load_normal();
 }
 
 // Private helper methods.
@@ -53,15 +53,14 @@ void engine_random_manager_load_random()
 
 	for( idx = 0; idx < MAX_QUESTIONS; idx++)
 	{
-		unsigned char val = quiz_questions[idx];
 		for( opt = 0; opt < MAX_OPTIONS; opt++)
 		{
 			while( 1 )
 			{
 				unsigned char rnd = rand() % MAX_OPTIONS;
-				if( 0 == quiz_options[val][rnd] )
+				if( 0 == quiz_options[idx][rnd] )
 				{
-					quiz_options[val][rnd] = opt;
+					quiz_options[idx][rnd] = opt;
 					break;
 				}
 			}
