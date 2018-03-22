@@ -12,6 +12,10 @@ void screen_test5_screen_init()
 
 void screen_test5_screen_load()
 {
+	engine_font_manager_draw_text(LOCALE_BLANK, 0, 0);
+	engine_font_manager_draw_text(LOCALE_BLANK, 0, 1);
+	engine_font_manager_draw_text("TEST5", 0, 1);
+
 	screen_bases_screen_init();
 }
 

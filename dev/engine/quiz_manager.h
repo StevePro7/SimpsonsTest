@@ -50,7 +50,7 @@ void engine_quiz_manager_bank(unsigned char b)
 
 void engine_quiz_manager_answer(unsigned char q)
 {
-	unsigned char idx;
+	//unsigned char idx;
 
 	answer_value = MAX_OPTIONS;
 	if( DIFF_TYPE_EASY == diff_select )

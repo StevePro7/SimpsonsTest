@@ -26,7 +26,7 @@ void screen_test1_screen_load()
 	screen_bases_screen_init();
 
 	question_count = 3;
-	question_index = 1;
+	question_index = 0;
 
 	rand();
 
@@ -57,7 +57,7 @@ void screen_test1_screen_load()
 		engine_debug_manager_quest(0);
 	}
 
-	engine_quiz_manager_answer(0);
+	//engine_quiz_manager_answer(0);
 }
 
 void screen_test1_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)

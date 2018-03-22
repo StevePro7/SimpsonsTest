@@ -47,6 +47,11 @@ void screen_test3_screen_update(unsigned char *screen_type, unsigned int curr_jo
 	if (screen_bases_screen_timer >= screen_test3_screen_delay)
 	{
 		question_index++;
+		if (question_index >= question_count)
+		{
+			*screen_type = SCREEN_TYPE_TEST5;
+			return;
+		}
 
 		//TODO
 		engine_font_manager_draw_data(question_index, 20, 0);

@@ -14,6 +14,7 @@ void screen_test2_screen_init()
 // Play
 void screen_test2_screen_load()
 {
+	engine_font_manager_draw_text(LOCALE_BLANK, 0, 0);
 	engine_font_manager_draw_text(LOCALE_BLANK, 0, 1);
 	engine_font_manager_draw_text("TEST2", 0, 1);
 
