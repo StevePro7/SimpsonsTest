@@ -7,7 +7,7 @@ extern unsigned char screen_test3_screen_delay;
 
 void screen_test3_screen_init()
 {
-	screen_test3_screen_delay = 50;
+	screen_test3_screen_delay = 250;
 }
 
 void screen_test3_screen_load()
@@ -17,8 +17,24 @@ void screen_test3_screen_load()
 
 	screen_bases_screen_init();
 
-	// TODO
-	engine_font_manager_draw_data(question_index, 20, 0);
+	answer_value = engine_quiz_manager_answer(question_value);
+	answer_index = answer_value - 1;		// Zero based index
+
+	// TODO remove
+	/*engine_font_manager_draw_data(question_index, 20, 0);
+	engine_font_manager_draw_data(question_value, 20, 1);
+	engine_font_manager_draw_data(answer_value, 20, 2);*/
+	engine_font_manager_draw_data(select_choice, 20, 0);
+
+	if( select_choice == answer_index )
+	{
+		engine_font_manager_draw_text("RIGHT", 25, 0);
+	}
+	else
+	{
+		engine_font_manager_draw_text("WRONG", 25, 0);
+	}
+	// TODO remove
 }
 
 void screen_test3_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
@@ -34,7 +50,8 @@ void screen_test3_screen_update(unsigned char *screen_type, unsigned int curr_jo
 		//TODO
 		engine_font_manager_draw_data(question_index, 20, 0);
 
-		*screen_type = SCREEN_TYPE_TEST2;
+		//*screen_type = SCREEN_TYPE_TEST2;
+		*screen_type = SCREEN_TYPE_TEST3;
 		return;
 	}
 
