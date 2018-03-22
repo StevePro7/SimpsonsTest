@@ -21,4 +21,8 @@
 #define LOCALE_OPTC			"C."
 #define LOCALE_OPTD			"D."
 
+#define LOCALE_ARROW_SPACE	" "
+#define LOCALE_ARROW_LEFT	">"
+#define LOCALE_ARROW_RIGHT	"<"
+
 #endif//_LOCALE_MANAGER_H_

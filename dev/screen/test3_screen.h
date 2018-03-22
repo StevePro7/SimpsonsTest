@@ -7,7 +7,7 @@ extern unsigned char screen_test3_screen_delay;
 
 void screen_test3_screen_init()
 {
-	screen_test3_screen_delay = 250;
+	screen_test3_screen_delay = 50;
 }
 
 void screen_test3_screen_load()
@@ -26,6 +26,7 @@ void screen_test3_screen_load()
 	engine_font_manager_draw_data(answer_value, 20, 2);*/
 	engine_font_manager_draw_data(select_choice, 20, 0);
 
+	// TEST right or wrong!
 	if( select_choice == answer_index )
 	{
 		engine_font_manager_draw_text("RIGHT", 25, 0);
@@ -50,8 +51,8 @@ void screen_test3_screen_update(unsigned char *screen_type, unsigned int curr_jo
 		//TODO
 		engine_font_manager_draw_data(question_index, 20, 0);
 
-		//*screen_type = SCREEN_TYPE_TEST2;
-		*screen_type = SCREEN_TYPE_TEST3;
+		*screen_type = SCREEN_TYPE_TEST2;
+		//*screen_type = SCREEN_TYPE_TEST3;
 		return;
 	}
 

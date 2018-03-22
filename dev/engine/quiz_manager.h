@@ -20,6 +20,7 @@ extern unsigned char diff_select;
 extern unsigned char quiz_questions[MAX_QUESTIONS];
 extern unsigned char quiz_options[MAX_QUESTIONS][MAX_OPTIONS];
 extern unsigned char option_height[MAX_OPTIONS];
+extern unsigned char question_value, answer_index, answer_value;
 
 void engine_quiz_manager_init()
 {
@@ -47,9 +48,22 @@ void engine_quiz_manager_bank(unsigned char b)
 	SMS_mapROMBank(b);
 }
 
+unsigned char engine_quiz_manager_answer(unsigned char q)
+{
+	unsigned char answer = 0;
+
+	if( DIFF_TYPE_EASY == diff_select )
+	{
+		answer = bank2_soln[q];
+	}
+
+	return answer;
+}
+
 void engine_quiz_manager_load(unsigned char qi, unsigned char qv, unsigned char opt1, unsigned char opt2, unsigned char opt3, unsigned char opt4)
 {
 	unsigned char opt1_Y, opt2_Y, opt3_Y, opt4_Y;
+	unsigned char idx, cheat_Y;
 
 	opt1_Y = option_height[opt1];
 	opt2_Y = option_height[opt2];
@@ -58,8 +72,17 @@ void engine_quiz_manager_load(unsigned char qi, unsigned char qv, unsigned char 
 
 	// Number.
 	engine_font_manager_draw_data_ZERO(qi + 1, QUIZ_X + 12, TITLE_Y);
+	answer_value = engine_quiz_manager_answer(question_value);
+	answer_index = answer_value - 1;		// Zero based index
 
 
+	for( idx = 0; idx < MAX_OPTIONS; idx++)
+	{
+		cheat_Y = option_height[idx];
+		engine_font_manager_draw_text(LOCALE_ARROW_SPACE, QUIZ_X-1, cheat_Y);
+	}
+	cheat_Y = option_height[answer_index];
+	engine_font_manager_draw_text(LOCALE_ARROW_LEFT, QUIZ_X-1, cheat_Y);
 	// TODO remove
 	//engine_font_manager_draw_data_ZERO(opt1+1, 10, 10);
 	//engine_font_manager_draw_data_ZERO(opt2+1, 10, 11);
@@ -212,16 +235,6 @@ void engine_quiz_manager_loadX(unsigned char q)
 	engine_font_manager_draw_data_ZERO(q + 1, QUIZ_X + 12, TITLE_Y);		// TODO - logic here is wrong!
 }
 
-unsigned char engine_quiz_manager_answer(unsigned char q)
-{
-	unsigned char answer = 0;
 
-	if( DIFF_TYPE_EASY == diff_select )
-	{
-		answer = bank2_soln[q];
-	}
-
-	return answer;
-}
 
 #endif//_QUIZ_MANAGER_H_
