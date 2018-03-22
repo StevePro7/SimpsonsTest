@@ -58,3 +58,7 @@ extern const unsigned char bank3_opt4_line3[10][18];
 #define				bank3_opt4_line3_size 180
 #define				bank3_opt4_line3_bank 3
 
+extern const unsigned char bank3_soln[10];
+#define				bank3_soln_size 10
+#define				bank3_soln_bank 3
+

@@ -8,6 +8,7 @@
 ;--------------------------------------------------------
 ; Public variables in this module
 ;--------------------------------------------------------
+	.globl _bank3_soln
 	.globl _bank3_opt4_line3
 	.globl _bank3_opt4_line2
 	.globl _bank3_opt4_line1
@@ -3161,5 +3162,16 @@ _bank3_opt4_line3:
 	.db #0x20	; 32
 	.db #0x20	; 32
 	.db #0x00	; 0
+_bank3_soln:
+	.db #0x04	; 4
+	.db #0x04	; 4
+	.db #0x03	; 3
+	.db #0x04	; 4
+	.db #0x01	; 1
+	.db #0x03	; 3
+	.db #0x03	; 3
+	.db #0x01	; 1
+	.db #0x02	; 2
+	.db #0x02	; 2
 	.area _INITIALIZER
 	.area _CABS (ABS)

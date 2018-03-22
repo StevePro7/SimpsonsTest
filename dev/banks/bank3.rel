@@ -1,5 +1,5 @@
 XL2
-H A areas 10 global symbols
+H A areas 11 global symbols
 M bank3
 O -mz80
 S .__.ABS. Def0000
@@ -10,8 +10,9 @@ A _DABS size 0 flags 8 addr 0
 A _HOME size 0 flags 0 addr 0
 A _GSINIT size 0 flags 0 addr 0
 A _GSFINAL size 0 flags 0 addr 0
-A _BANK3 size C12 flags 0 addr 0
+A _BANK3 size C1C flags 0 addr 0
 S _bank3_opt1_line1 Def03A2
+S _bank3_soln Def0C12
 S _bank3_opt1_line2 Def0456
 S _bank3_opt2_line1 Def05BE
 S _bank3_opt1_line3 Def050A
@@ -507,4 +508,8 @@ R 00 00 07 00
 T F8 0B 20 20 20 20 20 20 20 00 20 20 20 20 20 20
 R 00 00 07 00
 T 06 0C 20 20 20 20 20 20 20 20 20 20 20 00
+R 00 00 07 00
+T 12 0C
+R 00 00 07 00
+T 12 0C 04 04 03 04 01 03 03 01 02 02
 R 00 00 07 00
