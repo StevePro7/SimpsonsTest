@@ -25,7 +25,7 @@ void screen_test1_screen_load()
 
 	screen_bases_screen_init();
 
-	question_count = 3;
+	question_count = 10;			// TODO will be either 5 / 10 / 25 / 50
 	question_index = 0;
 
 	rand();
@@ -38,7 +38,15 @@ void screen_test1_screen_load()
 	}
 
 
+	bank = diff_select + QUIZ_BANK;
+	engine_quiz_manager_bank( bank );
+
+
 	engine_random_manager_load();
+
+
+
+
 	//engine_random_manager_load_random();
 	//engine_random_manager_load_normal();
 
@@ -47,8 +55,7 @@ void screen_test1_screen_load()
 		engine_debug_manager_load();
 	}
 
-	bank = diff_select + QUIZ_BANK;
-	engine_quiz_manager_bank( bank );
+	//engine_debug_manager_quest4();
 
 
 	// TODO remove

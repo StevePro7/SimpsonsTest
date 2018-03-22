@@ -83,4 +83,8 @@ void engine_debug_manager_quest3(unsigned char q, unsigned char a, unsigned char
 	engine_font_manager_draw_data(quiz_options[q][3], 26, 23); 
 }
 
+void engine_debug_manager_quest4()
+{
+}
+
 #endif//_DEBUG_MANAGER_H_

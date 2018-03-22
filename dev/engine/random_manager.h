@@ -30,14 +30,16 @@ void engine_random_manager_init()
 
 void engine_random_manager_load()
 {
-	if( hacker_random )
+	engine_random_manager_load_normal();
+
+	/*if( hacker_random )
 	{
 		engine_random_manager_load_random();
 	}
 	else
 	{
 		engine_random_manager_load_normal();
-	}
+	}*/
 }
 
 // Private helper methods.
@@ -82,15 +84,15 @@ void engine_random_manager_load_normal()
 		quiz_questions[idx] = idx;
 	}
 
-	/*for( idx = 0; idx < MAX_QUESTIONS; idx++)
+	for( idx = 0; idx < MAX_QUESTIONS; idx++)
 	{
 		for( opt = 0; opt < MAX_OPTIONS; opt++)
 		{
 			quiz_options[idx][opt] = opt;
 		}
-	}*/
+	}
 
-	for( idx = 0; idx < MAX_QUESTIONS; idx++)
+	/*for( idx = 0; idx < MAX_QUESTIONS; idx++)
 	{
 		for( opt = 0; opt < MAX_OPTIONS; opt++)
 		{
@@ -104,7 +106,7 @@ void engine_random_manager_load_normal()
 				}
 			}
 		}
-	}
+	}*/
 
 	/*opt = 0;
 	quiz_options[0][0] = 3;

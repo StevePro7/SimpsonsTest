@@ -22,7 +22,7 @@
 #define ENEMY_MIN_DELAY		25
 
 // Quiz.
-#define MAX_QUESTIONS		5		// TODO changed for testing - correct to 50
+#define MAX_QUESTIONS		10		// TODO changed for testing - correct to 50
 
 // Options.
 #define MAX_OPTIONS			4

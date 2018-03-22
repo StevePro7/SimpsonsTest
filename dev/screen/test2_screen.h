@@ -27,7 +27,8 @@ void screen_test2_screen_load()
 	option3_value = quiz_options[question_value][2];
 	option4_value = quiz_options[question_value][3];
 
-	engine_debug_manager_quest3(question_value, option1_value, option2_value, option3_value, option4_value);
+	//engine_debug_manager_quest2(question_index, question_value, option1_value, option2_value, option3_value, option4_value);
+	//engine_debug_manager_quest4();
 
 	// TODO remove
 	//if( hacker_debug )

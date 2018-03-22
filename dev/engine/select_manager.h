@@ -18,7 +18,8 @@ void engine_select_manager_init()
 		select_option[idx] = SELECT_Y + idx * SELECT_DELTA;
 	}
 
-	diff_select = long_select = quiz_select = 0;
+	diff_select = 1;
+	long_select = quiz_select = 0;
 	select_choice = 0;
 	select_height = select_option[select_choice];
 }
