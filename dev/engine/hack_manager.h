@@ -21,8 +21,8 @@ void engine_hack_manager_init()
 	hacker_sound = PEEK(HACKER_START + 4);		// 0x0054		// 0=sound on otherwise off.
 
 	// TODO update correctly
-	hacker_cheat = PEEK(HACKER_START + 7);		//
-	hacker_random= PEEK(HACKER_START + 8);		//
+	hacker_random= PEEK(HACKER_START + 7);		//
+	hacker_cheat = PEEK(HACKER_START + 8);		//
 }
 
 void engine_hack_manager_invert()
@@ -32,6 +32,7 @@ void engine_hack_manager_invert()
 	hacker_splash = !hacker_splash;
 	hacker_music = !hacker_music;				// TODO uncomment - just for testing
 	hacker_sound = !hacker_sound;
+	hacker_random= !hacker_random;
 }
 
 void engine_hack_manager_resetX()
@@ -43,6 +44,8 @@ void engine_hack_manager_resetX()
 	hacker_delay = 0;
 	hacker_music = 0;
 	hacker_sound = 0;
+	hacker_random= 0;
+	hacker_cheat = 0;
 }
 
 #endif//_HACK_MANAGER_H_

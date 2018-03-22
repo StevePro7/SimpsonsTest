@@ -72,17 +72,19 @@ void engine_quiz_manager_load(unsigned char qi, unsigned char qv, unsigned char 
 
 	// Number.
 	engine_font_manager_draw_data_ZERO(qi + 1, QUIZ_X + 12, TITLE_Y);
-	answer_value = engine_quiz_manager_answer(question_value);
-	answer_index = answer_value - 1;		// Zero based index
 
 
-	for( idx = 0; idx < MAX_OPTIONS; idx++)
+//	engine_font_manager_draw_data(hacker_cheat, 30, 0);
+
+	// Cheat!
+	/*for( idx = 0; idx < MAX_OPTIONS; idx++)
 	{
 		cheat_Y = option_height[idx];
 		engine_font_manager_draw_text(LOCALE_ARROW_SPACE, QUIZ_X-1, cheat_Y);
 	}
+
 	cheat_Y = option_height[answer_index];
-	engine_font_manager_draw_text(LOCALE_ARROW_LEFT, QUIZ_X-1, cheat_Y);
+	engine_font_manager_draw_text(LOCALE_ARROW_LEFT, QUIZ_X-1, cheat_Y);*/
 	// TODO remove
 	//engine_font_manager_draw_data_ZERO(opt1+1, 10, 10);
 	//engine_font_manager_draw_data_ZERO(opt2+1, 10, 11);
@@ -117,6 +119,22 @@ void engine_quiz_manager_load(unsigned char qi, unsigned char qv, unsigned char 
 		engine_font_manager_draw_text(bank2_opt4_line1[qv], OPTN_X, opt4_Y + 0);
 		engine_font_manager_draw_text(bank2_opt4_line2[qv], OPTN_X, opt4_Y + 1);
 		engine_font_manager_draw_text(bank2_opt4_line3[qv], OPTN_X, opt4_Y + 2);
+	}
+
+	// Cheat!
+	if( hacker_cheat )
+	{
+		answer_value = engine_quiz_manager_answer(question_value);
+		answer_index = answer_value - 1;		// Zero based index
+
+		for( idx = 0; idx < MAX_OPTIONS; idx++)
+		{
+			cheat_Y = option_height[idx];
+			engine_font_manager_draw_text(LOCALE_ARROW_SPACE, QUIZ_X-1, cheat_Y);
+		}
+
+		cheat_Y = option_height[answer_index];
+		engine_font_manager_draw_text(LOCALE_ARROW_LEFT, QUIZ_X-1, cheat_Y);
 	}
 }
 

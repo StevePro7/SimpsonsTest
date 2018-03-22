@@ -30,9 +30,14 @@ void engine_random_manager_init()
 
 void engine_random_manager_load()
 {
-	// TODO add logic here
-	//engine_random_manager_load_random();
-	engine_random_manager_load_normal();
+	if( hacker_random )
+	{
+		engine_random_manager_load_random();
+	}
+	else
+	{
+		engine_random_manager_load_normal();
+	}
 }
 
 // Private helper methods.
