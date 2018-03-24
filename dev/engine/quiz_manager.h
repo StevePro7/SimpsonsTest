@@ -37,22 +37,22 @@ void engine_quiz_manager_base()
 	engine_font_manager_draw_text(LOCALE_QUESTION, QUIZ_X, TITLE_Y);
 }
 
-void engine_quiz_manager_bank(unsigned char b)
+void engine_quiz_manager_bank( unsigned char b )
 {
 	SMS_mapROMBank(b);
 }
 
-void engine_quiz_manager_answer(unsigned char q)
+void engine_quiz_manager_answer( unsigned char q )
 {
 	// TODO - BANKS!
-	/*if( DIFF_TYPE_EASY == diff_select )
+	if( DIFF_TYPE_EASY == diff_select )
 	{
 		answer_value = bank2_soln[q];
 	}
 	else if( DIFF_TYPE_NORM == diff_select )
 	{
 		answer_value = bank3_soln[q];
-	}*/
+	}
 	//else if( DIFF_TYPE_HARD == diff_select )
 	//{
 	//	answer_value = bank4_soln[q];
@@ -67,7 +67,7 @@ void engine_quiz_manager_answer(unsigned char q)
 	answer_index = quiz_options[q][answer_value];
 }
 
-void engine_quiz_manager_cheat(unsigned char ans)
+void engine_quiz_manager_cheat( unsigned char ans )
 {
 	unsigned char idx, cheat_Y;
 
@@ -116,7 +116,7 @@ void engine_quiz_manager_load(unsigned char qi, unsigned char qv, unsigned char 
 	// TODO remove
 
 	// TODO - BANKS!
-	/*
+	
 	if( DIFF_TYPE_EASY == diff_select )
 	{
 		// Question.
@@ -171,7 +171,7 @@ void engine_quiz_manager_load(unsigned char qi, unsigned char qv, unsigned char 
 		engine_font_manager_draw_text(bank3_opt4_line2[qv], OPTN_X, opt4_Y + 1);
 		engine_font_manager_draw_text(bank3_opt4_line3[qv], OPTN_X, opt4_Y + 2);
 	}
-	*/
+
 	//else if( DIFF_TYPE_HARD == diff_select )
 	//{
 	//}
