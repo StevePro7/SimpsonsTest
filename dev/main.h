@@ -89,7 +89,7 @@ unsigned char screen_test3_screen_delay;
 unsigned char screen_test4_screen_delay;
 unsigned char screen_test5_screen_delay;
 
-unsigned char question_index, question_count, question_length;
+unsigned char question_index, question_count;
 unsigned char question_value, option1_value, option2_value, option3_value, option4_value;
 unsigned char answer_index, answer_value;
 

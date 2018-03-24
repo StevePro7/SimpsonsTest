@@ -35,8 +35,6 @@ void engine_quiz_manager_init()
 void engine_quiz_manager_base()
 {
 	engine_font_manager_draw_text(LOCALE_QUESTION, QUIZ_X, TITLE_Y);
-
-	
 }
 
 void engine_quiz_manager_bank(unsigned char b)
