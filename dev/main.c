@@ -7,7 +7,7 @@ unsigned char hacker_debug, hacker_splash;
 unsigned char hacker_start, hacker_delay, hacker_music, hacker_sound;
 unsigned char hacker_cheat, hacker_random;
 unsigned char enum_curr_screen_type, enum_next_screen_type;
-
+	
 void custom_initialize();
 void custom_load_content();
 
@@ -36,7 +36,7 @@ void main( void )
 
 	enum_curr_screen_type = SCREEN_TYPE_NONE;
 	enum_next_screen_type = SCREEN_TYPE_SPLASH;
-	enum_next_screen_type = SCREEN_TYPE_READY;`
+	//enum_next_screen_type = SCREEN_TYPE_READY;`
 	//enum_next_screen_type = SCREEN_TYPE_TITLE;
 	//enum_next_screen_type = SCREEN_TYPE_OVER;
 	//enum_next_screen_type = SCREEN_TYPE_DIFF;

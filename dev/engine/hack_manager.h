@@ -34,7 +34,7 @@ void engine_hack_manager_invert()
 	hacker_sound = !hacker_sound;
 	//hacker_random= !hacker_random;
 	//hacker_random= RAND_TYPE_NORMAL;
-	hacker_cheat = 1;							// TODO REMOVE
+	//hacker_cheat = 1;							// TODO REMOVE
 }
 
 void engine_hack_manager_resetX()

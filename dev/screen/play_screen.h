@@ -11,7 +11,7 @@ extern unsigned char answer_index, answer_value;
 
 void screen_play_screen_init()
 {
-	screen_cheat_screen_delay = NORMAL_DELAY / 2;
+	screen_cheat_screen_delay = TITLE_DELAY * 2/5;
 }
 
 void screen_play_screen_load()
