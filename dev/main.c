@@ -39,8 +39,8 @@ void main( void )
 	//enum_next_screen_type = SCREEN_TYPE_READY;
 	//enum_next_screen_type = SCREEN_TYPE_PLAY;
 	//enum_next_screen_type = SCREEN_TYPE_TEST5;
-	//enum_next_screen_type = SCREEN_TYPE_DIFF;
-	enum_next_screen_type = SCREEN_TYPE_LONG;
+	enum_next_screen_type = SCREEN_TYPE_DIFF;
+	//enum_next_screen_type = SCREEN_TYPE_LONG;
 
 	SMS_displayOn();
 	for (;;)
@@ -156,7 +156,7 @@ void custom_initialize()
 	screen_title_screen_init();
 	screen_intro_screen_init();
 	screen_diff_screen_init();
-
+	screen_long_screen_init();
 
 	// TODO - delete
 	screen_test1_screen_init();

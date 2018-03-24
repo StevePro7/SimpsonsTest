@@ -7,13 +7,14 @@ extern unsigned char screen_long_screen_delay, screen_long_screen_state;
 
 void screen_long_screen_init()
 {
-	screen_bases_screen_init();
 	screen_long_screen_delay = NORMAL_DELAY;
-	screen_long_screen_state = SELECT_TYPE_BEFORE;
 }
 
 void screen_long_screen_load()
 {
+	screen_bases_screen_init();
+	screen_long_screen_state = SELECT_TYPE_BEFORE;
+
 	engine_select_manager_clear();
 	engine_select_manager_load_long();
 	engine_select_manager_base();
@@ -51,7 +52,7 @@ void screen_long_screen_update(unsigned char *screen_type, unsigned int curr_joy
 		screen_bases_screen_timer++;
 		if (screen_bases_screen_timer >= screen_long_screen_delay)
 		{
-			*screen_type = SCREEN_TYPE_READY;
+			*screen_type = SCREEN_TYPE_DIFF;
 			return;
 		}
 	}

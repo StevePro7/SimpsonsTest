@@ -16,7 +16,7 @@
 // Delay.
 #define SPLASH_DELAY		150
 #define TITLE_DELAY			100
-#define NORMAL_DELAY		250		// TODO maybe beef this up to 75
+#define NORMAL_DELAY		50		// TODO maybe beef this up to 75
 
 // Quiz.
 #define MAX_QUESTIONS		10		// TODO changed for testing - correct to 50
