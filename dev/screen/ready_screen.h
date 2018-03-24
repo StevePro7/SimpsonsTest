@@ -14,12 +14,12 @@ void screen_ready_screen_init()
 void screen_ready_screen_load()
 {
 	// TODO REMOVE
-	SMS_displayOff();
-	engine_content_manager_title();
-	SMS_setSpritePaletteColor(0, RGB(3,3,3));
-	SMS_displayOn();
-	//diff_select = 0;
-	//question_long = 2;
+	//SMS_displayOff();
+	//engine_content_manager_title();
+	//SMS_setSpritePaletteColor(0, RGB(3,3,3));
+	//SMS_displayOn();
+	diff_select = 0;
+	question_long = 3;
 	// TODO REMOVE
 
 	screen_bases_screen_init();
@@ -54,13 +54,13 @@ void screen_ready_screen_update(unsigned char *screen_type, unsigned int curr_jo
 	input = engine_input_manager_hold_fire1( curr_joypad1, prev_joypad1 );
 	if( input )
 	{
-		//level = 1;
+		level = 1;
 	}
 
 	screen_bases_screen_timer++;
 	if( screen_bases_screen_timer >= screen_ready_screen_delay )
 	{
-		//level = 1;
+		level = 1;
 	}
 
 	if ( level )
@@ -68,8 +68,7 @@ void screen_ready_screen_update(unsigned char *screen_type, unsigned int curr_jo
 		engine_select_manager_clear();
 		engine_audio_manager_stop_music();
 
-		//*screen_type = SCREEN_TYPE_LEVEL;
-		*screen_type = SCREEN_TYPE_READY;
+		*screen_type = SCREEN_TYPE_LEVEL;
 		return;
 	}
 
