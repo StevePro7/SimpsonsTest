@@ -1,9 +1,6 @@
 #ifndef _SCORE_SCREEN_H_
 #define _SCORE_SCREEN_H_
 
-#define TEXT_X		2
-#define DATA_X		19
-
 void screen_score_screen_load()
 {
 	float percent = 0.0f;
@@ -13,28 +10,27 @@ void screen_score_screen_load()
 	engine_font_manager_draw_text( LOCALE_FIRE1, 2, 22 );
 
 	engine_font_manager_draw_text( LOCALE_STATISTICS, 8, TITLE_Y);
+	engine_font_manager_draw_text( LOCALE_QUIZ_TOTAL, SUMMARY_TEXT_X, 5 );
+	engine_font_manager_draw_data_ZERO(question_long, SUMMARY_DATA_X, 6);
 
-	engine_font_manager_draw_text( LOCALE_QUIZ_TOTAL, TEXT_X, 5 );
-	engine_font_manager_draw_data_ZERO(question_long, DATA_X, 6);
+	engine_font_manager_draw_text( LOCALE_QUIZ_SOLVE, SUMMARY_TEXT_X, 9 );
+	engine_font_manager_draw_data_ZERO(question_count, SUMMARY_DATA_X, 10);
 
-	engine_font_manager_draw_text( LOCALE_QUIZ_SOLVE, TEXT_X, 9 );
-	engine_font_manager_draw_data_ZERO(question_count, DATA_X, 10);
-
-	engine_font_manager_draw_text( LOCALE_QUIZ_RIGHT, TEXT_X, 13 );
-	engine_font_manager_draw_data_ZERO( score_player, DATA_X, 14 );
+	engine_font_manager_draw_text( LOCALE_QUIZ_RIGHT, SUMMARY_TEXT_X, 13 );
+	engine_font_manager_draw_data_ZERO( score_player, SUMMARY_DATA_X, 14 );
 
 	// Allow for potential division by zero error.
-	engine_font_manager_draw_text( LOCALE_CURR_PERCENT, TEXT_X, 17 );
+	engine_font_manager_draw_text( LOCALE_CURR_PERCENT, SUMMARY_TEXT_X, 17 );
 	if( question_count == 0 )
 	{
-		engine_font_manager_draw_data_ZERO( percent, DATA_X, 18 );
-		engine_font_manager_draw_text( LOCALE_PERCENT_SYM, DATA_X + 1, 18 );
+		engine_font_manager_draw_data_ZERO( percent, SUMMARY_DATA_X, 18 );
+		engine_font_manager_draw_text( LOCALE_PERCENT_SYM, SUMMARY_DATA_X + 1, 18 );
 		return;
 	}
 
 	percent = (float)score_player / (float)question_count * 100;
-	engine_font_manager_draw_data_ZERO(percent, DATA_X, 18 );
-	engine_font_manager_draw_text( LOCALE_PERCENT_SYM, DATA_X + 1, 18 );
+	engine_font_manager_draw_data_ZERO( percent, SUMMARY_DATA_X, 18 );
+	engine_font_manager_draw_text( LOCALE_PERCENT_SYM, SUMMARY_DATA_X + 1, 18 );
 }
 
 void screen_score_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)

@@ -30,4 +30,8 @@
 // Cheat.
 #define CHEAT_TOTAL			5
 
+// Summary.
+#define SUMMARY_TEXT_X		2
+#define SUMMARY_DATA_X		19
+
 #endif//_GLOBAL_MANAGER_H_

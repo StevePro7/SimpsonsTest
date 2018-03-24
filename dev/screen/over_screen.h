@@ -7,7 +7,7 @@ extern unsigned int screen_over_screen_delay;
 
 void screen_over_screen_init()
 {
-	screen_over_screen_delay = NORMAL_DELAY * 8;
+	screen_over_screen_delay = TITLE_DELAY * 8;
 }
 
 void screen_over_screen_load()
@@ -16,28 +16,26 @@ void screen_over_screen_load()
 	engine_select_manager_clear2();
 	screen_bases_screen_init();
 
-	// TODO REMOVE
-	//engine_font_manager_draw_text(LOCALE_BLANK, 2, 2);
-	//engine_font_manager_draw_text("GAME OVER", 2, 2);
-	// TODO REMOVE
+	engine_font_manager_draw_text( LOCALE_OVER_MSG1, 2, 21 );
+	engine_font_manager_draw_text( LOCALE_OVER_MSG2, 2, 22 );
 
+	engine_font_manager_draw_text( LOCALE_UNDERLINED, 8, TITLE_Y - 1 );
+	engine_font_manager_draw_text( LOCALE_COMPLETION, 8, TITLE_Y + 0 );
+	engine_font_manager_draw_text( LOCALE_UNDERLINED, 8, TITLE_Y + 1 );
 
-	// TODO REMOVE format better
-	engine_font_manager_draw_text("QUESTIONS", 2, 4);
-	engine_font_manager_draw_text("TOTAL", 2, 5);
-	engine_font_manager_draw_data(question_long, 4, 6);
+	engine_font_manager_draw_text( LOCALE_QUIZ_TOTAL, SUMMARY_TEXT_X, 5 );
+	engine_font_manager_draw_data_ZERO(question_long, SUMMARY_DATA_X, 6);
 
-	engine_font_manager_draw_text("QUESTIONS", 2, 8);
-	engine_font_manager_draw_text("ANSWERED", 2, 9);
-	engine_font_manager_draw_data(question_count, 4, 10);
+	engine_font_manager_draw_text( LOCALE_QUIZ_SOLVE, SUMMARY_TEXT_X, 9 );
+	engine_font_manager_draw_data_ZERO(question_count, SUMMARY_DATA_X, 10);
 
-	engine_font_manager_draw_text("NUMBER", 2, 12);
-	engine_font_manager_draw_text("CORRECT", 2, 13);
-	engine_font_manager_draw_data(score_player, 4, 14);
+	engine_font_manager_draw_text( LOCALE_QUIZ_RIGHT, SUMMARY_TEXT_X, 13 );
+	engine_font_manager_draw_data_ZERO( score_player, SUMMARY_DATA_X, 14 );
 
-	engine_font_manager_draw_text("PERCENTAGE", 2, 16);
-	percent = (float)score_player / (float)question_long * 100;
-	engine_font_manager_draw_data(percent, 4, 17);
+	engine_font_manager_draw_text( LOCALE_OVER_PERCENT, SUMMARY_TEXT_X, 17 );
+	percent = (float)score_player / (float)question_count * 100;
+	engine_font_manager_draw_data_ZERO( percent, SUMMARY_DATA_X, 18 );
+	engine_font_manager_draw_text( LOCALE_PERCENT_SYM, SUMMARY_DATA_X + 1, 18 );
 }
 
 void screen_over_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
@@ -52,7 +50,7 @@ void screen_over_screen_update(unsigned char *screen_type, unsigned int curr_joy
 	}
 
 	screen_bases_screen_timer++;
-	if (screen_bases_screen_timer >= screen_over_screen_delay)
+	if ( screen_bases_screen_timer >= screen_over_screen_delay )
 	{
 		level = 1;
 	}
