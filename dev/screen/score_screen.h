@@ -17,11 +17,11 @@ void screen_score_screen_load()
 
 
 	// TODO REMOVE format better
-	//engine_font_manager_draw_text("PRESS FIRE2 TO RESUME QUIZ", 2, 20);
-	//engine_font_manager_draw_text("PRESS FIRE1 TO FINISH QUZE", 2, 21);
+	
 
 	//engine_font_manager_draw_text("1234567890123456789", 2, 4);
-
+	engine_font_manager_draw_text("PRESS FIRE2 => BACK", 2, 21);
+	engine_font_manager_draw_text("PRESS FIRE1 => QUIT", 2, 22);
 
 	engine_font_manager_draw_text( "=THE STATISTICS=", 8, TITLE_Y);
 
