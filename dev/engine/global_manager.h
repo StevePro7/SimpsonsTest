@@ -27,4 +27,7 @@
 // Options.
 #define MAX_OPTIONS			4
 
+// Long.
+#define LONG_DELTA			4		// Change this to 4 if max no. questions >= 100!
+
 #endif//_GLOBAL_MANAGER_H_

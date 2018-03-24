@@ -1,25 +1,34 @@
 #ifndef _OVER_SCREEN_H_
 #define _OVER_SCREEN_H_
 
+// This will be the "Number questions" screen!
+
 void screen_over_screen_load()
 {
 	engine_font_manager_draw_text(LOCALE_BLANK, 2, 2);
 	engine_font_manager_draw_text("OVER", 2, 2);
+
+	engine_select_manager_load_long();
+	engine_select_manager_base();
 }
 
 void screen_over_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
 {
-	unsigned char level = 0;
-	if ((curr_joypad1 & PORT_A_KEY_1 && !(prev_joypad1 & PORT_A_KEY_1)) ||
-		(curr_joypad1 & PORT_A_KEY_2 && !(prev_joypad1 & PORT_A_KEY_2)))
+	unsigned char input = 0;
+	engine_select_manager_draw_select();
+
+	input = engine_input_manager_hold_up(curr_joypad1, prev_joypad1);
+	if( input )
 	{
-		level = 1;
+		long_select = engine_select_manager_move_up( long_select );
+	}
+	input = engine_input_manager_hold_down(curr_joypad1, prev_joypad1);
+	if (input)
+	{
+		long_select = engine_select_manager_move_down( long_select );
 	}
 
-	if (level)
-	{
-		*screen_type = SCREEN_TYPE_SCORE;
-	}
+	*screen_type = SCREEN_TYPE_OVER;
 }
 
 #endif//_OVER_SCREEN_H_

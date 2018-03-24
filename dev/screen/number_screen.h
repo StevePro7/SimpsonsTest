@@ -5,9 +5,6 @@
 
 void screen_number_screen_load()
 {
-	engine_font_manager_draw_text( "      ", 2, 1 );
-	engine_font_manager_draw_text( "NUMBER", 2, 1 );
-
 	engine_select_manager_base();
 	engine_select_manager_load_diff();
 }

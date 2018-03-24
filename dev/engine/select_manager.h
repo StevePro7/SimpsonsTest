@@ -23,10 +23,10 @@ void engine_select_manager_init()
 		select_option[idx] = SELECT_Y + idx * SELECT_DELTA;
 	}
 
-	diff_select = 0;
-	long_select = 0;
-	quiz_select = 1;
-	select_choice = 0;
+	diff_select = 0;		// Select difficulty option.
+	long_select = 0;		// Number questions option.
+	quiz_select = 0;		// Last questions selected.
+	select_choice = 0;		// Variable that remembers.
 	select_height = select_option[select_choice];
 }
 
@@ -55,7 +55,7 @@ void engine_select_manager_load_long()
 	unsigned char idx;
 	for( idx = 0; idx < MAX_OPTIONS; idx++)
 	{
-		engine_font_manager_draw_data( select_long_option[idx], QUIZ_X + 2, select_high_option[idx] );
+		engine_font_manager_draw_data( select_long_option[idx], QUIZ_X + LONG_DELTA, select_high_option[idx] );
 	}
 
 	select_choice = long_select;
@@ -63,6 +63,7 @@ void engine_select_manager_load_long()
 }
 void engine_select_manager_load_quiz()
 {
+	quiz_select = 0;
 	select_choice = quiz_select;
 	select_height = select_option[select_choice];
 }
