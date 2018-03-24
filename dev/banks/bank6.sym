@@ -7,9 +7,12 @@ Symbol Table
     .__.ABS.                                                    =  0000 G
     .__.CPU.                                                    =  0000 L
     .__.H$L.                                                    =  0000 L
-  7 _splash__palette__bin                                          0000 GR
-  7 _splash__tilemap__stmcompr                                     0010 GR
-  7 _splash__tiles__psgcompr                                       0057 GR
+  7 _simpsons__palette__bin                                        0000 GR
+  7 _simpsons__tilemap__stmcompr                                   0010 GR
+  7 _simpsons__tiles__psgcompr                                     00D4 GR
+  7 _splash__palette__bin                                          1F3B GR
+  7 _splash__tilemap__stmcompr                                     1F4B GR
+  7 _splash__tiles__psgcompr                                       1F92 GR
 
 
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 2.
@@ -24,7 +27,7 @@ Area Table
    4 _HOME                                      size    0   flags    0
    5 _GSINIT                                    size    0   flags    0
    6 _GSFINAL                                   size    0   flags    0
-   7 _BANK6                                     size  880   flags    0
+   7 _BANK6                                     size 27BB   flags    0
    8 _INITIALIZER                               size    0   flags    0
    9 _CABS                                      size    0   flags    8
 

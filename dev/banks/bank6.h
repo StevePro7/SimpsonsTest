@@ -1,3 +1,15 @@
+extern const unsigned char	simpsons__palette__bin[];
+#define				simpsons__palette__bin_size 16
+#define				simpsons__palette__bin_bank 6
+
+extern const unsigned char	simpsons__tilemap__stmcompr[];
+#define				simpsons__tilemap__stmcompr_size 196
+#define				simpsons__tilemap__stmcompr_bank 6
+
+extern const unsigned char	simpsons__tiles__psgcompr[];
+#define				simpsons__tiles__psgcompr_size 7783
+#define				simpsons__tiles__psgcompr_bank 6
+
 extern const unsigned char	splash__palette__bin[];
 #define				splash__palette__bin_size 16
 #define				splash__palette__bin_bank 6

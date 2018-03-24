@@ -15,9 +15,10 @@ void engine_content_manager_splash()
 
 void engine_content_manager_title()
 {
-	/*SMS_loadPSGaidencompressedTiles(simpsons__tiles__psgcompr, SIMPSONS_TILES);
+	SMS_mapROMBank(6);
+	SMS_loadPSGaidencompressedTiles(simpsons__tiles__psgcompr, SIMPSONS_TILES);
 	SMS_loadSTMcompressedTileMap(0, 0, simpsons__tilemap__stmcompr);
-	SMS_loadBGPalette(simpsons__palette__bin);*/
+	SMS_loadBGPalette(simpsons__palette__bin);
 }
 
 void engine_content_manager_load_font()
