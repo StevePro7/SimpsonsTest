@@ -5,7 +5,7 @@ void engine_audio_manager_start_music()
 {
 	if( hacker_music )
 	{
-		//PSGPlayNoRepeat( MUSIC_PSG );
+		PSGPlayNoRepeat( MUSIC_PSG );
 	}
 }
 
