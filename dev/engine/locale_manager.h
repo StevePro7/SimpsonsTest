@@ -14,7 +14,6 @@
 
 #define LOCALE_QUESTION		"QUESTION #"
 #define LOCALE_SCORE		"SCORE"
-#define LOCALE_SPACE		"   "
 
 #define LOCALE_OPTA			"A."
 #define LOCALE_OPTB			"B."

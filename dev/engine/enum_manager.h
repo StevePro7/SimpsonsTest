@@ -59,6 +59,17 @@ enum
 // TODO - not used so can remove
 
 
+// Each select screen has 2x states
+#define SELECT_TYPE_BEFORE	0
+#define SELECT_TYPE_AFTER	1
+
+enum
+{
+	select_type_before,	// 0
+	select_type_after,	// 1
+} enum_select_type;
+
+
 // Difficulty type.
 #define DIFF_TYPE_EASY		0
 #define DIFF_TYPE_NORM		1

@@ -14,14 +14,16 @@ void screen_test5_screen_load()
 {
 	unsigned char idx = 0;
 
+	engine_select_manager_clear();
+
 	screen_bases_screen_init();
 	engine_font_manager_draw_text(LOCALE_BLANK, 0, 1);
 	engine_font_manager_draw_text("TEST5", 0, 1);
 
-	for(idx = 0; idx < question_count; idx++)
+	/*for(idx = 0; idx < question_count; idx++)
 	{
 		engine_font_manager_draw_data(idx, 17, idx+0);
-	}
+	}*/
 }
 
 void screen_test5_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)

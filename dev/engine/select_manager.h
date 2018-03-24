@@ -36,6 +36,17 @@ void engine_select_manager_base()
 	for( idx = 0; idx < MAX_OPTIONS; idx++)
 	{
 		engine_font_manager_draw_text( select_text_option[idx], QUIZ_X, select_high_option[idx] );
+		engine_font_manager_draw_text( LOCALE_SPACE6, QUIZ_X + 2, select_high_option[idx] );
+	}
+}
+
+void engine_select_manager_clear()
+{
+	// TODO - get EXACT co-ordinates!!
+	unsigned char high;
+	for( high = 5; high < 24; high++)
+	{
+		engine_font_manager_draw_text( "          ", 1, high );
 	}
 }
 
