@@ -17,6 +17,8 @@ void screen_long_screen_load()
 	screen_long_screen_state = SELECT_TYPE_BEFORE;
 
 	engine_select_manager_clear();
+	engine_font_manager_draw_text( LOCALE_QUESTIONS, 2, 6);
+
 	engine_select_manager_load_long();
 	engine_select_manager_base();
 }

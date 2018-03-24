@@ -17,6 +17,8 @@ void screen_diff_screen_load()
 
 	engine_select_manager_clear();
 	engine_select_manager_base();
+
+	engine_font_manager_draw_text( LOCALE_DIFFICULTY, 2, 6);
 	engine_select_manager_load_diff();
 }
 

@@ -13,12 +13,13 @@ void screen_ready_screen_init()
 
 void screen_ready_screen_load()
 {
-//	unsigned char bank;
-
-
 	// TODO REMOVE
-	diff_select = 0;
-	question_long = 2;
+	SMS_displayOff();
+	engine_content_manager_title();
+	SMS_setSpritePaletteColor(0, RGB(3,3,3));
+	SMS_displayOn();
+	//diff_select = 0;
+	//question_long = 2;
 	// TODO REMOVE
 
 	screen_bases_screen_init();
@@ -27,29 +28,19 @@ void screen_ready_screen_load()
 	engine_select_manager_clear();
 
 	// TODO format this better!!
-	engine_font_manager_draw_text("DIFFICULTY", 2, 5);
-	engine_font_manager_draw_text( select_diff_option[diff_select], 2, 6);
+	engine_font_manager_draw_text( LOCALE_DIFFICULTY, 2, 6);
+	engine_font_manager_draw_text( LOCALE_ARROW_LEFT, 1, 7);
+	engine_font_manager_draw_text( select_diff_option[diff_select], 2, 7);
 
-	engine_font_manager_draw_text("QUESTIONS", 2, 8);
-	engine_font_manager_draw_data( question_long, 3, 9);
-
-	engine_font_manager_draw_text(LOCALE_GET, 5, 12);
-	engine_font_manager_draw_text(LOCALE_READY, 5, 13);
-	// TODO format this better!!
-
+	engine_font_manager_draw_text( LOCALE_QUESTIONS, 2, 9);
+	engine_font_manager_draw_text( LOCALE_ARROW_LEFT, 1, 10);
+	engine_font_manager_draw_data_ZERO( question_long, 4, 10);
 
 	// Initialize all relevant variables before quiz starts...
 	question_index = 0;
 	question_value = 0;
 	question_count = 0;
 	engine_score_manager_init();
-
-
-	/*engine_random_manager_init();
-	bank = diff_select + QUIZ_BANK;
-	engine_quiz_manager_bank( bank );
-	engine_random_manager_load();
-	engine_select_manager_load_quiz();*/
 }
 
 void screen_ready_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
@@ -61,13 +52,13 @@ void screen_ready_screen_update(unsigned char *screen_type, unsigned int curr_jo
 	input = engine_input_manager_hold_fire1( curr_joypad1, prev_joypad1 );
 	if( input )
 	{
-		level = 1;
+		//level = 1;
 	}
 
 	screen_bases_screen_timer++;
 	if( screen_bases_screen_timer >= screen_ready_screen_delay )
 	{
-		level = 1;
+		//level = 1;
 	}
 
 	if ( level )
@@ -75,12 +66,8 @@ void screen_ready_screen_update(unsigned char *screen_type, unsigned int curr_jo
 		engine_select_manager_clear();
 		engine_audio_manager_stop_music();
 
-		// TODO REMOVE
-		//engine_debug_manager_clear();
-		// TODO REMOVE
-
-
-		*screen_type = SCREEN_TYPE_LEVEL;
+		//*screen_type = SCREEN_TYPE_LEVEL;
+		*screen_type = SCREEN_TYPE_READY;
 		return;
 	}
 

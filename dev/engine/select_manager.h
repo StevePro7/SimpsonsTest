@@ -42,7 +42,15 @@ void engine_select_manager_base()
 void engine_select_manager_clear()
 {
 	unsigned char high;
-	for( high = 5; high < 24; high++)
+	for( high = 5; high < 7; high++)
+	{
+		engine_font_manager_draw_text( LOCALE_BLANK12, 0, high );
+	}
+	for( high = 7; high < 12; high++)
+	{
+		engine_font_manager_draw_text( LOCALE_BLANK11, 0, high );
+	}
+	for( high = 12; high < 24; high++)
 	{
 		engine_font_manager_draw_text( LOCALE_BLANK8, 0, high );
 	}

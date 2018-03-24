@@ -10,15 +10,16 @@
 
 #define LOCALE_PRESS		"PRESS"
 #define LOCALE_START		"START"
-#define LOCALE_BLANK5		"     "
-#define LOCALE_BLANK8		"        "
-#define LOCALE_BLANK21		"                     "
 
 #define LOCALE_CHEAT		"CHEAT"
 #define LOCALE_MODE			"MODE!"
 
+#define LOCALE_DIFFICULTY	"DIFFICULTY"
+#define LOCALE_LEVEL		"SELECTED"
 #define LOCALE_GET			" GET "
 #define LOCALE_READY		"READY"
+
+#define LOCALE_QUESTIONS	"QUESTIONS"
 
 #define LOCALE_QUESTION		"QUESTION #"
 #define LOCALE_SCORE		"SCORE"
@@ -41,5 +42,11 @@
 #define LOCALE_ARROW_SPACE	" "
 #define LOCALE_ARROW_LEFT	">"
 #define LOCALE_ARROW_RIGHT	"<"
+
+#define LOCALE_BLANK5		"     "
+#define LOCALE_BLANK8		"        "
+#define LOCALE_BLANK11		"           "
+#define LOCALE_BLANK12		"            "
+#define LOCALE_BLANK21		"                     "
 
 #endif//_LOCALE_MANAGER_H_
