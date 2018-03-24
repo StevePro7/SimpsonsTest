@@ -13,6 +13,7 @@
 #include "banks\bank4.h"
 #include "banks\bank5.h"
 #include "banks\bank6.h"
+#include "banks\bank7.h"
 
 #include "engine\global_manager.h"
 #include "engine\locale_manager.h"

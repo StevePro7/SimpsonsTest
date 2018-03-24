@@ -6,8 +6,11 @@ void screen_level_screen_load()
 {
 	unsigned char bank;
 
+	SMS_displayOff();
 	engine_content_manager_load_sprites();
+	engine_content_manager_load_maggie();
 	SMS_setSpritePaletteColor(0, RGB(3,3,3));
+	SMS_displayOn();
 
 	// Process this here just before quiz starts
 	// Why?  Otherwise may cause music to "drag"
@@ -18,6 +21,8 @@ void screen_level_screen_load()
 
 	engine_random_manager_load();
 	engine_select_manager_load_quiz();
+
+	
 }
 
 void screen_level_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)

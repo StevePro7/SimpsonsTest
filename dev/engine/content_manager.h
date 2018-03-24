@@ -39,9 +39,10 @@ void engine_content_manager_load_sprites()
 
 void engine_content_manager_load_maggie()
 {
-	/*SMS_loadPSGaidencompressedTiles(maggie__tiles__psgcompr, GRAPHICS_TILES);
+	SMS_mapROMBank(7);
+	SMS_loadPSGaidencompressedTiles(maggie__tiles__psgcompr, GRAPHICS_TILES);
 	SMS_loadSTMcompressedTileMap(0, 0, maggie__tilemap__stmcompr);
-	SMS_loadBGPalette(maggie__palette__bin);*/
+	SMS_loadBGPalette(maggie__palette__bin);
 }
 
 #endif//_CONTENT_MANAGER_H_

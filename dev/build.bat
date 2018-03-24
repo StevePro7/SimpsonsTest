@@ -15,11 +15,17 @@ REM bmp2tile.exe raw\homer.bmp -savetiles "homer (tiles).psgcompr" -removedupes 
 REM bmp2tile.exe raw\marge.bmp -savetiles "marge (tiles).psgcompr" -removedupes -nomirror -planar -tileoffset 112 -savetilemap "marge (tilemap).stmcompr" -savepalette "marge (palette).bin"
 
 REM cd banks\bank6
-REM bmp2tile.exe raw\splash.bmp -savetiles "..\dev\banks\bank6\splash (tiles).psgcompr" -removedupes -nomirror -planar -tileoffset 112 -savetilemap "..\dev\banks\bank6\splash (tilemap).stmcompr" -savepalette "..\dev\banks\bank6\splash (palette).bin"
+REM bmp2tile.exe raw\splash.bmp -savetiles "splash (tiles).psgcompr" -removedupes -nomirror -planar -tileoffset 112 -savetilemap "splash (tilemap).stmcompr" -savepalette "splash (palette).bin"
 REM bmp2tile.exe raw\simpsons.bmp -savetiles "simpsons (tiles).psgcompr" -removedupes -nomirror -planar -tileoffset 96 -savetilemap "simpsons (tilemap).stmcompr" -savepalette "simpsons (palette).bin"
 
 REM cd ..
 REM folder2c bank6 bank6 6
+
+REM cd banks\bank7
+REM bmp2tile.exe raw\maggie.bmp -savetiles "maggie (tiles).psgcompr" -removedupes -nomirror -planar -tileoffset 112 -savetilemap "maggie (tilemap).stmcompr" -savepalette "maggie (palette).bin"
+
+REM cd ..
+REM folder2c bank7 bank7 7
 
 
 REM echo Build gfx.c and gfx.h from gfx folder
@@ -46,6 +52,7 @@ REM sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK3 bank3
 REM sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK4 bank4.c
 REM sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK5 bank5.c
 REM sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK6 bank6.c
+REM sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK7 bank7.c
 REM cd ..
 
 REM echo Build main
@@ -59,6 +66,7 @@ sdcc -o output.ihx --Werror --opt-code-speed -mz80 --no-std-crt0 --data-loc 0xC0
 -Wl-b_BANK4=0x8000 ^
 -Wl-b_BANK5=0x8000 ^
 -Wl-b_BANK6=0x8000 ^
+-Wl-b_BANK7=0x8000 ^
 ..\crt0\crt0_sms.rel ^main.rel ^
 ..\lib\SMSlib.lib ^
 ..\lib\PSGlib.rel ^
@@ -67,6 +75,7 @@ banks\bank3.rel ^
 banks\bank4.rel ^
 banks\bank5.rel ^
 banks\bank6.rel ^
+banks\bank7.rel ^
 gfx.rel ^
 psg.rel
 

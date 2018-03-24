@@ -18,8 +18,8 @@ void screen_title_screen_load()
 	engine_content_manager_load_sprites();
 	engine_content_manager_title();
 	SMS_setSpritePaletteColor(0, RGB(3,3,3));
-
 	SMS_displayOn();
+
 	engine_audio_manager_start_music();
 }
 
