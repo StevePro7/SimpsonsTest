@@ -8,7 +8,7 @@ extern unsigned char question_index, question_value, question_long, question_cou
 
 void screen_ready_screen_init()
 {
-	screen_ready_screen_delay = NORMAL_DELAY * 4;
+	screen_ready_screen_delay = TITLE_DELAY * 4;
 }
 
 void screen_ready_screen_load()
@@ -18,8 +18,11 @@ void screen_ready_screen_load()
 	//engine_content_manager_title();
 	//SMS_setSpritePaletteColor(0, RGB(3,3,3));
 	//SMS_displayOn();
-	diff_select = 0;
-	question_long = 3;
+	diff_select = 1;
+	if (question_long > 10 )
+	{
+		question_long = 10;
+	}
 	// TODO REMOVE
 
 	screen_bases_screen_init();
@@ -27,16 +30,16 @@ void screen_ready_screen_load()
 	// Clear space.
 	engine_select_manager_clear();
 
-	engine_font_manager_draw_text( LOCALE_DIFFICULTY, 2, 6);
-	engine_font_manager_draw_text( LOCALE_ARROW_LEFT, 1, 7);
-	engine_font_manager_draw_text( select_diff_option[diff_select], 2, 7);
+	engine_font_manager_draw_text( LOCALE_DIFFICULTY, 2, 6 );
+	engine_font_manager_draw_text( LOCALE_ARROW_LEFT, 1, 7 );
+	engine_font_manager_draw_text( select_diff_option[diff_select], 2, 7 );
 
-	engine_font_manager_draw_text( LOCALE_QUESTIONS, 2, 9);
-	engine_font_manager_draw_text( LOCALE_ARROW_LEFT, 1, 10);
-	engine_font_manager_draw_data_ZERO( question_long, 4, 10);
+	engine_font_manager_draw_text( LOCALE_QUESTIONS, 2, 11 );
+	engine_font_manager_draw_text( LOCALE_ARROW_LEFT, 1, 12 );
+	engine_font_manager_draw_data( question_long, 4, 12 );
 
-	engine_font_manager_draw_text(LOCALE_GET, 2, 16);
-	engine_font_manager_draw_text(LOCALE_READY, 2, 17);
+	engine_font_manager_draw_text( LOCALE_GET, 2, 17 );
+	engine_font_manager_draw_text( LOCALE_READY, 2, 18 );
 
 	// Initialize all relevant variables before quiz starts...
 	question_index = 0;
