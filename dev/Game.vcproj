@@ -264,6 +264,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\screen\diff_screen.h"
+					>
+				</File>
+				<File
 					RelativePath=".\screen\intro_screen.h"
 					>
 				</File>

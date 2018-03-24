@@ -8,7 +8,7 @@ extern unsigned char screen_intro_screen_delay;
 void screen_intro_screen_init()
 {
 	screen_bases_screen_init();
-	screen_intro_screen_delay = INTRO_DELAY;
+	screen_intro_screen_delay = NORMAL_DELAY;
 }
 
 void screen_intro_screen_load()

@@ -19,6 +19,7 @@
 #define SCREEN_TYPE_TEST3	14
 #define SCREEN_TYPE_TEST4	15
 #define SCREEN_TYPE_TEST5	16
+#define SCREEN_TYPE_DIFF	17
 
 enum
 {
@@ -39,6 +40,7 @@ enum
 	screen_type_test3,	// 14
 	screen_type_test4,	// 15
 	screen_type_test5,	// 16
+	screen_type_diff,	// 17
 } enum_curr_screen_type, enum_next_screen_type;
 
 
