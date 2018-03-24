@@ -12,20 +12,42 @@ void screen_quiz_screen_load()
 	engine_font_manager_draw_text("QUIZ", 2, 2);
 	// TODO REMOVE
 
-
+	question_count++;
 	screen_bases_screen_init();
-	if( select_choice == answer_index )
+	if( quiz_select == answer_index )
 	{
-		engine_score_manager_update();
+		screen_quiz_screen_state = ANSWER_TYPE_RIGHT;
+		
+	}
+	else
+	{
+		screen_quiz_screen_state = ANSWER_TYPE_WRONG;
 	}
 
-
+	if( ANSWER_TYPE_RIGHT == screen_quiz_screen_state )
+	{
+		engine_audio_manager_sound_right();
+		engine_score_manager_update();
+	}
+	else
+	{
+		engine_audio_manager_sound_wrong();
+	}
 }
 
 void screen_quiz_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
 {
 	unsigned int test_curr_joypad1 = curr_joypad1;
 	unsigned int test_prev_joypad1 = prev_joypad1;
+
+	if( ANSWER_TYPE_RIGHT == screen_quiz_screen_state )
+	{
+		engine_select_manager_draw_right();
+	}
+	else
+	{
+		engine_select_manager_draw_wrong();
+	}
 
 	*screen_type = SCREEN_TYPE_QUIZ;
 }

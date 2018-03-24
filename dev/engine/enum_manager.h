@@ -48,13 +48,13 @@ enum
 
 // TODO - not used so can remove
 // Select type.
-#define ANSWER_TYPE_SELECT	0
+#define ANSWER_TYPE_NONE	0
 #define ANSWER_TYPE_RIGHT	1
 #define ANSWER_TYPE_WRONG	2
 
 enum
 {
-	answer_type_select,	// 0
+	answer_type_none,	// 0
 	answer_type_right,	// 1
 	answer_type_wrong,	// 2
 } enum_answer_type;
