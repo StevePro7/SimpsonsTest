@@ -45,7 +45,7 @@ void engine_select_manager_clear()
 	unsigned char high;
 	for( high = 5; high < 24; high++)
 	{
-		engine_font_manager_draw_text( "          ", 1, high );
+		engine_font_manager_draw_text( "           ", 1, high );
 	}
 }
 

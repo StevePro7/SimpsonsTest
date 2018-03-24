@@ -6,7 +6,7 @@ extern unsigned char play_answer_state;
 void screen_play_screen_load()
 {
 	engine_font_manager_draw_text(LOCALE_BLANK, 2, 2);
-	engine_font_manager_draw_text("LEVEL", 2, 2);
+	engine_font_manager_draw_text("PLAY", 2, 2);
 }
 
 void screen_play_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)

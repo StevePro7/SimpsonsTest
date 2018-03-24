@@ -12,6 +12,9 @@
 #define LOCALE_START		"START"
 #define LOCALE_BLANK5		"     "
 
+#define LOCALE_GET			" GET "
+#define LOCALE_READY		"READY"
+
 #define LOCALE_QUESTION		"QUESTION #"
 #define LOCALE_SCORE		"SCORE"
 
