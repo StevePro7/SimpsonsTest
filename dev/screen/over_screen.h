@@ -3,12 +3,12 @@
 
 extern unsigned int screen_bases_screen_count;
 extern unsigned int screen_bases_screen_timer;
-extern unsigned char screen_over_screen_delay;
+extern unsigned int screen_over_screen_delay;
 
 void screen_over_screen_init()
 {
-	//screen_over_screen_delay = NORMAL_DELAY * 8;
-	screen_over_screen_delay = NORMAL_DELAY;
+	screen_over_screen_delay = NORMAL_DELAY * 8;
+	//screen_over_screen_delay = NORMAL_DELAY;
 }
 
 void screen_over_screen_load()
@@ -53,7 +53,7 @@ void screen_over_screen_update(unsigned char *screen_type, unsigned int curr_joy
 	}
 
 	screen_bases_screen_timer++;
-	if (screen_bases_screen_timer >= screen_over_screen_delay)
+	if (screen_bases_screen_timer >= screen_ready_screen_delay)
 	{
 		level = 1;
 	}

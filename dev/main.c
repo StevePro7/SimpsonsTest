@@ -153,6 +153,7 @@ void custom_initialize()
 	screen_splash_screen_init();
 	screen_title_screen_init();
 	screen_intro_screen_init();
+	screen_ready_screen_init();
 	screen_diff_screen_init();
 	screen_long_screen_init();
 	screen_quiz_screen_init();

@@ -8,7 +8,7 @@ void screen_score_screen_load()
 	// TODO REMOVE
 	engine_debug_manager_clear();
 	engine_font_manager_draw_text(LOCALE_BLANK, 2, 2);
-	engine_font_manager_draw_text("GAME SCORE", 2, 2);
+	engine_font_manager_draw_text("=SCORE=", 2, 2);
 	// TODO REMOVE
 
 

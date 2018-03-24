@@ -86,11 +86,14 @@ unsigned char screen_diff_screen_delay, screen_diff_screen_state;
 //_LONG_SCREEN_H_
 unsigned char screen_long_screen_delay, screen_long_screen_state; 
 
+// _READY_SCREEN_H_
+unsigned int screen_ready_screen_delay;
+
 //_QUIZ_SCREEN_H_
 unsigned char screen_quiz_screen_delay, screen_quiz_screen_state;
 
 // _OVER_SCREEN_H_
-unsigned char screen_over_screen_delay;
+unsigned int screen_over_screen_delay;
 
 
 //_TEST_SCREEN_H_

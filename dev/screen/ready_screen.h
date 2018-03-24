@@ -1,7 +1,15 @@
 #ifndef _READY_SCREEN_H_
 #define _READY_SCREEN_H_
 
+extern unsigned int screen_bases_screen_count;
+extern unsigned int screen_bases_screen_timer;
+extern unsigned int screen_ready_screen_delay;
 extern unsigned char question_index, question_value, question_long, question_count;
+
+void screen_ready_screen_init()
+{
+	screen_ready_screen_delay = NORMAL_DELAY * 4;
+}
 
 void screen_ready_screen_load()
 {
@@ -10,9 +18,10 @@ void screen_ready_screen_load()
 
 	// TODO REMOVE
 	diff_select = 1;
-	question_long = 5;
+	question_long = 3;
 	// TODO REMOVE
 
+	screen_bases_screen_init();
 
 	// Clear space.
 	engine_select_manager_clear();
@@ -49,24 +58,36 @@ void screen_ready_screen_load()
 void screen_ready_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
 {
 	unsigned char input = 0;
+	unsigned char level = 0;
 
 	rand();
-	input = engine_input_manager_hold_fire1(curr_joypad1, prev_joypad1);
+	input = engine_input_manager_hold_fire1( curr_joypad1, prev_joypad1 );
 	if( input )
+	{
+		level = 1;
+	}
+
+	screen_bases_screen_timer++;
+	if( screen_bases_screen_timer >= screen_ready_screen_delay )
+	{
+		level = 1;
+	}
+
+	if ( level )
 	{
 		engine_select_manager_clear();
 		engine_audio_manager_stop_music();
+
+		// TODO REMOVE
+		engine_select_manager_clear();
+		// TODO REMOVE
+
+
 		*screen_type = SCREEN_TYPE_PLAY;
 		return;
 	}
 
-	//*screen_type = SCREEN_TYPE_READY;
-
-
-	// TODO REMOVE
-	engine_select_manager_clear();
-	*screen_type = SCREEN_TYPE_PLAY;
-	// TODO REMOVE
+	*screen_type = SCREEN_TYPE_READY;
 }
 
 #endif//_READY_SCREEN_H_
