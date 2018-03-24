@@ -24,6 +24,7 @@ void screen_long_screen_load()
 void screen_long_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
 {
 	unsigned char input = 0;
+	rand();
 
 	if( SELECT_TYPE_BEFORE == screen_long_screen_state )
 	{
