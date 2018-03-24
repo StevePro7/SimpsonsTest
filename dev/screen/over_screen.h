@@ -8,18 +8,17 @@ extern unsigned int screen_over_screen_delay;
 void screen_over_screen_init()
 {
 	screen_over_screen_delay = NORMAL_DELAY * 8;
-	//screen_over_screen_delay = NORMAL_DELAY;
 }
 
 void screen_over_screen_load()
 {
 	float percent = 0.0f;
+	engine_select_manager_clear2();
 	screen_bases_screen_init();
 
 	// TODO REMOVE
-	/*engine_debug_manager_clear();
-	engine_font_manager_draw_text(LOCALE_BLANK, 2, 2);
-	engine_font_manager_draw_text("GAME OVER", 2, 2);*/
+	//engine_font_manager_draw_text(LOCALE_BLANK, 2, 2);
+	//engine_font_manager_draw_text("GAME OVER", 2, 2);
 	// TODO REMOVE
 
 
@@ -53,18 +52,14 @@ void screen_over_screen_update(unsigned char *screen_type, unsigned int curr_joy
 	}
 
 	screen_bases_screen_timer++;
-	if (screen_bases_screen_timer >= screen_ready_screen_delay)
+	if (screen_bases_screen_timer >= screen_over_screen_delay)
 	{
 		level = 1;
 	}
 
 	if ( level )
 	{
-		// TODO REMOVE
-		//engine_debug_manager_clear();
-		// TODO REMOVE
-
-		*screen_type = SCREEN_TYPE_INTRO;
+		*screen_type = SCREEN_TYPE_TITLE;
 		return;
 	}
 

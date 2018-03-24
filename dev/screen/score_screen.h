@@ -4,17 +4,11 @@
 void screen_score_screen_load()
 {
 	float percent = 0.0f;
-
-	// TODO REMOVE
-	/*engine_debug_manager_clear();
-	engine_font_manager_draw_text(LOCALE_BLANK, 2, 2);
-	engine_font_manager_draw_text("=SCORE=", 2, 2);*/
-	// TODO REMOVE
-
+	engine_select_manager_clear2();
 
 	// TODO REMOVE format better
-	engine_font_manager_draw_text("PRESS FIRE2 TO RESUME QUIZ", 2, 20);
-	engine_font_manager_draw_text("PRESS FIRE1 TO FINISH QUZE", 2, 21);
+	//engine_font_manager_draw_text("PRESS FIRE2 TO RESUME QUIZ", 2, 20);
+	//engine_font_manager_draw_text("PRESS FIRE1 TO FINISH QUZE", 2, 21);
 
 
 	engine_font_manager_draw_text("QUESTIONS", 2, 4);
@@ -48,10 +42,7 @@ void screen_score_screen_update(unsigned char *screen_type, unsigned int curr_jo
 	input = engine_input_manager_hold_fire2( curr_joypad1, prev_joypad1 );
 	if( input )
 	{
-		// TODO REMOVE
-		//engine_debug_manager_clear();
-		// TODO REMOVE
-
+		engine_select_manager_clear2();
 		*screen_type = SCREEN_TYPE_PLAY;
 		return;
 	}
@@ -59,10 +50,7 @@ void screen_score_screen_update(unsigned char *screen_type, unsigned int curr_jo
 	input = engine_input_manager_hold_fire1( curr_joypad1, prev_joypad1 );
 	if( input )
 	{
-		// TODO REMOVE
-		//engine_debug_manager_clear();
-		// TODO REMOVE
-
+		engine_select_manager_clear2();
 		*screen_type = SCREEN_TYPE_OVER;
 		return;
 	}

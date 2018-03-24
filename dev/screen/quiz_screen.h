@@ -12,11 +12,6 @@ void screen_quiz_screen_init()
 
 void screen_quiz_screen_load()
 {
-	// TODO REMOVE
-	engine_font_manager_draw_text(LOCALE_BLANK, 2, 2);
-	engine_font_manager_draw_text("QUIZ", 2, 2);
-	// TODO REMOVE
-
 	question_count++;
 	screen_bases_screen_init();
 

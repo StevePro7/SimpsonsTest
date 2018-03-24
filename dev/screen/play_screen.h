@@ -7,12 +7,6 @@ extern unsigned char answer_index, answer_value;
 
 void screen_play_screen_load()
 {
-	// TODO REMOVE
-	engine_font_manager_draw_text(LOCALE_BLANK, 2, 2);
-	engine_font_manager_draw_text("PLAY", 2, 2);
-	// TODO REMOVE
-
-
 	engine_quiz_manager_base();
 	engine_score_manager_base();
 
