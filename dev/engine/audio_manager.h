@@ -29,15 +29,15 @@ void engine_audio_manager_sound_wrong()
 {
 	if( hacker_sound )
 	{
-		//PSGSFXPlay( SOUND2_PSG, SFX_CHANNEL2 );
+		PSGSFXPlay( SOUND2_PSG, SFX_CHANNEL2 );
 	}
 }
 
-void engine_audio_manager_sound_pause()
+void engine_audio_manager_sound_cheat()
 {
 	if( hacker_sound )
 	{
-		//PSGSFXPlay( SOUND3_PSG, SFX_CHANNEL2 );
+		PSGSFXPlay( SOUND3_PSG, SFX_CHANNEL2 );
 	}
 }
 

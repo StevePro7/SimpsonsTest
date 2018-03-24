@@ -76,6 +76,7 @@ unsigned char screen_splash_screen_delay;
 
 //_INTRO_SCREEN_H_
 unsigned char screen_intro_screen_delay;
+unsigned char cheat_count;
 
 //_DIFF_SCREEN_H_
 unsigned char screen_diff_screen_delay, screen_diff_screen_state;

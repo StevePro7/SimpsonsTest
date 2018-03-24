@@ -7,6 +7,13 @@ void screen_ready_screen_load()
 {
 	unsigned char bank;
 
+
+	// TODO REMOVE
+	diff_select = 1;
+	question_count = 10;
+	// TODO REMOVE
+
+
 	// Clear space.
 	engine_select_manager_clear();
 
@@ -25,10 +32,13 @@ void screen_ready_screen_load()
 	// Initialize all relevant variables before quiz starts...
 	question_index = 0;
 	question_value = 0;
+	engine_score_manager_init();
+
 
 	engine_random_manager_init();
 
 	bank = diff_select + QUIZ_BANK;
+
 	engine_quiz_manager_bank( bank );
 
 	engine_random_manager_load();
@@ -50,7 +60,13 @@ void screen_ready_screen_update(unsigned char *screen_type, unsigned int curr_jo
 		return;
 	}
 
-	*screen_type = SCREEN_TYPE_READY;
+	//*screen_type = SCREEN_TYPE_READY;
+
+
+	// TODO REMOVE
+	engine_select_manager_clear();
+	*screen_type = SCREEN_TYPE_PLAY;
+	// TODO REMOVE
 }
 
 #endif//_READY_SCREEN_H_

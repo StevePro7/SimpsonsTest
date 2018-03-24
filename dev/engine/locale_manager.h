@@ -12,6 +12,9 @@
 #define LOCALE_START		"START"
 #define LOCALE_BLANK5		"     "
 
+#define LOCALE_CHEAT		"CHEAT"
+#define LOCALE_MODE			"MODE!"
+
 #define LOCALE_GET			" GET "
 #define LOCALE_READY		"READY"
 

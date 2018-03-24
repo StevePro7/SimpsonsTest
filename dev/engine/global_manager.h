@@ -8,7 +8,7 @@
 #define MUSIC_PSG			music_psg
 #define SOUND1_PSG			sfx_right_psg
 #define SOUND2_PSG			sfx_wrong_psg
-#define SOUND3_PSG			sfx_pause_psg
+#define SOUND3_PSG			sfx_cheat_psg
 
 // Sprites.
 #define SPRITE_TILES		64
@@ -26,5 +26,8 @@
 
 // Long.
 #define LONG_DELTA			4		// Change this to 4 if max no. questions >= 100!
+
+// Cheat.
+#define CHEAT_TOTAL			5
 
 #endif//_GLOBAL_MANAGER_H_
