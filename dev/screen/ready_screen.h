@@ -17,8 +17,8 @@ void screen_ready_screen_load()
 
 
 	// TODO REMOVE
-	diff_select = 1;
-	question_long = 3;
+	diff_select = 0;
+	question_long = 2;
 	// TODO REMOVE
 
 	screen_bases_screen_init();

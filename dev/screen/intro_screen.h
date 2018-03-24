@@ -57,8 +57,8 @@ void screen_intro_screen_update( unsigned char *screen_type, unsigned int curr_j
 			cheat_count++;
 			if( cheat_count >= CHEAT_TOTAL )
 			{
-				engine_font_manager_draw_text( LOCALE_CHEAT, 25, 20 );		// TODO	format better
-				engine_font_manager_draw_text( LOCALE_MODE, 25, 21 );		// TODO	format better
+				engine_font_manager_draw_text( LOCALE_CHEAT, 25, 10 );		// TODO	format better
+				engine_font_manager_draw_text( LOCALE_MODE, 25, 11 );		// TODO	format better
 
 				engine_audio_manager_sound_cheat();
 				hacker_cheat = 1;

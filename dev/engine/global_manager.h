@@ -15,7 +15,7 @@
 
 // Delay.
 #define SPLASH_DELAY		150
-#define TITLE_DELAY			100
+#define TITLE_DELAY			100		// TODO remove as not used?
 #define NORMAL_DELAY		50		// TODO maybe beef this up to 75
 
 // Quiz.
@@ -28,6 +28,6 @@
 #define LONG_DELTA			4		// Change this to 4 if max no. questions >= 100!
 
 // Cheat.
-#define CHEAT_TOTAL			5
+#define CHEAT_TOTAL			1
 
 #endif//_GLOBAL_MANAGER_H_
