@@ -10,6 +10,10 @@ extern unsigned char diff_select, long_select, quiz_select;
 extern unsigned char select_choice, select_height;
 extern unsigned char select_option[MAX_OPTIONS];
 
+extern unsigned char select_high_option[MAX_OPTIONS] = { OPTA_Y, OPTB_Y, OPTC_Y, OPTD_Y };
+extern unsigned char select_text_option[MAX_OPTIONS][3] = { LOCALE_OPTA, LOCALE_OPTB, LOCALE_OPTC, LOCALE_OPTD };
+extern unsigned char select_diff_option[MAX_OPTIONS][6] = { LOCALE_DIFF_OPT1, LOCALE_DIFF_OPT2, LOCALE_DIFF_OPT3, LOCALE_DIFF_OPT4 };
+
 void engine_select_manager_init()
 {
 	unsigned char idx = 0;
@@ -25,9 +29,23 @@ void engine_select_manager_init()
 	select_height = select_option[select_choice];
 }
 
+void engine_select_manager_base()
+{
+	unsigned char idx;
+	for( idx = 0; idx < MAX_OPTIONS; idx++)
+	{
+		engine_font_manager_draw_text( select_text_option[idx], QUIZ_X, select_high_option[idx] );
+	}
+}
+
 void engine_select_manager_load_diff()
 {
+	unsigned char idx;
 	select_choice = diff_select;
+	for( idx = 0; idx < MAX_OPTIONS; idx++)
+	{
+		engine_font_manager_draw_text( select_diff_option[idx], QUIZ_X + 2, select_high_option[idx] );
+	}
 	select_height = select_option[select_choice];
 }
 void engine_select_manager_load_long()

@@ -21,6 +21,11 @@
 #define LOCALE_OPTC			"C."
 #define LOCALE_OPTD			"D."
 
+#define LOCALE_DIFF_OPT1	"EASY"
+#define LOCALE_DIFF_OPT2	"NORM"
+#define LOCALE_DIFF_OPT3	"HARD"
+#define LOCALE_DIFF_OPT4	"ARGH"
+
 #define LOCALE_ARROW_SPACE	" "
 #define LOCALE_ARROW_LEFT	">"
 #define LOCALE_ARROW_RIGHT	"<"

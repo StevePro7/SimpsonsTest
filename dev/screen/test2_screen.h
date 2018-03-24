@@ -20,6 +20,7 @@ void screen_test2_screen_load()
 
 
 	engine_quiz_manager_base();
+	engine_score_manager_base();
 
 	question_value = quiz_questions[question_index];
 	option1_value = quiz_options[question_value][0];
