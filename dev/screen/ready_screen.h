@@ -13,7 +13,7 @@ void screen_ready_screen_init()
 
 void screen_ready_screen_load()
 {
-	unsigned char bank;
+//	unsigned char bank;
 
 
 	// TODO REMOVE
@@ -45,14 +45,11 @@ void screen_ready_screen_load()
 	engine_score_manager_init();
 
 
-	engine_random_manager_init();
-
+	/*engine_random_manager_init();
 	bank = diff_select + QUIZ_BANK;
-
 	engine_quiz_manager_bank( bank );
-
 	engine_random_manager_load();
-	engine_select_manager_load_quiz();
+	engine_select_manager_load_quiz();*/
 }
 
 void screen_ready_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
@@ -83,7 +80,7 @@ void screen_ready_screen_update(unsigned char *screen_type, unsigned int curr_jo
 		// TODO REMOVE
 
 
-		*screen_type = SCREEN_TYPE_PLAY;
+		*screen_type = SCREEN_TYPE_LEVEL;
 		return;
 	}
 

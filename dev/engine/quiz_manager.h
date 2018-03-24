@@ -84,6 +84,7 @@ void engine_quiz_manager_cheat( unsigned char ans )
 void engine_quiz_manager_load(unsigned char qi, unsigned char qv, unsigned char opt1, unsigned char opt2, unsigned char opt3, unsigned char opt4)
 {
 	unsigned char opt1_Y, opt2_Y, opt3_Y, opt4_Y;
+	unsigned char bank;
 
 	opt1_Y = option_height[opt1];
 	opt2_Y = option_height[opt2];
@@ -114,6 +115,9 @@ void engine_quiz_manager_load(unsigned char qi, unsigned char qv, unsigned char 
 
 	// TODO - BANKS!
 	
+	bank = diff_select + QUIZ_BANK;
+	engine_quiz_manager_bank( bank );
+
 	if( DIFF_TYPE_EASY == diff_select )
 	{
 		// Question.
