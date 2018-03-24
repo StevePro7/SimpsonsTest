@@ -25,29 +25,13 @@ void screen_score_screen_load()
 	engine_font_manager_draw_text("CORRECT", 2, 11);
 	engine_font_manager_draw_data(score_player, 4, 12);
 
+	// Allow for potential division by zero error.
 	engine_font_manager_draw_text("PERCENTAGE", 2, 15);
 	if( question_count == 0 )
 	{
 		engine_font_manager_draw_data(percent, 4, 16);
 		return;
 	}
-	/*if( question_count > 0 )
-	{
-		percent = score_player / question_count;
-	)
-	else
-	{
-
-		percent = 0.0f;
-	}*/
-	
-	/*score_player = 1;
-	question_count = 0;*/
-	//if( ((int)question_count) != 0 )
-	/*if( 0 != question_count)
-	{
-		
-	}*/
 
 	percent = (float)score_player / (float)question_count * 100;
 	engine_font_manager_draw_data(percent, 4, 16);
@@ -59,6 +43,10 @@ void screen_score_screen_update(unsigned char *screen_type, unsigned int curr_jo
 	input = engine_input_manager_hold_fire2( curr_joypad1, prev_joypad1 );
 	if( input )
 	{
+		// TODO REMOVE
+		engine_debug_manager_clear();
+		// TODO REMOVE
+
 		*screen_type = SCREEN_TYPE_PLAY;
 		return;
 	}
