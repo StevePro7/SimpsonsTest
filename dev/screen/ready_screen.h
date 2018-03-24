@@ -18,7 +18,10 @@ void screen_ready_screen_load()
 	//engine_content_manager_title();
 	//SMS_setSpritePaletteColor(0, RGB(3,3,3));
 	//SMS_displayOn();
-	diff_select = 1;
+	if (diff_select > 1 )
+	{
+		diff_select = 1;
+	}
 	if (question_long > 10 )
 	{
 		question_long = 10;
@@ -54,6 +57,12 @@ void screen_ready_screen_update(unsigned char *screen_type, unsigned int curr_jo
 	unsigned char level = 0;
 
 	rand();
+	input = engine_input_manager_hold_fire2( curr_joypad1, prev_joypad1 );
+	if( input )
+	{
+		*screen_type = SCREEN_TYPE_LONG;
+		return;
+	}
 	input = engine_input_manager_hold_fire1( curr_joypad1, prev_joypad1 );
 	if( input )
 	{

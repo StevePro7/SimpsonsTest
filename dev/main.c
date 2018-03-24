@@ -39,7 +39,7 @@ void main( void )
 	//enum_next_screen_type = SCREEN_TYPE_READY;`
 	//enum_next_screen_type = SCREEN_TYPE_TITLE;
 	//enum_next_screen_type = SCREEN_TYPE_OVER;
-	//enum_next_screen_type = SCREEN_TYPE_DIFF;
+	//enum_next_screen_type = SCREEN_TYPE_TEST4;
 
 	SMS_displayOn();
 	for (;;)

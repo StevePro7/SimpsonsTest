@@ -40,6 +40,13 @@ void screen_diff_screen_update(unsigned char *screen_type, unsigned int curr_joy
 		{
 			diff_select = engine_select_manager_move_down( diff_select );
 		}
+		// IMPORTANT - don't allow to go back here as invalidates cheat mode!
+		//input = engine_input_manager_hold_fire2(curr_joypad1, prev_joypad1);
+		//if (input)
+		//{
+		//	*screen_type = SCREEN_TYPE_INTRO;
+		//	return;
+		//}
 		input = engine_input_manager_hold_fire1(curr_joypad1, prev_joypad1);
 		if (input)
 		{

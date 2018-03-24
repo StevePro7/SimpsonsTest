@@ -41,6 +41,12 @@ void screen_long_screen_update(unsigned char *screen_type, unsigned int curr_joy
 		{
 			long_select = engine_select_manager_move_down( long_select );
 		}
+		input = engine_input_manager_hold_fire2(curr_joypad1, prev_joypad1);
+		if (input)
+		{
+			*screen_type = SCREEN_TYPE_DIFF;
+			return;
+		}
 		input = engine_input_manager_hold_fire1(curr_joypad1, prev_joypad1);
 		if (input)
 		{

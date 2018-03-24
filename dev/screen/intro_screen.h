@@ -15,8 +15,9 @@ void screen_intro_screen_load()
 {
 	hacker_cheat = 0;
 	cheat_count = 0;
-
 	screen_bases_screen_init();
+
+	engine_select_manager_clear();
 	engine_font_manager_draw_text( LOCALE_PRESS, 2, 13 );
 	engine_font_manager_draw_text( LOCALE_START, 2, 14 );
 }
@@ -57,8 +58,8 @@ void screen_intro_screen_update( unsigned char *screen_type, unsigned int curr_j
 			cheat_count++;
 			if( cheat_count >= CHEAT_TOTAL )
 			{
-				engine_font_manager_draw_text( LOCALE_CHEAT, 25, 10 );		// TODO	format better
-				engine_font_manager_draw_text( LOCALE_MODE, 25, 11 );		// TODO	format better
+				engine_font_manager_draw_text( LOCALE_CHEAT, 25, 10 );
+				engine_font_manager_draw_text( LOCALE_MODE, 25, 11 );
 
 				engine_audio_manager_sound_cheat();
 				hacker_cheat = 1;

@@ -17,37 +17,40 @@ void screen_test4_screen_load()
 	engine_font_manager_draw_text("TEST4", 0, 1);
 
 
-	engine_select_manager_load_long();
-	engine_select_manager_base();
+	/*engine_select_manager_load_long();
+	engine_select_manager_base();*/
 }
 
 void screen_test4_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
 {
-	unsigned char input = 0;
-	engine_select_manager_draw_select();
+	unsigned int test_curr_joypad1 = curr_joypad1;
+	unsigned int test_prev_joypad1 = prev_joypad1;
 
-	input = engine_input_manager_hold_up(curr_joypad1, prev_joypad1);
-	if( input )
-	{
-		long_select = engine_select_manager_move_up( long_select );
-	}
-	input = engine_input_manager_hold_down(curr_joypad1, prev_joypad1);
-	if (input)
-	{
-		long_select = engine_select_manager_move_down( long_select );
-	}
+	//unsigned char input = 0;
+	//engine_select_manager_draw_select();
 
-	// Set the number of questions.
-	input = engine_input_manager_hold_fire1(curr_joypad1, prev_joypad1);
-	if (input)
-	{
-		question_long = select_long_option[ long_select ];
-		engine_font_manager_draw_data( long_select, 25, 5 );
-		engine_font_manager_draw_data( question_long, 25, 7 );
+	//input = engine_input_manager_hold_up(curr_joypad1, prev_joypad1);
+	//if( input )
+	//{
+	//	long_select = engine_select_manager_move_up( long_select );
+	//}
+	//input = engine_input_manager_hold_down(curr_joypad1, prev_joypad1);
+	//if (input)
+	//{
+	//	long_select = engine_select_manager_move_down( long_select );
+	//}
 
-		*screen_type = SCREEN_TYPE_TEST5;
-		return;
-	}
+	//// Set the number of questions.
+	//input = engine_input_manager_hold_fire1(curr_joypad1, prev_joypad1);
+	//if (input)
+	//{
+	//	question_long = select_long_option[ long_select ];
+	//	engine_font_manager_draw_data( long_select, 25, 5 );
+	//	engine_font_manager_draw_data( question_long, 25, 7 );
+
+	//	*screen_type = SCREEN_TYPE_TEST5;
+	//	return;
+	//}
 
 	*screen_type = SCREEN_TYPE_TEST4;
 }
