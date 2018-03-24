@@ -6,6 +6,9 @@ void screen_level_screen_load()
 {
 	unsigned char bank;
 
+	engine_content_manager_load_sprites();
+	SMS_setSpritePaletteColor(0, RGB(3,3,3));
+
 	// Process this here just before quiz starts
 	// Why?  Otherwise may cause music to "drag"
 	engine_random_manager_init();

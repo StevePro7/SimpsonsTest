@@ -3,7 +3,7 @@ extern const unsigned char	simpsons__palette__bin[];
 #define				simpsons__palette__bin_bank 6
 
 extern const unsigned char	simpsons__tilemap__stmcompr[];
-#define				simpsons__tilemap__stmcompr_size 196
+#define				simpsons__tilemap__stmcompr_size 199
 #define				simpsons__tilemap__stmcompr_bank 6
 
 extern const unsigned char	simpsons__tiles__psgcompr[];

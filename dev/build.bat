@@ -14,8 +14,11 @@ REM bmp2tile.exe raw\maggie.bmp -savetiles "maggie (tiles).psgcompr" -removedupe
 REM bmp2tile.exe raw\homer.bmp -savetiles "homer (tiles).psgcompr" -removedupes -nomirror -planar -tileoffset 112 -savetilemap "homer (tilemap).stmcompr" -savepalette "homer (palette).bin"
 REM bmp2tile.exe raw\marge.bmp -savetiles "marge (tiles).psgcompr" -removedupes -nomirror -planar -tileoffset 112 -savetilemap "marge (tilemap).stmcompr" -savepalette "marge (palette).bin"
 
+REM cd banks\bank6
 REM bmp2tile.exe raw\splash.bmp -savetiles "..\dev\banks\bank6\splash (tiles).psgcompr" -removedupes -nomirror -planar -tileoffset 112 -savetilemap "..\dev\banks\bank6\splash (tilemap).stmcompr" -savepalette "..\dev\banks\bank6\splash (palette).bin"
-REM cd banks
+REM bmp2tile.exe raw\simpsons.bmp -savetiles "simpsons (tiles).psgcompr" -removedupes -nomirror -planar -tileoffset 96 -savetilemap "simpsons (tilemap).stmcompr" -savepalette "simpsons (palette).bin"
+
+REM cd ..
 REM folder2c bank6 bank6 6
 
 
@@ -42,7 +45,7 @@ REM sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK2 bank2
 REM sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK3 bank3.c
 REM sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK4 bank4.c
 REM sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK5 bank5.c
-rem sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK6 bank6.c
+REM sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK6 bank6.c
 REM cd ..
 
 REM echo Build main

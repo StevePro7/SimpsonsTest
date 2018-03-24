@@ -2,7 +2,7 @@
 #define _CONTENT_MANAGER_H_
 
 #define FONT_TILES		0
-#define SIMPSONS_TILES	80
+#define SIMPSONS_TILES	96
 #define GRAPHICS_TILES	112
 
 void engine_content_manager_splash()
