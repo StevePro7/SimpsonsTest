@@ -1,40 +1,84 @@
 #ifndef _LEVEL_SCREEN_H_
 #define _LEVEL_SCREEN_H_
 
+// Dump previous contents of the play screen here
 void screen_level_screen_load()
 {
-	//SMS_displayOff();
-	//engine_content_manager_load_sprites();
-	//engine_content_manager_title();
-	//SMS_setSpritePaletteColor(0, RGB(3,3,3));
+	engine_font_manager_draw_text(LOCALE_BLANK, 2, 2);
+	engine_font_manager_draw_text("LEVEL", 2, 2);
 
-	//engine_font_manager_draw_text("A.SIMPLE", 2, 9);
-	//engine_font_manager_draw_text("> EASY", 2, 13);
-	//engine_font_manager_draw_text("> HARD", 2, 17);
-	//engine_font_manager_draw_text("D.INSANE", 2, 21);
+	/*
+	SMS_displayOff();
 
-	//SMS_displayOn();
+	// Load full screen image here!
+	engine_content_manager_load_maggie();
+	engine_content_manager_load_sprites();
+	SMS_setSpritePaletteColor(0, RGB(3,3,3));
 
-	if( hacker_debug )
-	{
-		engine_font_manager_draw_text( "      ", 2, 21 );
-		engine_font_manager_draw_text( "LEVEL", 2, 21 );
-	}
+	engine_quiz_manager_base();
+	engine_quiz_manager_bank(2);
+	//engine_quiz_manager_load();
+	engine_score_manager_draw();
+
+	play_answer_state = ANSWER_TYPE_SELECT;
+	SMS_displayOn();
+	*/
 }
 
 void screen_level_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
 {
-	unsigned char level = 0;
-	if ((curr_joypad1 & PORT_A_KEY_1 && !(prev_joypad1 & PORT_A_KEY_1)) ||
-		(curr_joypad1 & PORT_A_KEY_2 && !(prev_joypad1 & PORT_A_KEY_2)))
+	unsigned int test_curr_joypad1 = curr_joypad1;
+	unsigned int test_prev_joypad1 = prev_joypad1;
+
+	*screen_type = SCREEN_TYPE_LEVEL;
+
+	/*
+	if(ANSWER_TYPE_SELECT == play_answer_state)
 	{
-		level = 1;
+	engine_select_manager_draw_select();
+	input = engine_input_manager_hold_up(curr_joypad1, prev_joypad1);
+	if( input )
+	{
+	//engine_select_manager_move_up();
+	}
+	input = engine_input_manager_hold_down(curr_joypad1, prev_joypad1);
+	if (input)
+	{
+	//engine_select_manager_move_down();
 	}
 
-	if (level)
+
+	// REMOVE - used for testing
+	input = engine_input_manager_hold_fire1(curr_joypad1, prev_joypad1);
+	if( input )
 	{
-		*screen_type = SCREEN_TYPE_NUMBER;
+	play_answer_state = ANSWER_TYPE_RIGHT;
+	engine_sprite_manager_hide_select();
+	engine_audio_manager_sound_right();
 	}
+	input = engine_input_manager_hold_fire2(curr_joypad1, prev_joypad1);
+	if( input )
+	{
+	play_answer_state = ANSWER_TYPE_WRONG;
+	engine_sprite_manager_hide_select();
+	engine_audio_manager_sound_wrong();
+	}
+	// REMOVE - used for testing
+
+
+	}
+
+	if(ANSWER_TYPE_RIGHT == play_answer_state)
+	{
+	engine_select_manager_draw_right();
+	}
+	if(ANSWER_TYPE_WRONG == play_answer_state)
+	{
+	engine_select_manager_draw_wrong();
+	}
+
+	*screen_type = SCREEN_TYPE_PLAY;
+	*/
 }
 
 #endif//_LEVEL_SCREEN_H_
