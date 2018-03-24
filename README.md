@@ -13,3 +13,10 @@ Add the screen to the enum_manager
 Add any screen specific vars to global vars
 Add the screen to main.h
 Finally, wire up the load and update function pointers
+
+
+
+KNOWN issue
+right / wrong sprite transparency
+If the question has 3x lines and option A. is incorrect
+then if option A. is chosen it will overwrite the text

@@ -55,6 +55,9 @@
 unsigned char quiz_questions[MAX_QUESTIONS];
 unsigned char quiz_options[MAX_QUESTIONS][MAX_OPTIONS];
 unsigned char option_height[MAX_OPTIONS];
+unsigned char question_index, question_long, question_count;
+unsigned char question_value, option1_value, option2_value, option3_value, option4_value;
+unsigned char answer_index, answer_value;
 
 //_SCORE_MANAGER_H_
 unsigned char score_player;
@@ -86,6 +89,10 @@ unsigned char screen_long_screen_delay, screen_long_screen_state;
 //_QUIZ_SCREEN_H_
 unsigned char screen_quiz_screen_delay, screen_quiz_screen_state;
 
+// _OVER_SCREEN_H_
+unsigned char screen_over_screen_delay;
+
+
 //_TEST_SCREEN_H_
 unsigned char screen_test1_screen_delay;
 unsigned char screen_test2_screen_delay;
@@ -93,8 +100,5 @@ unsigned char screen_test3_screen_delay;
 unsigned char screen_test4_screen_delay;
 unsigned char screen_test5_screen_delay;
 
-unsigned char question_index, question_long, question_count;
-unsigned char question_value, option1_value, option2_value, option3_value, option4_value;
-unsigned char answer_index, answer_value;
 
 #endif//__MAIN__

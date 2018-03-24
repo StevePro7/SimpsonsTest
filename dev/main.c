@@ -156,6 +156,8 @@ void custom_initialize()
 	screen_diff_screen_init();
 	screen_long_screen_init();
 	screen_quiz_screen_init();
+	screen_over_screen_init();
+
 
 	// TODO - delete
 	screen_test1_screen_init();

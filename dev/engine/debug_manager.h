@@ -9,7 +9,7 @@ void engine_debug_manager_clear()
 	unsigned char idx;
 	for(idx = 0; idx < 24; idx++)
 	{
-		engine_font_manager_draw_text(LOCALE_BLANK, 1, idx);
+		engine_font_manager_draw_text(LOCALE_BLANK, 0, idx);
 	}
 }
 
