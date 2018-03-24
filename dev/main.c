@@ -38,7 +38,7 @@ void main( void )
 	//enum_next_screen_type = SCREEN_TYPE_SPLASH;
 	enum_next_screen_type = SCREEN_TYPE_READY;
 	//enum_next_screen_type = SCREEN_TYPE_QUIZ;
-	//enum_next_screen_type = SCREEN_TYPE_INTRO;
+	//enum_next_screen_type = SCREEN_TYPE_OVER;
 
 	SMS_displayOn();
 	for (;;)
@@ -154,6 +154,7 @@ void custom_initialize()
 	screen_intro_screen_init();
 	screen_diff_screen_init();
 	screen_long_screen_init();
+	screen_quiz_screen_init();
 
 	// TODO - delete
 	screen_test1_screen_init();
