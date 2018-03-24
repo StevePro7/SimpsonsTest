@@ -10,7 +10,7 @@ void screen_ready_screen_load()
 
 	// TODO REMOVE
 	diff_select = 1;
-	question_long = 10;
+	question_long = 5;
 	// TODO REMOVE
 
 

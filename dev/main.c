@@ -39,6 +39,7 @@ void main( void )
 	enum_next_screen_type = SCREEN_TYPE_READY;
 	//enum_next_screen_type = SCREEN_TYPE_QUIZ;
 	//enum_next_screen_type = SCREEN_TYPE_OVER;
+	enum_next_screen_type = SCREEN_TYPE_SCORE;
 
 	SMS_displayOn();
 	for (;;)

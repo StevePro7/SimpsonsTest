@@ -41,6 +41,13 @@ void screen_play_screen_update(unsigned char *screen_type, unsigned int curr_joy
 		return;
 	}
 
+	input = engine_input_manager_hold_fire2( curr_joypad1, prev_joypad1 );
+	if( input )
+	{
+		*screen_type = SCREEN_TYPE_SCORE;
+		return;
+	}
+
 	input = engine_input_manager_hold_up(curr_joypad1, prev_joypad1);
 	if( input )
 	{

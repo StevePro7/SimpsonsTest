@@ -81,7 +81,7 @@ unsigned char cheat_count;
 unsigned char screen_diff_screen_delay, screen_diff_screen_state;
 
 //_LONG_SCREEN_H_
-unsigned char screen_long_screen_delay, screen_long_screen_state;
+unsigned char screen_long_screen_delay, screen_long_screen_state; 
 
 //_QUIZ_SCREEN_H_
 unsigned char screen_quiz_screen_delay, screen_quiz_screen_state;

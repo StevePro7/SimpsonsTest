@@ -42,7 +42,6 @@ void screen_test4_screen_update(unsigned char *screen_type, unsigned int curr_jo
 	if (input)
 	{
 		question_long = select_long_option[ long_select ];
-		//question_count = select_long_option[ long_select ];
 		engine_font_manager_draw_data( long_select, 25, 5 );
 		engine_font_manager_draw_data( question_long, 25, 7 );
 
