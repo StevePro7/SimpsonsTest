@@ -60,13 +60,13 @@ void screen_test2_screen_update(unsigned char *screen_type, unsigned int curr_jo
 	input = engine_input_manager_hold_up(curr_joypad1, prev_joypad1);
 	if( input )
 	{
-		engine_select_manager_move_up();
+		quiz_select = engine_select_manager_move_up( quiz_select );
 		engine_font_manager_draw_data(select_choice, 20, 0);
 	}
 	input = engine_input_manager_hold_down(curr_joypad1, prev_joypad1);
 	if (input)
 	{
-		engine_select_manager_move_down();
+		quiz_select = engine_select_manager_move_down( quiz_select );
 		engine_font_manager_draw_data(select_choice, 20, 0);
 	}
 

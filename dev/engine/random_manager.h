@@ -7,7 +7,7 @@ extern unsigned char quiz_options[MAX_QUESTIONS][MAX_OPTIONS];
 // Private helper methods.
 static void engine_random_manager_load_random();
 static void engine_random_manager_load_normal();
-
+static void engine_random_manager_load_mixed();
 
 // Public methods.
 void engine_random_manager_init()

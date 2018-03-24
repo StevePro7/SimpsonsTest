@@ -43,7 +43,7 @@ void screen_test1_screen_load()
 
 
 	engine_random_manager_load();
-
+	engine_select_manager_load_quiz();
 
 
 

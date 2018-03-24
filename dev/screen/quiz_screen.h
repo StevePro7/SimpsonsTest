@@ -29,12 +29,12 @@ void screen_quiz_screen_update(unsigned char *screen_type, unsigned int curr_joy
 	input = engine_input_manager_hold_up(curr_joypad1, prev_joypad1);
 	if( input )
 	{
-		engine_select_manager_move_up();
+		//engine_select_manager_move_up();
 	}
 	input = engine_input_manager_hold_down(curr_joypad1, prev_joypad1);
 	if (input)
 	{
-		engine_select_manager_move_down();
+		//engine_select_manager_move_down();
 	}
 
 	input = engine_input_manager_move_left(curr_joypad1);
