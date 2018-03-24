@@ -31,7 +31,7 @@ void engine_hack_manager_invert()
 
 	hacker_splash = !hacker_splash;
 	hacker_music = !hacker_music;				// TODO uncomment - just for testing
-	hacker_sound = !hacker_sound;
+	//hacker_sound = !hacker_sound;
 	//hacker_random= !hacker_random;
 	hacker_cheat = !hacker_cheat;
 }

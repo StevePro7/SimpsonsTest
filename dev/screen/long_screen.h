@@ -4,6 +4,7 @@
 extern unsigned int screen_bases_screen_count;
 extern unsigned int screen_bases_screen_timer;
 extern unsigned char screen_long_screen_delay, screen_long_screen_state;
+extern unsigned char question_count;
 
 void screen_long_screen_init()
 {
@@ -40,6 +41,9 @@ void screen_long_screen_update(unsigned char *screen_type, unsigned int curr_joy
 		input = engine_input_manager_hold_fire1(curr_joypad1, prev_joypad1);
 		if (input)
 		{
+			// Set the question couht here.
+			question_count = select_long_option[ long_select ];
+
 			engine_audio_manager_sound_right();
 			screen_long_screen_state = SELECT_TYPE_AFTER;
 		}
@@ -52,7 +56,7 @@ void screen_long_screen_update(unsigned char *screen_type, unsigned int curr_joy
 		screen_bases_screen_timer++;
 		if (screen_bases_screen_timer >= screen_long_screen_delay)
 		{
-			*screen_type = SCREEN_TYPE_DIFF;
+			*screen_type = SCREEN_TYPE_READY;
 			return;
 		}
 	}
