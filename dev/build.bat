@@ -47,9 +47,8 @@ sdcc -o output.ihx --Werror --opt-code-speed -mz80 --no-std-crt0 --data-loc 0xC0
 ..\crt0\crt0_sms.rel ^main.rel ^
 ..\lib\SMSlib.lib ^
 ..\lib\PSGlib.rel ^
-gfx.rel
-REM gfx.rel ^
-REM psg.rel
+gfx.rel ^
+psg.rel
 
 if %errorlevel% NEQ 0 goto :EOF
 

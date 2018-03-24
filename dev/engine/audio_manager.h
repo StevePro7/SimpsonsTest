@@ -21,7 +21,7 @@ void engine_audio_manager_sound_right()
 {
 	if( hacker_sound )
 	{
-		//PSGSFXPlay( SOUND1_PSG, SFX_CHANNEL2 );
+		PSGSFXPlay( SOUND1_PSG, SFX_CHANNEL2 );
 	}
 }
 
