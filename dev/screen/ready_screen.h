@@ -8,7 +8,7 @@ extern unsigned char question_index, question_value, question_long, question_cou
 
 void screen_ready_screen_init()
 {
-	screen_ready_screen_delay = NORMAL_DELAY * 8;
+	screen_ready_screen_delay = NORMAL_DELAY * 4;
 }
 
 void screen_ready_screen_load()
@@ -76,7 +76,7 @@ void screen_ready_screen_update(unsigned char *screen_type, unsigned int curr_jo
 		engine_audio_manager_stop_music();
 
 		// TODO REMOVE
-		engine_debug_manager_clear();
+		//engine_debug_manager_clear();
 		// TODO REMOVE
 
 

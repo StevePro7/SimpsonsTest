@@ -4,14 +4,14 @@
 extern unsigned char quiz_questions[MAX_QUESTIONS];
 extern unsigned char quiz_options[MAX_QUESTIONS][MAX_OPTIONS];
 
-void engine_debug_manager_clear()
-{
-	unsigned char idx;
-	for(idx = 0; idx < 24; idx++)
-	{
-		engine_font_manager_draw_text(LOCALE_BLANK, 0, idx);
-	}
-}
+//void engine_debug_manager_clear()
+//{
+//	unsigned char idx;
+//	for(idx = 0; idx < 24; idx++)
+//	{
+//		engine_font_manager_draw_text(LOCALE_BLANK, 0, idx);
+//	}
+//}
 
 void engine_debug_manager_init()
 {

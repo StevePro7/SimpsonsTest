@@ -6,9 +6,9 @@ void screen_score_screen_load()
 	float percent = 0.0f;
 
 	// TODO REMOVE
-	engine_debug_manager_clear();
+	/*engine_debug_manager_clear();
 	engine_font_manager_draw_text(LOCALE_BLANK, 2, 2);
-	engine_font_manager_draw_text("=SCORE=", 2, 2);
+	engine_font_manager_draw_text("=SCORE=", 2, 2);*/
 	// TODO REMOVE
 
 
@@ -49,7 +49,7 @@ void screen_score_screen_update(unsigned char *screen_type, unsigned int curr_jo
 	if( input )
 	{
 		// TODO REMOVE
-		engine_debug_manager_clear();
+		//engine_debug_manager_clear();
 		// TODO REMOVE
 
 		*screen_type = SCREEN_TYPE_PLAY;
@@ -60,7 +60,7 @@ void screen_score_screen_update(unsigned char *screen_type, unsigned int curr_jo
 	if( input )
 	{
 		// TODO REMOVE
-		engine_debug_manager_clear();
+		//engine_debug_manager_clear();
 		// TODO REMOVE
 
 		*screen_type = SCREEN_TYPE_OVER;

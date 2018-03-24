@@ -17,9 +17,9 @@ void screen_over_screen_load()
 	screen_bases_screen_init();
 
 	// TODO REMOVE
-	engine_debug_manager_clear();
+	/*engine_debug_manager_clear();
 	engine_font_manager_draw_text(LOCALE_BLANK, 2, 2);
-	engine_font_manager_draw_text("GAME OVER", 2, 2);
+	engine_font_manager_draw_text("GAME OVER", 2, 2);*/
 	// TODO REMOVE
 
 
@@ -61,7 +61,7 @@ void screen_over_screen_update(unsigned char *screen_type, unsigned int curr_joy
 	if ( level )
 	{
 		// TODO REMOVE
-		engine_debug_manager_clear();
+		//engine_debug_manager_clear();
 		// TODO REMOVE
 
 		*screen_type = SCREEN_TYPE_INTRO;

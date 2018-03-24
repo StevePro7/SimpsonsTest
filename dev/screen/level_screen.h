@@ -1,16 +1,9 @@
 #ifndef _LEVEL_SCREEN_H_
 #define _LEVEL_SCREEN_H_
 
-// Dump previous contents of the play screen here
 void screen_level_screen_load()
 {
 	unsigned char bank;
-
-	SMS_displayOff();
-	engine_content_manager_load_sprites();
-	engine_content_manager_load_maggie();
-	SMS_setSpritePaletteColor(0, RGB(3,3,3));
-	SMS_displayOn();
 
 	// Process this here just before quiz starts
 	// Why?  Otherwise may cause music to "drag"
@@ -22,7 +15,7 @@ void screen_level_screen_load()
 	engine_random_manager_load();
 	engine_select_manager_load_quiz();
 
-	
+	engine_select_manager_clear();
 }
 
 void screen_level_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
@@ -30,7 +23,7 @@ void screen_level_screen_update(unsigned char *screen_type, unsigned int curr_jo
 	unsigned int test_curr_joypad1 = curr_joypad1;
 	unsigned int test_prev_joypad1 = prev_joypad1;
 
-	*screen_type = SCREEN_TYPE_PLAY;
+	*screen_type = SCREEN_TYPE_NUMBER;
 }
 
 #endif//_LEVEL_SCREEN_H_

@@ -15,7 +15,6 @@ void screen_title_screen_load()
 	screen_bases_screen_init();
 
 	SMS_displayOff();
-	engine_content_manager_load_sprites();
 	engine_content_manager_title();
 	SMS_setSpritePaletteColor(0, RGB(3,3,3));
 	SMS_displayOn();

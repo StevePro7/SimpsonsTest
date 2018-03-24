@@ -12,8 +12,9 @@ void screen_splash_screen_init()
 
 void screen_splash_screen_load()
 {
-	SMS_displayOff();
 	screen_bases_screen_init();
+
+	SMS_displayOff();
 	engine_content_manager_splash();
 	SMS_displayOn();
 }
