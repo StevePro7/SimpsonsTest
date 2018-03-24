@@ -27,7 +27,6 @@ void screen_ready_screen_load()
 	// Clear space.
 	engine_select_manager_clear();
 
-	// TODO format this better!!
 	engine_font_manager_draw_text( LOCALE_DIFFICULTY, 2, 6);
 	engine_font_manager_draw_text( LOCALE_ARROW_LEFT, 1, 7);
 	engine_font_manager_draw_text( select_diff_option[diff_select], 2, 7);
@@ -35,6 +34,9 @@ void screen_ready_screen_load()
 	engine_font_manager_draw_text( LOCALE_QUESTIONS, 2, 9);
 	engine_font_manager_draw_text( LOCALE_ARROW_LEFT, 1, 10);
 	engine_font_manager_draw_data_ZERO( question_long, 4, 10);
+
+	engine_font_manager_draw_text(LOCALE_GET, 2, 16);
+	engine_font_manager_draw_text(LOCALE_READY, 2, 17);
 
 	// Initialize all relevant variables before quiz starts...
 	question_index = 0;
