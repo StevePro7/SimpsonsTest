@@ -15,7 +15,6 @@
 
 #define QUIZ_BANK	2
 
-extern unsigned char quiz_number;
 extern unsigned char diff_select;
 extern unsigned char quiz_questions[MAX_QUESTIONS];
 extern unsigned char quiz_options[MAX_QUESTIONS][MAX_OPTIONS];
@@ -24,8 +23,6 @@ extern unsigned char question_value, answer_index, answer_value;
 
 void engine_quiz_manager_init()
 {
-	quiz_number = 0;		// TODO remove!
-
 	option_height[0] = OPTA_Y;
 	option_height[1] = OPTB_Y;
 	option_height[2] = OPTC_Y;

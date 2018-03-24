@@ -52,7 +52,6 @@
 #include "screen\test5_screen.h"
 
 //_QUIZ_MANAGER_H_
-unsigned char quiz_number;		// TODO remove
 unsigned char quiz_questions[MAX_QUESTIONS];
 unsigned char quiz_options[MAX_QUESTIONS][MAX_OPTIONS];
 unsigned char option_height[MAX_OPTIONS];
