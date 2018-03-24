@@ -17,8 +17,6 @@ void screen_diff_screen_load()
 	engine_select_manager_clear();
 	engine_select_manager_base();
 	engine_select_manager_load_diff();
-
-	engine_font_manager_draw_data(screen_diff_screen_delay, 25, 1);
 }
 
 void screen_diff_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
@@ -57,7 +55,6 @@ void screen_diff_screen_update(unsigned char *screen_type, unsigned int curr_joy
 			return;
 		}
 	}
-
 
 	*screen_type = SCREEN_TYPE_DIFF;
 }

@@ -2,7 +2,7 @@
 #define _GLOBAL_MANAGER_H_
 
 // General.
-#define MAX_STATES			18
+#define MAX_STATES			19
 
 // Content.
 #define MUSIC_PSG			music_psg
@@ -16,7 +16,7 @@
 // Delay.
 #define SPLASH_DELAY		150
 #define TITLE_DELAY			100
-#define NORMAL_DELAY		50
+#define NORMAL_DELAY		250		// TODO maybe beef this up to 75
 
 // Quiz.
 #define MAX_QUESTIONS		10		// TODO changed for testing - correct to 50

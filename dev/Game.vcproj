@@ -276,6 +276,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\screen\long_screen.h"
+					>
+				</File>
+				<File
 					RelativePath=".\screen\number_screen.h"
 					>
 				</File>

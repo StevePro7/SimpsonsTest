@@ -35,6 +35,7 @@
 #include "screen\title_screen.h"
 #include "screen\intro_screen.h"
 #include "screen\diff_screen.h"
+#include "screen\long_screen.h"
 #include "screen\level_screen.h"
 #include "screen\number_screen.h"
 #include "screen\ready_screen.h"
@@ -78,6 +79,9 @@ unsigned char screen_intro_screen_delay;
 
 //_DIFF_SCREEN_H_
 unsigned char screen_diff_screen_delay, screen_diff_screen_state;
+
+//_LONG_SCREEN_H_
+unsigned char screen_long_screen_delay, screen_long_screen_state;
 
 //_PLAY_SCREEN_H_
 unsigned char play_answer_state;
