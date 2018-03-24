@@ -7,9 +7,10 @@
 
 void engine_content_manager_splash()
 {
-	/*SMS_loadPSGaidencompressedTiles(splash__tiles__psgcompr, GRAPHICS_TILES);
+	SMS_mapROMBank(6);
+	SMS_loadPSGaidencompressedTiles(splash__tiles__psgcompr, GRAPHICS_TILES);
 	SMS_loadSTMcompressedTileMap(0, 0, splash__tilemap__stmcompr);
-	SMS_loadBGPalette(splash__palette__bin);*/
+	SMS_loadBGPalette(splash__palette__bin);
 }
 
 void engine_content_manager_title()

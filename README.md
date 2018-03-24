@@ -20,3 +20,15 @@ KNOWN issue
 right / wrong sprite transparency
 If the question has 3x lines and option A. is incorrect
 then if option A. is chosen it will overwrite the text
+
+
+
+Graphics ROM Banking
+cd into directory where raw file is in relative raw directory
+bmp2tile command
+
+then
+cd banks
+folder2c bank6 bank6 6
+
+this dumps out the binary data in bank6.h | bank6.c

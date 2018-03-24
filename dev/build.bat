@@ -1,5 +1,6 @@
 @echo off
 REM echo Execute bmp2tile
+REM cd ..\gfx
 REM bmp2tile.exe raw\font.bmp -savetiles "font (tiles).psgcompr" -removedupes -tileoffset 0 -savetilemap "font (tilemap).bin" -savepalette "font (palette).bin"
 REM bmp2tile.exe raw\splash.bmp -savetiles "splash (tiles).psgcompr" -removedupes -nomirror -planar -tileoffset 112 -savetilemap "splash (tilemap).stmcompr" -savepalette "splash (palette).bin"
 REM bmp2tile.exe raw\simpsons.bmp -savetiles "simpsons (tiles).psgcompr" -removedupes -nomirror -planar -tileoffset 80 -savetilemap "simpsons (tilemap).stmcompr" -savepalette "simpsons (palette).bin"
@@ -12,6 +13,11 @@ REM cd img
 REM bmp2tile.exe raw\maggie.bmp -savetiles "maggie (tiles).psgcompr" -removedupes -nomirror -planar -tileoffset 112 -savetilemap "maggie (tilemap).stmcompr" -savepalette "maggie (palette).bin"
 REM bmp2tile.exe raw\homer.bmp -savetiles "homer (tiles).psgcompr" -removedupes -nomirror -planar -tileoffset 112 -savetilemap "homer (tilemap).stmcompr" -savepalette "homer (palette).bin"
 REM bmp2tile.exe raw\marge.bmp -savetiles "marge (tiles).psgcompr" -removedupes -nomirror -planar -tileoffset 112 -savetilemap "marge (tilemap).stmcompr" -savepalette "marge (palette).bin"
+
+REM bmp2tile.exe raw\splash.bmp -savetiles "..\dev\banks\bank6\splash (tiles).psgcompr" -removedupes -nomirror -planar -tileoffset 112 -savetilemap "..\dev\banks\bank6\splash (tilemap).stmcompr" -savepalette "..\dev\banks\bank6\splash (palette).bin"
+REM cd banks
+REM folder2c bank6 bank6 6
+
 
 REM echo Build gfx.c and gfx.h from gfx folder
 REM folder2c ..\gfx gfx
@@ -36,6 +42,7 @@ REM sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK2 bank2
 REM sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK3 bank3.c
 REM sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK4 bank4.c
 REM sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK5 bank5.c
+rem sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-speed --constseg BANK6 bank6.c
 REM cd ..
 
 REM echo Build main
@@ -46,11 +53,17 @@ REM echo Linking
 sdcc -o output.ihx --Werror --opt-code-speed -mz80 --no-std-crt0 --data-loc 0xC000 ^
 -Wl-b_BANK2=0x8000 ^
 -Wl-b_BANK3=0x8000 ^
+-Wl-b_BANK4=0x8000 ^
+-Wl-b_BANK5=0x8000 ^
+-Wl-b_BANK6=0x8000 ^
 ..\crt0\crt0_sms.rel ^main.rel ^
 ..\lib\SMSlib.lib ^
 ..\lib\PSGlib.rel ^
 banks\bank2.rel ^
 banks\bank3.rel ^
+banks\bank4.rel ^
+banks\bank5.rel ^
+banks\bank6.rel ^
 gfx.rel ^
 psg.rel
 
@@ -61,13 +74,13 @@ ihx2sms output.ihx output.sms
 if %errorlevel% NEQ 0 goto :EOF
 
 REM echo Copy output
-REM copy output.sms ..\asm
+copy output.sms ..\asm
 REM copy output.sms ..\Simpsons.sms
 
 REM echo Disassemble output
-REM cd ..\asm
-REM smsexamine.exe output.sms
-REM cd ..\dev
+cd ..\asm
+smsexamine.exe output.sms
+cd ..\dev
 
 REM echo Delete
 REM cd banks

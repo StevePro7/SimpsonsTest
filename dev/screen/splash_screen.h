@@ -20,20 +20,29 @@ void screen_splash_screen_load()
 
 void screen_splash_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
 {
-	unsigned char mover = 0;
 	unsigned char input = 0;
+	unsigned char level = 0;
 
 	input = engine_input_manager_hold_fire1(curr_joypad1, prev_joypad1);
 	if( input )
 	{
-		*screen_type = SCREEN_TYPE_TITLE;
+		level = 1;
 	}
 
 	screen_bases_screen_timer++;
 	if (screen_bases_screen_timer >= screen_splash_screen_delay)
 	{
-		*screen_type = SCREEN_TYPE_TITLE;
+		level = 1;
 	}
+
+	if( level )
+	{
+		*screen_type = SCREEN_TYPE_TITLE;
+		//*screen_type = SCREEN_TYPE_SPLASH;
+		return;
+	}
+
+	*screen_type = SCREEN_TYPE_SPLASH;
 }
 
 #endif//_SPLASH_SCREEN_H_
