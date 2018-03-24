@@ -1,7 +1,7 @@
 #ifndef _OVER_SCREEN_H_
 #define _OVER_SCREEN_H_
 
-extern unsigned int screen_bases_screen_count;
+extern unsigned char screen_bases_screen_count;
 extern unsigned int screen_bases_screen_timer;
 extern unsigned int screen_over_screen_delay;
 

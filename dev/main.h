@@ -73,7 +73,8 @@ unsigned char select_text_option[MAX_OPTIONS][3];
 unsigned char select_diff_option[MAX_OPTIONS][6];
 
 //_BASES_SCREEN_H_
-unsigned int screen_bases_screen_count, screen_bases_screen_timer;
+unsigned int screen_bases_screen_timer;
+unsigned char screen_bases_screen_count;
 
 //_SPLASH_SCREEN_H_
 unsigned char screen_splash_screen_delay;
@@ -90,6 +91,9 @@ unsigned char screen_long_screen_delay, screen_long_screen_state;
 
 // _READY_SCREEN_H_
 unsigned int screen_ready_screen_delay;
+
+//_PLAY_SCREEN_H_
+unsigned char screen_cheat_screen_delay;
 
 //_QUIZ_SCREEN_H_
 unsigned char screen_quiz_screen_delay, screen_quiz_screen_state;

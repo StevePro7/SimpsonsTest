@@ -36,7 +36,7 @@ void main( void )
 
 	enum_curr_screen_type = SCREEN_TYPE_NONE;
 	enum_next_screen_type = SCREEN_TYPE_SPLASH;
-	//enum_next_screen_type = SCREEN_TYPE_SCORE;`
+	enum_next_screen_type = SCREEN_TYPE_READY;`
 	//enum_next_screen_type = SCREEN_TYPE_TITLE;
 	//enum_next_screen_type = SCREEN_TYPE_OVER;
 	//enum_next_screen_type = SCREEN_TYPE_DIFF;
@@ -155,6 +155,7 @@ void custom_initialize()
 	screen_ready_screen_init();
 	screen_diff_screen_init();
 	screen_long_screen_init();
+	screen_play_screen_init();
 	screen_quiz_screen_init();
 	screen_over_screen_init();
 

@@ -1,9 +1,18 @@
 #ifndef _PLAY_SCREEN_H_
 #define _PLAY_SCREEN_H_
 
+extern unsigned char screen_bases_screen_count;
+extern unsigned int screen_bases_screen_timer;
+extern unsigned char screen_cheat_screen_delay;
+
 extern unsigned char question_index, question_value, question_long, question_count;
 extern unsigned char question_value, option1_value, option2_value, option3_value, option4_value;
 extern unsigned char answer_index, answer_value;
+
+void screen_play_screen_init()
+{
+	screen_cheat_screen_delay = NORMAL_DELAY / 2;
+}
 
 void screen_play_screen_load()
 {
@@ -42,6 +51,13 @@ void screen_play_screen_update(unsigned char *screen_type, unsigned int curr_joy
 
 	engine_select_manager_draw_select();
 
+	screen_bases_screen_timer++;
+	if ( screen_bases_screen_timer >= screen_cheat_screen_delay )
+	{
+		engine_quiz_manager_cheat2( answer_index, screen_bases_screen_count );
+		screen_bases_screen_count = !screen_bases_screen_count;
+		screen_bases_screen_timer = 0;
+	}
 
 	input = engine_input_manager_hold_up(curr_joypad1, prev_joypad1);
 	if( input )

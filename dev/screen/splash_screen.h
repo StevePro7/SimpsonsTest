@@ -1,7 +1,7 @@
 #ifndef _SPLASH_SCREEN_H_
 #define _SPLASH_SCREEN_H_
 
-extern unsigned int screen_bases_screen_count;
+extern unsigned char screen_bases_screen_count;
 extern unsigned int screen_bases_screen_timer;
 extern unsigned char screen_splash_screen_delay;
 

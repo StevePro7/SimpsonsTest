@@ -1,7 +1,7 @@
 #ifndef _LONG_SCREEN_H_
 #define _LONG_SCREEN_H_
 
-extern unsigned int screen_bases_screen_count;
+extern unsigned char screen_bases_screen_count;
 extern unsigned int screen_bases_screen_timer;
 extern unsigned char screen_long_screen_delay, screen_long_screen_state;
 extern unsigned char question_long;

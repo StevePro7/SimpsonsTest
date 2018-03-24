@@ -1,8 +1,8 @@
 #ifndef _QUIZ_SCREEN_H_
 #define _QUIZ_SCREEN_H_
 
-extern unsigned int screen_bases_screen_count;
 extern unsigned int screen_bases_screen_timer;
+extern unsigned char screen_bases_screen_count;
 extern unsigned char screen_quiz_screen_delay, screen_quiz_screen_state;
 
 void screen_quiz_screen_init()

@@ -1,7 +1,7 @@
 #ifndef _TEST5_SCREEN_H_
 #define _TEST5_SCREEN_H_
 
-extern unsigned int screen_bases_screen_count;
+extern unsigned char screen_bases_screen_count;
 extern unsigned int screen_bases_screen_timer;
 extern unsigned char screen_test5_screen_delay;
 

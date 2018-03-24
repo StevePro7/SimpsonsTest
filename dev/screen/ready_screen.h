@@ -1,7 +1,7 @@
 #ifndef _READY_SCREEN_H_
 #define _READY_SCREEN_H_
 
-extern unsigned int screen_bases_screen_count;
+extern unsigned char screen_bases_screen_count;
 extern unsigned int screen_bases_screen_timer;
 extern unsigned int screen_ready_screen_delay;
 extern unsigned char question_index, question_value, question_long, question_count;
