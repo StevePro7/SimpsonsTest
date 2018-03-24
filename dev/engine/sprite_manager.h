@@ -21,7 +21,6 @@ void engine_sprite_manager_draw_wrong(unsigned char x, unsigned char y)
 	engine_sprite_manager_draw(x, y, SPRITE_TILES+32);
 }
 
-// TODO - believe HIDE methods not req'd!
 // Public methods HIDE.
 //void engine_sprite_manager_hide_select()
 //{

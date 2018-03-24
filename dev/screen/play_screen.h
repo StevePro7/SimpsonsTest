@@ -26,8 +26,6 @@ void screen_play_screen_load()
 void screen_play_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
 {
 	unsigned char input = 0;
-	engine_select_manager_draw_select();
-
 	input = engine_input_manager_hold_fire1( curr_joypad1, prev_joypad1 );
 	if( input )
 	{
@@ -41,6 +39,9 @@ void screen_play_screen_update(unsigned char *screen_type, unsigned int curr_joy
 		*screen_type = SCREEN_TYPE_SCORE;
 		return;
 	}
+
+	engine_select_manager_draw_select();
+
 
 	input = engine_input_manager_hold_up(curr_joypad1, prev_joypad1);
 	if( input )
