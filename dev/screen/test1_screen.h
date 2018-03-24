@@ -5,7 +5,7 @@ extern unsigned int screen_bases_screen_count;
 extern unsigned int screen_bases_screen_timer;
 extern unsigned char screen_test1_screen_delay;
 
-extern unsigned char question_index, question_value, question_count;
+extern unsigned char question_index, question_value, question_long, question_count;
 extern unsigned char question_value, option1_value, option2_value, option3_value, option4_value;
 extern unsigned char answer_index, answer_value;
 
@@ -25,7 +25,7 @@ void screen_test1_screen_load()
 
 	screen_bases_screen_init();
 
-	question_count = 10;			// TODO will be either 5 / 10 / 25 / 50
+	question_long = 10;			// TODO will be either 5 / 10 / 25 / 50
 	question_index = 0;
 
 	rand();

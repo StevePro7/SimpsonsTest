@@ -4,7 +4,7 @@
 extern unsigned int screen_bases_screen_count;
 extern unsigned int screen_bases_screen_timer;
 extern unsigned char screen_long_screen_delay, screen_long_screen_state;
-extern unsigned char question_count;
+extern unsigned char question_long;
 
 void screen_long_screen_init()
 {
@@ -43,7 +43,7 @@ void screen_long_screen_update(unsigned char *screen_type, unsigned int curr_joy
 		if (input)
 		{
 			// Set the question count here.
-			question_count = select_long_option[ long_select ];
+			question_long = select_long_option[ long_select ];
 
 			engine_audio_manager_sound_right();
 			screen_long_screen_state = SELECT_TYPE_AFTER;

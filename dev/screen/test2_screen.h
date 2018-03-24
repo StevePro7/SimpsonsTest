@@ -1,8 +1,7 @@
 #ifndef _TEST2_SCREEN_H_
 #define _TEST2_SCREEN_H_
 
-//extern unsigned char select_choice;
-extern unsigned char question_index, question_value, question_count;
+extern unsigned char question_index, question_value, question_long, question_count;
 extern unsigned char question_value, option1_value, option2_value, option3_value, option4_value;
 extern unsigned char answer_index, answer_value;
 

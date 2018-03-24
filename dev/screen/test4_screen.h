@@ -41,9 +41,10 @@ void screen_test4_screen_update(unsigned char *screen_type, unsigned int curr_jo
 	input = engine_input_manager_hold_fire1(curr_joypad1, prev_joypad1);
 	if (input)
 	{
-		question_count = select_long_option[ long_select ];
+		question_long = select_long_option[ long_select ];
+		//question_count = select_long_option[ long_select ];
 		engine_font_manager_draw_data( long_select, 25, 5 );
-		engine_font_manager_draw_data( question_count, 25, 7 );
+		engine_font_manager_draw_data( question_long, 25, 7 );
 
 		*screen_type = SCREEN_TYPE_TEST5;
 		return;

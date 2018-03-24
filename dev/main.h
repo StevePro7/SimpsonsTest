@@ -83,8 +83,8 @@ unsigned char screen_diff_screen_delay, screen_diff_screen_state;
 //_LONG_SCREEN_H_
 unsigned char screen_long_screen_delay, screen_long_screen_state;
 
-//_PLAY_SCREEN_H_
-unsigned char play_answer_state;
+//_QUIZ_SCREEN_H_
+unsigned char screen_quiz_screen_delay, screen_quiz_screen_state;
 
 //_TEST_SCREEN_H_
 unsigned char screen_test1_screen_delay;
@@ -93,7 +93,7 @@ unsigned char screen_test3_screen_delay;
 unsigned char screen_test4_screen_delay;
 unsigned char screen_test5_screen_delay;
 
-unsigned char question_index, question_count;
+unsigned char question_index, question_long, question_count;
 unsigned char question_value, option1_value, option2_value, option3_value, option4_value;
 unsigned char answer_index, answer_value;
 
