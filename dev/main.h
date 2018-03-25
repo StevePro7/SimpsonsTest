@@ -99,7 +99,8 @@ unsigned char screen_cheat_screen_delay;
 unsigned char screen_quiz_screen_delay, screen_quiz_screen_state;
 
 // _OVER_SCREEN_H_
-unsigned int screen_over_screen_delay;
+unsigned char screen_over_screen_delay1;
+unsigned int screen_over_screen_delay2; 
 
 
 //_TEST_SCREEN_H_

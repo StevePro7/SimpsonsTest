@@ -9,6 +9,14 @@ void engine_audio_manager_start_music()
 	}
 }
 
+void engine_audio_manager_finish_music()
+{
+	if( hacker_music )
+	{
+		PSGPlayNoRepeat( FINISH_PSG );
+	}
+}
+
 void engine_audio_manager_stop_music()
 {
 	if( hacker_music )

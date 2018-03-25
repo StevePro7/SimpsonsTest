@@ -1,3 +1,6 @@
+extern const unsigned char	finish_psg[];
+#define				finish_psg_size 544
+
 extern const unsigned char	music_psg[];
 #define				music_psg_size 7528
 

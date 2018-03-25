@@ -6,6 +6,7 @@
 
 // Content.
 #define MUSIC_PSG			music_psg
+#define FINISH_PSG			finish_psg
 #define SOUND1_PSG			sfx_right_psg
 #define SOUND2_PSG			sfx_wrong_psg
 #define SOUND3_PSG			sfx_cheat_psg
@@ -15,7 +16,7 @@
 
 // Delay.
 #define SPLASH_DELAY		150
-#define TITLE_DELAY			100		// TODO remove as not used?
+#define TITLE_DELAY			100
 #define NORMAL_DELAY		50		// TODO maybe beef this up to 75
 
 // Quiz.
