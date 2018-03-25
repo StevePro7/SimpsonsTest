@@ -7,9 +7,8 @@ unsigned char hacker_debug, hacker_splash;
 unsigned char hacker_start, hacker_delay, hacker_music, hacker_sound;
 unsigned char hacker_cheat, hacker_random;
 unsigned char enum_curr_screen_type, enum_next_screen_type;
-	
+
 void custom_initialize();
-void custom_load_content();
 
 void (*load_method[MAX_STATES])();
 void (*update_method[MAX_STATES])(unsigned char *screen_type, const unsigned int curr_joypad1, const unsigned int prev_joypad1);
@@ -32,14 +31,10 @@ void main( void )
 	engine_content_manager_load_sprites();
 
 	custom_initialize();
-	custom_load_content();
 
 	enum_curr_screen_type = SCREEN_TYPE_NONE;
 	enum_next_screen_type = SCREEN_TYPE_SPLASH;
-	enum_next_screen_type = SCREEN_TYPE_READY;`
-	//enum_next_screen_type = SCREEN_TYPE_TITLE;
-	//enum_next_screen_type = SCREEN_TYPE_OVER;
-	//enum_next_screen_type = SCREEN_TYPE_TEST4;
+	//enum_next_screen_type = SCREEN_TYPE_READY;`
 
 	SMS_displayOn();
 	for (;;)
@@ -167,10 +162,6 @@ void custom_initialize()
 	screen_test4_screen_init();
 	screen_test5_screen_init();
 	// TODO - delete
-}
-
-void custom_load_content()
-{
 }
 
 SMS_EMBED_SEGA_ROM_HEADER(9999, 0);
