@@ -18,14 +18,16 @@ void screen_ready_screen_load()
 	//engine_content_manager_title();
 	//SMS_setSpritePaletteColor(0, RGB(3,3,3));
 	//SMS_displayOn();
-	if (diff_select > 1 )
+	/*if (diff_select > 1 )
 	{
 		diff_select = 1;
 	}
 	if (question_long > 10 )
 	{
 		question_long = 10;
-	}
+	}*/
+	diff_select = 1;
+	question_long = 5;
 	// TODO REMOVE
 
 	screen_bases_screen_init();

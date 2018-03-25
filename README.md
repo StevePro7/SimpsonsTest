@@ -36,3 +36,7 @@ this dumps out the binary data in bank6.h | bank6.c
 
 Flicky
 http://www.smspower.org/Music/Flicky-SG
+
+
+E:\GitHub\StevePro7\SimpsonsTest\psg\raw
+vgm2psg.exe FlickyGameOver.vgm finish.psg 

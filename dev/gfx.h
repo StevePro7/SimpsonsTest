@@ -23,5 +23,5 @@ extern const unsigned char	wrong__palette__bin[];
 #define				wrong__palette__bin_size 16
 
 extern const unsigned char	wrong__tiles__psgcompr[];
-#define				wrong__tiles__psgcompr_size 185
+#define				wrong__tiles__psgcompr_size 180
 

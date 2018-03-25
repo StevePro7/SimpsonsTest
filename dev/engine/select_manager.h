@@ -134,11 +134,11 @@ void engine_select_manager_draw_select()
 }
 void engine_select_manager_draw_right()
 {
-	engine_sprite_manager_draw_right(ANSWER_X, select_height);
+	engine_sprite_manager_draw_right(ANSWER_X, select_height + 4);
 }
 void engine_select_manager_draw_wrong()
 {
-	engine_sprite_manager_draw_wrong(ANSWER_X, select_height);
+	engine_sprite_manager_draw_wrong(ANSWER_X, select_height + 4);
 }
 
 #endif//_SELECT_MANAGER_H_
