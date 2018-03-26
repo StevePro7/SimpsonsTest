@@ -6,7 +6,7 @@
 
 extern unsigned char hacker_debug, hacker_splash;
 extern unsigned char hacker_start, hacker_delay, hacker_music, hacker_sound;
-extern unsigned char hacker_cheat, hacker_random;
+extern unsigned char hacker_random, hacker_cheat;
 
 #define HACKER_START		0x0050
 

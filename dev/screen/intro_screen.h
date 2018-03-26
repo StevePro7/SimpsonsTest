@@ -4,7 +4,7 @@
 extern unsigned int screen_bases_screen_timer;
 extern unsigned char screen_bases_screen_count;
 extern unsigned char screen_intro_screen_delay;
-extern unsigned char cheat_count = 0;
+extern unsigned char cheat_count, local_cheat;
 
 void screen_intro_screen_init()
 {
@@ -13,13 +13,22 @@ void screen_intro_screen_init()
 
 void screen_intro_screen_load()
 {
-	hacker_cheat = 0;
+	local_cheat = 0;
 	cheat_count = 0;
 	screen_bases_screen_init();
 
 	engine_select_manager_clear();
 	engine_font_manager_draw_text( LOCALE_PRESS, 2, 13 );
 	engine_font_manager_draw_text( LOCALE_START, 2, 14 );
+
+	if ( hacker_cheat )
+	{
+		engine_font_manager_draw_text( LOCALE_CHEAT, 25, 10 );
+		engine_font_manager_draw_text( LOCALE_MODE, 25, 11 );
+		
+		engine_audio_manager_sound_cheat();
+		local_cheat = 1;
+	}
 }
 
 void screen_intro_screen_update( unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1 )
@@ -53,7 +62,7 @@ void screen_intro_screen_update( unsigned char *screen_type, unsigned int curr_j
 	}
 	if( engine_input_manager_hold_fire2( curr_joypad1, prev_joypad1 ) )
 	{
-		if ( !hacker_cheat )
+		if ( !hacker_cheat || !local_cheat )
 		{
 			cheat_count++;
 			if( cheat_count >= CHEAT_TOTAL )
@@ -62,7 +71,7 @@ void screen_intro_screen_update( unsigned char *screen_type, unsigned int curr_j
 				engine_font_manager_draw_text( LOCALE_MODE, 25, 11 );
 
 				engine_audio_manager_sound_cheat();
-				hacker_cheat = 1;
+				local_cheat = 1;
 			}
 		}
 	}

@@ -20,6 +20,7 @@ extern unsigned char quiz_questions[MAX_QUESTIONS];
 extern unsigned char quiz_options[MAX_QUESTIONS][MAX_OPTIONS];
 extern unsigned char option_height[MAX_OPTIONS];
 extern unsigned char question_value, answer_index, answer_value;
+extern unsigned char local_cheat;
 
 void engine_quiz_manager_init()
 {
@@ -74,7 +75,7 @@ void engine_quiz_manager_cheat( unsigned char ans )
 		engine_font_manager_draw_text( LOCALE_ARROW_SPACE, QUIZ_X-1, cheat_Y );
 	}
 
-	if( hacker_cheat )
+	if( local_cheat )
 	{
 		cheat_Y = option_height[ans];
 		engine_font_manager_draw_text( LOCALE_ARROW_LEFT, QUIZ_X-1, cheat_Y );
@@ -83,7 +84,7 @@ void engine_quiz_manager_cheat( unsigned char ans )
 void engine_quiz_manager_cheat2( unsigned char ans, unsigned char flag )
 {
 	unsigned char cheat_Y;
-	if( hacker_cheat )
+	if( local_cheat )
 	{
 		cheat_Y = option_height[ans];
 		if ( !flag )
@@ -111,26 +112,6 @@ void engine_quiz_manager_load(unsigned char qi, unsigned char qv, unsigned char 
 	engine_font_manager_draw_data_ZERO(qi + 1, QUIZ_X + 12, TITLE_Y);
 	qv = qv * 1;
 
-//	engine_font_manager_draw_data(hacker_cheat, 30, 0);
-
-	// Cheat!
-	/*for( idx = 0; idx < MAX_OPTIONS; idx++)
-	{
-		cheat_Y = option_height[idx];
-		engine_font_manager_draw_text(LOCALE_ARROW_SPACE, QUIZ_X-1, cheat_Y);
-	}
-
-	cheat_Y = option_height[answer_index];
-	engine_font_manager_draw_text(LOCALE_ARROW_LEFT, QUIZ_X-1, cheat_Y);*/
-	// TODO remove
-	//engine_font_manager_draw_data_ZERO(opt1+1, 10, 10);
-	//engine_font_manager_draw_data_ZERO(opt2+1, 10, 11);
-	//engine_font_manager_draw_data_ZERO(opt3+1, 10, 12);
-	//engine_font_manager_draw_data_ZERO(opt4+1, 10, 13);
-	// TODO remove
-
-	// TODO - BANKS!
-	
 	bank = diff_select + QUIZ_BANK;
 	engine_quiz_manager_bank( bank );
 
@@ -188,30 +169,6 @@ void engine_quiz_manager_load(unsigned char qi, unsigned char qv, unsigned char 
 		engine_font_manager_draw_text(bank3_opt4_line2[qv], OPTN_X, opt4_Y + 1);
 		engine_font_manager_draw_text(bank3_opt4_line3[qv], OPTN_X, opt4_Y + 2);
 	}
-
-	//else if( DIFF_TYPE_HARD == diff_select )
-	//{
-	//}
-	//else if( DIFF_TYPE_ARGH == diff_select )
-	//{
-	//}
-	// TODO - BANKS!
-
-	// Cheat!
-	//if( hacker_cheat )
-	//{
-	//	//answer_value = engine_quiz_manager_answer(question_value);
-	//	//answer_index = answer_value - 1;		// Zero based index
-
-	//	//for( idx = 0; idx < MAX_OPTIONS; idx++)
-	//	//{
-	//	//	cheat_Y = option_height[idx];
-	//	//	engine_font_manager_draw_text(LOCALE_ARROW_SPACE, QUIZ_X-1, cheat_Y);
-	//	//}
-
-	//	cheat_Y = option_height[answer_index];
-	//	engine_font_manager_draw_text(LOCALE_ARROW_LEFT, QUIZ_X-1, cheat_Y);
-	//}
 }
 
 void engine_quiz_manager_loadX(unsigned char q)

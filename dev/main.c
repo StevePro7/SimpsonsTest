@@ -5,7 +5,7 @@ bool global_pause;
 
 unsigned char hacker_debug, hacker_splash;
 unsigned char hacker_start, hacker_delay, hacker_music, hacker_sound;
-unsigned char hacker_cheat, hacker_random;
+unsigned char hacker_random, hacker_cheat, local_cheat;
 unsigned char enum_curr_screen_type, enum_next_screen_type;
 
 void custom_initialize();
