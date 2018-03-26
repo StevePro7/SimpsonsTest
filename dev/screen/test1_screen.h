@@ -25,7 +25,6 @@ void screen_test1_screen_load()
 
 	screen_bases_screen_init();
 
-	question_long = 10;			// TODO will be either 5 / 10 / 25 / 50
 	question_index = 0;
 
 	rand();
