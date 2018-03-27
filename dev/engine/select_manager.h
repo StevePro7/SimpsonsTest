@@ -54,6 +54,7 @@ void engine_select_manager_clear()
 	{
 		engine_font_manager_draw_text( LOCALE_BLANK8, 0, high );
 	}
+	engine_font_manager_draw_text( LOCALE_BLANK3, DOTS_X + 1, DOTS_Y );
 }
 
 void engine_select_manager_clear2()

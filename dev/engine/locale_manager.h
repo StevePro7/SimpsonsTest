@@ -19,7 +19,8 @@
 #define LOCALE_DIFFICULTY	"DIFFICULTY"
 #define LOCALE_LEVEL		"SELECTED"
 #define LOCALE_GET			" GET "
-#define LOCALE_READY		"READY"
+#define LOCALE_READY		"READY   "
+#define LOCALE_DOT			"."
 
 #define LOCALE_QUESTIONS	"QUESTIONS"
 
@@ -61,6 +62,7 @@
 #define LOCALE_OVER_MSG1	"THANKS FOR PLAYING"
 #define LOCALE_OVER_MSG2	"=STEVEPRO STUDIOS="
 
+#define LOCALE_BLANK3		"   "
 #define LOCALE_BLANK5		"     "
 #define LOCALE_BLANK8		"        "
 #define LOCALE_BLANK11		"           "

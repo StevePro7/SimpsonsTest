@@ -90,7 +90,9 @@ unsigned char screen_diff_screen_delay, screen_diff_screen_state;
 unsigned char screen_long_screen_delay, screen_long_screen_state; 
 
 // _READY_SCREEN_H_
+unsigned int screen_bases_screen_timer2;
 unsigned int screen_ready_screen_delay;
+unsigned char screen_ready_screen_delay2, screen_ready_screen_dots;
 
 //_PLAY_SCREEN_H_
 unsigned char screen_cheat_screen_delay;

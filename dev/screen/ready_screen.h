@@ -3,12 +3,15 @@
 
 extern unsigned char screen_bases_screen_count;
 extern unsigned int screen_bases_screen_timer;
+extern unsigned int screen_bases_screen_timer2;
 extern unsigned int screen_ready_screen_delay;
+extern unsigned char screen_ready_screen_delay2, screen_ready_screen_dots;
 extern unsigned char question_index, question_value, question_long, question_count;
 
 void screen_ready_screen_init()
 {
 	screen_ready_screen_delay = TITLE_DELAY * 4;
+	screen_ready_screen_delay2 = NORMAL_DELAY;
 }
 
 void screen_ready_screen_load()
@@ -34,6 +37,9 @@ void screen_ready_screen_load()
 	question_value = 0;
 	question_count = 0;
 	engine_score_manager_init();
+
+	screen_bases_screen_timer2 = 0;
+	screen_ready_screen_dots = 0;
 }
 
 void screen_ready_screen_update(unsigned char *screen_type, unsigned int curr_joypad1, unsigned int prev_joypad1)
@@ -52,6 +58,24 @@ void screen_ready_screen_update(unsigned char *screen_type, unsigned int curr_jo
 	if( input )
 	{
 		level = 1;
+	}
+
+	// Moving dots "animation".
+	screen_bases_screen_timer2++;
+	if ( screen_bases_screen_timer2 >= screen_ready_screen_delay2 )
+	{
+		screen_ready_screen_dots++;
+		if( screen_ready_screen_dots > 3 )
+		{
+			engine_font_manager_draw_text( LOCALE_READY, 2, 18 );
+			screen_ready_screen_dots = 0;
+		}
+		else
+		{
+			engine_font_manager_draw_text( LOCALE_DOT, DOTS_X + screen_ready_screen_dots, DOTS_Y );
+		}
+
+		screen_bases_screen_timer2 = 0;
 	}
 
 	screen_bases_screen_timer++;

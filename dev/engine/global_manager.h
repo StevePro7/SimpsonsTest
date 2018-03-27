@@ -35,4 +35,8 @@
 #define SUMMARY_TEXT_X		2
 #define SUMMARY_DATA_X		19
 
+// Dots.
+#define DOTS_X				6
+#define DOTS_Y				18
+
 #endif//_GLOBAL_MANAGER_H_
