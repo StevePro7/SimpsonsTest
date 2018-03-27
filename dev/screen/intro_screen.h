@@ -62,7 +62,7 @@ void screen_intro_screen_update( unsigned char *screen_type, unsigned int curr_j
 	}
 	if( engine_input_manager_hold_fire2( curr_joypad1, prev_joypad1 ) )
 	{
-		if ( !hacker_cheat || !local_cheat )
+		if ( !hacker_cheat && !local_cheat )
 		{
 			cheat_count++;
 			if( cheat_count >= CHEAT_TOTAL )
