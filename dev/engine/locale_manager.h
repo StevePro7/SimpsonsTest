@@ -1,6 +1,8 @@
 #ifndef _LOCALE_MANAGER_H_
 #define _LOCALE_MANAGER_H_
 
+#define LOCALE_VERSION		"V1.00"
+
 #define LOCALE_BLANK		"                                "
 #define LOCALE_PAUSED		"PAUSED"
 #define LOCALE_RESUME		"      "
