@@ -5,9 +5,9 @@ Simpsons Trivia game for the Sega Master System 2018 Competition
 Tuesday, 27th March 2017
 
 ###### INTRO
-The Simpsons is a hit TV show that has become a worldwide cultural phenomenon.
+The Simpsons is a hit TV show that has become a worldwide phenomenon.
 <br />
-Therefore, it only seems natural to build a Simpsons Trivia game for the SMS!
+Therefore, it seems only natural to build a Simpsons Trivia game for the SMS!
 
 ###### INSTRUCTIONS
 Simple: move joystick Up and Down to select a multi-choice answer: A, B, C, D.
@@ -51,7 +51,7 @@ Press button 2 five times and you will have answers to current quiz!
 ###### CREDITS
 Extra special thanks to: sverx for devkitSMS https://github.com/sverx/devkitSMS
 <br />
-Shout out to eruiz00 as I used some programming tricks from "Astro Force"
+Plus shout out to eruiz00 as I used some programming tricks from "Astro Force"
 <br />
 <br />
 Special thanks to:
@@ -67,6 +67,11 @@ Note: game complete screen has the "Flicky" game over music from SMS Power!
 Reference to original Simpsons Trivia questions can be found here:
 <br />
 https://www.absurdtrivia.com/trivia/the-simpsons
+
+###### OUTSTANDING
+It would be nice to have more graphics of The Simpsons characters throughout the quiz.
+<br />
+Unfortunately, I only had enough time to import  one consistent image for everything...
 
 ###### DOCUMENTATION
 Links to documentation on games written for the Sega Master System using devkitSMS:
