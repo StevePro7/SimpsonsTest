@@ -20,10 +20,10 @@ void engine_hack_manager_init()
 	hacker_sound = PEEK(HACKER_START + 3);		// 0x0054		// 0=sound on otherwise off.
 }
 
-//void engine_hack_manager_invert()
-//{
-//	hacker_music = !hacker_music;
-//	hacker_sound = !hacker_sound;
-//}
+void engine_hack_manager_invert()
+{
+	hacker_music = !hacker_music;
+	hacker_sound = !hacker_sound;
+}
 
 #endif//_HACK_MANAGER_H_

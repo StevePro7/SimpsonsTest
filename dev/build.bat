@@ -87,7 +87,7 @@ if %errorlevel% NEQ 0 goto :EOF
 
 REM echo Copy output
 copy output.sms ..\asm
-REM copy output.sms ..\Simpsons.sms
+copy output.sms ..\SimpsonsTriviaSMS.sms
 
 REM echo Disassemble output
 cd ..\asm
