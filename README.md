@@ -5,7 +5,7 @@ Simpsons Trivia game for the Sega Master System 2018 Competition
 Tuesday, 27th March 2017
 
 ###### INTRO
-The Simpsons is a hit TV show that has become a worldwide phenomenon.
+The Simpsons is a hit TV show that has become a world wide phenomenon.
 <br />
 Therefore, it seems only natural to build a Simpsons Trivia game for the SMS!
 
