@@ -10,11 +10,11 @@ The Simpsons is a hit American TV show that has become a cultural phenomenon.
 Therefore, it only seems natural to build a Simpsons Trivia game for the SMS!
 
 ###### INSTRUCTIONS
-Simple: move joystick Up and Down to select multichoice answer: A, B, C, D.
+Simple: move joystick Up and Down to select multi-choice answer: A, B, C, D.
 <br />
 Press button 1 to select an answer or progress forward through any prompts.
 <br />
-Note: Press button 2 to always go back.  Also Left and Right are not used.
+Note: Press button 2 to always go back.  Also, Left and Right are not used.
 
 ###### TOOLS
 - Programming:	devkitSMS
@@ -31,25 +31,50 @@ http://github.com/SteveProXNA/SimpsonsTriviaSMS
 
 ###### ROM HACKING
 You can hack this ROM!  
-Download and dump CandyKidDemo.sms into Hex Editor, e.g. HxD, and modify bytes:
-- 0x0050	Steps to move Kid: 1, 2, 4, 8 pixels.
-- 0x0051	Delay for enemy ghosts arm moves.
-- 0x0052	Hands for enemy ghosts to toggle.
-- 0x0053	Music 0=music play otherwise off.
-- 0x0054	Sound	0=sound on otherwise off.
-- 0x0055	Paths to test individually 1 thru 8.
+Download and dump SimpsonsTriviaSMS.sms into Hex Editor, e.g. HxD, and modify bytes:
+- 0x004F	Used in development => debugging.
+- 0x0050	Non-zero value will show answers.
+- 0x0051	Ask random questions during quiz.
+- 0x0052	Music 0=music play otherwise off.
+- 0x0053	Sound	0=sound on otherwise off.
+
+###### CHEAT
+Some of the questions may be tough so you can cheat if necessary!
+<br />
+Either hack the ROM [above] to show the answers for every quiz OR
+<br />
+Alternatively on the Title screen when prompted to "Press Start"
+<br />
+Press button 2 five times and you will have answers to current quiz!
 
 ###### CREDITS
 Extra special thanks to: sverx for devkitSMS https://github.com/sverx/devkitSMS
 <br />
-Special thanks to: 
-Maxim, Martin, Ville Helin, Steve Snake, Bock + Emulicious devs
+Shout out to eruiz00 as I used some programming tricks from "Astro Force" [awesome!]
+<br />
+<br />
+Special thanks to:
+<br />
+Maxim, Martin, Ville Helin, Steve Snake, Bock + the Emulicious devs
 <br />
 Also, I "borrowed" sound effects from Baluba Balok http://bit.ly/2nnSQJG Thanks!
+<br />
+Note: the game complete screen has "Flicky" the game over music from SMS Power!
+<br />
+<br />
+Reference to original Simpsons Trivia questions can be found here:
+<br />
+https://www.absurdtrivia.com/trivia/the-simpsons
 
-###### SOCIAL MEDIA
-- You Tube https://youtu.be/HbtZgRN_j0Y
+###### DOCUMENTATION
+Links to documentation on games written for the Sega Master System using devkitSMS:
+http://steveproxna.blogspot.com/2017/09/devkitsms-programming-setup.html
+<br />
+http://steveproxna.blogspot.com/2017/11/devkitsms-programming-sample.html
+<br />
+http://steveproxna.blogspot.com/2018/03/devkitsms-programming-sample-ii.html
 
+ 
 ###### COMPANY BIO
 StevePro Studios is an independent game developer that builds and publishes 80s retro arcade video games!
 <br />
