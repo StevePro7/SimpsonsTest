@@ -10,7 +10,7 @@ extern unsigned char question_index, question_value, question_long, question_cou
 
 void screen_ready_screen_init()
 {
-	screen_ready_screen_delay = TITLE_DELAY * 4;
+	screen_ready_screen_delay = TITLE_DELAY * 3;
 	screen_ready_screen_delay2 = NORMAL_DELAY;
 }
 

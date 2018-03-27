@@ -18,31 +18,12 @@ void engine_hack_manager_init()
 	hacker_random= PEEK(HACKER_START + 1);		// 0x0051		// 0=randomly ask questions.
 	hacker_music = PEEK(HACKER_START + 2);		// 0x0053		// 0=music on otherwise off.
 	hacker_sound = PEEK(HACKER_START + 3);		// 0x0054		// 0=sound on otherwise off.
-
-
-	// TODO remove
-	hacker_cheat = 1;
-	hacker_random= RAND_TYPE_NORMAL;
-	// TODO remove
 }
 
-void engine_hack_manager_invert()
-{
-	hacker_music = !hacker_music;
-	hacker_sound = !hacker_sound;
-	//hacker_random= !hacker_random;
-	hacker_random= RAND_TYPE_NORMAL;
-	hacker_cheat = 1;							// TODO REMOVE
-}
-
-void engine_hack_manager_resetX()
-{
-	hacker_debug = 0;
-
-	hacker_cheat = 0;
-	hacker_random= 0;
-	hacker_music = 0;
-	hacker_sound = 0;
-}
+//void engine_hack_manager_invert()
+//{
+//	hacker_music = !hacker_music;
+//	hacker_sound = !hacker_sound;
+//}
 
 #endif//_HACK_MANAGER_H_
