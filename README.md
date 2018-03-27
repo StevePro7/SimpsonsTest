@@ -5,16 +5,16 @@ Simpsons Trivia game for the Sega Master System 2018 Competition
 Tuesday, 27th March 2017
 
 ###### INTRO
-The Simpsons is a hit American TV show that has become a cultural phenomenon.
+The Simpsons is a hit TV show that has become a worldwide cultural phenomenon.
 <br />
 Therefore, it only seems natural to build a Simpsons Trivia game for the SMS!
 
 ###### INSTRUCTIONS
-Simple: move joystick Up and Down to select multi-choice answer: A, B, C, D.
+Simple: move joystick Up and Down to select a multi-choice answer: A, B, C, D.
 <br />
 Press button 1 to select an answer or progress forward through any prompts.
 <br />
-Note: Press button 2 to always go back.  Also, Left and Right are not used.
+Note: Press button 2 to always go back.  Joystick Left and Right are not used.
 
 ###### TOOLS
 - Programming:	devkitSMS
@@ -43,23 +43,25 @@ Some of the questions may be tough so you can cheat if necessary!
 <br />
 Either hack the ROM [above] to show the answers for every quiz OR
 <br />
-Alternatively on the Title screen when prompted to "Press Start"
+<br />
+Alternatively on the Title screen whenyou're prompted to "Press Start"
 <br />
 Press button 2 five times and you will have answers to current quiz!
 
 ###### CREDITS
 Extra special thanks to: sverx for devkitSMS https://github.com/sverx/devkitSMS
 <br />
-Shout out to eruiz00 as I used some programming tricks from "Astro Force" [awesome!]
+Shout out to eruiz00 as I used some programming tricks from "Astro Force"
 <br />
 <br />
 Special thanks to:
 <br />
 Maxim, Martin, Ville Helin, Steve Snake, Bock + the Emulicious devs
 <br />
+<br />
 Also, I "borrowed" sound effects from Baluba Balok http://bit.ly/2nnSQJG Thanks!
 <br />
-Note: the game complete screen has "Flicky" the game over music from SMS Power!
+Note: game complete screen has the "Flicky" game over music from SMS Power!
 <br />
 <br />
 Reference to original Simpsons Trivia questions can be found here:
