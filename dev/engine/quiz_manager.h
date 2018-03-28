@@ -19,8 +19,12 @@ extern unsigned char diff_select;
 extern unsigned char quiz_questions[MAX_QUESTIONS];
 extern unsigned char quiz_options[MAX_QUESTIONS][MAX_OPTIONS];
 extern unsigned char option_height[MAX_OPTIONS];
+extern unsigned char select_diff_option[MAX_OPTIONS][6];
 extern unsigned char question_value, answer_index, answer_value, question_long;
 extern unsigned char local_cheat;
+
+// Private helper method.
+static void engine_quiz_manager_diff( unsigned char x, unsigned char y );
 
 void engine_quiz_manager_init()
 {
@@ -35,10 +39,20 @@ void engine_quiz_manager_base()
 	engine_font_manager_draw_text( LOCALE_QUESTION, QUIZ_X, TITLE_Y );
 	if( hacker_extra )
 	{
-		engine_font_manager_draw_text( LOCALE_SQUARE_LEFT, QUIZ_X + 14, TITLE_Y );
-		engine_font_manager_draw_data_ZERO( question_long, QUIZ_X + 17, TITLE_Y );
-		engine_font_manager_draw_text( LOCALE_SQUARE_RIGHT, QUIZ_X + 18, TITLE_Y );
+		// Display total number of questions.
+		engine_font_manager_draw_text( LOCALE_FSLASH_SYM, QUIZ_X + 13, TITLE_Y );
+		engine_font_manager_draw_data_ZERO( question_long, QUIZ_X + 16, TITLE_Y );
 	}
+}
+
+void engine_quiz_manager_base2()
+{
+	engine_quiz_manager_diff( 26, TITLE_Y - 1 );
+}
+
+void engine_quiz_manager_base3( unsigned char y )
+{
+	engine_quiz_manager_diff( 24, y );
 }
 
 void engine_quiz_manager_bank( unsigned char b )
@@ -227,6 +241,19 @@ void engine_quiz_manager_load(unsigned char qi, unsigned char qv, unsigned char 
 		engine_font_manager_draw_text( bank5_opt4_line2[qv], OPTN_X, opt4_Y + 1 );
 		engine_font_manager_draw_text( bank5_opt4_line3[qv], OPTN_X, opt4_Y + 2 );
 	}
+}
+
+void engine_quiz_manager_diff( unsigned char x, unsigned char y )
+{
+	if( !hacker_extra )
+	{
+		return;
+	}
+
+	// Display difficulty level for quiz.
+	engine_font_manager_draw_text( LOCALE_SQUARE_LEFT, x + 0, y );
+	engine_font_manager_draw_text( LOCALE_SQUARE_RIGHT, x + 5, y );
+	engine_font_manager_draw_text( select_diff_option[diff_select], x + 1, y );
 }
 
 #endif//_QUIZ_MANAGER_H_

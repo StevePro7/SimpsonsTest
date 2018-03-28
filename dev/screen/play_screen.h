@@ -17,6 +17,7 @@ void screen_play_screen_init()
 void screen_play_screen_load()
 {
 	engine_quiz_manager_base();
+	engine_quiz_manager_base2();
 	engine_score_manager_base();
 
 	question_value = quiz_questions[question_index];

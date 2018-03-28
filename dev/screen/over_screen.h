@@ -18,6 +18,7 @@ void screen_over_screen_load()
 	engine_select_manager_clear2();
 	screen_bases_screen_init();
 
+	engine_quiz_manager_base3( TITLE_Y + 2 );
 	engine_font_manager_draw_text( LOCALE_OVER_MSG1, 2, 21 );
 	engine_font_manager_draw_text( LOCALE_OVER_MSG2, 2, 22 );
 

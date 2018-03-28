@@ -46,6 +46,7 @@
 #define LOCALE_ARROW_LEFT	">"
 #define LOCALE_ARROW_RIGHT	"<"
 #define LOCALE_PERCENT_SYM	"%"
+#define LOCALE_FSLASH_SYM	"/"
 #define LOCALE_SQUARE_LEFT	"["
 #define LOCALE_SQUARE_RIGHT	"]"
 

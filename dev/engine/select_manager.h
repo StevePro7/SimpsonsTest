@@ -60,7 +60,7 @@ void engine_select_manager_clear()
 void engine_select_manager_clear2()
 {
 	unsigned char high;
-	for( high = 3; high < 8; high++)
+	for( high = 2; high < 8; high++)
 	{
 		engine_font_manager_draw_text( LOCALE_BLANK, 0, high );
 	}
