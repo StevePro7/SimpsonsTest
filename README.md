@@ -56,7 +56,7 @@ Plus shout out to eruiz00 as I used some programming tricks from "Astro Force"
 <br />
 Special thanks to:
 <br />
-Maxim, Martin, Ville Helin, Steve Snake, Bock + the Emulicious devs
+Maxim, Martin, Ville Helin, Steve Snake, Bock + Calindro
 <br />
 <br />
 Also, I "borrowed" sound effects from Baluba Balok http://bit.ly/2nnSQJG Thanks!
