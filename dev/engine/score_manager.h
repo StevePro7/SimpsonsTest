@@ -1,7 +1,7 @@
 #ifndef _SCORE_MANAGER_H_
 #define _SCORE_MANAGER_H_
 
-#define SCORE_X 30
+#define SCORE_X 31
 #define SCORE_Y 3
 
 extern unsigned char score_player;

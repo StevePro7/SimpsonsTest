@@ -4,7 +4,7 @@
 #define QUIZ_X	2
 #define QUIZ_Y	5
 
-#define TITLE_X	22
+#define TITLE_X	23
 #define TITLE_Y	3
 
 #define OPTN_X	4
@@ -19,7 +19,7 @@ extern unsigned char diff_select;
 extern unsigned char quiz_questions[MAX_QUESTIONS];
 extern unsigned char quiz_options[MAX_QUESTIONS][MAX_OPTIONS];
 extern unsigned char option_height[MAX_OPTIONS];
-extern unsigned char question_value, answer_index, answer_value;
+extern unsigned char question_value, answer_index, answer_value, question_long;
 extern unsigned char local_cheat;
 
 void engine_quiz_manager_init()
@@ -32,7 +32,13 @@ void engine_quiz_manager_init()
 
 void engine_quiz_manager_base()
 {
-	engine_font_manager_draw_text(LOCALE_QUESTION, QUIZ_X, TITLE_Y);
+	engine_font_manager_draw_text( LOCALE_QUESTION, QUIZ_X, TITLE_Y );
+	if( hacker_extra )
+	{
+		engine_font_manager_draw_text( LOCALE_SQUARE_LEFT, QUIZ_X + 14, TITLE_Y );
+		engine_font_manager_draw_data_ZERO( question_long, QUIZ_X + 17, TITLE_Y );
+		engine_font_manager_draw_text( LOCALE_SQUARE_RIGHT, QUIZ_X + 18, TITLE_Y );
+	}
 }
 
 void engine_quiz_manager_bank( unsigned char b )
@@ -107,7 +113,7 @@ void engine_quiz_manager_load(unsigned char qi, unsigned char qv, unsigned char 
 	opt4_Y = option_height[opt4];
 
 	// Number.
-	engine_font_manager_draw_data_ZERO(qi + 1, QUIZ_X + 12, TITLE_Y);
+	engine_font_manager_draw_data_ZERO( qi + 1, QUIZ_X + 12, TITLE_Y );
 	qv = qv * 1;
 
 	bank = diff_select + QUIZ_BANK;
